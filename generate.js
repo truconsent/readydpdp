@@ -19,6 +19,8 @@ const { categories: faqCategories, faqs } = require('./data/faqs');
 const insights = require('./data/insights');
 const comparisons = require('./data/comparisons');
 
+const resources = require('./data/resources');
+
 const ROOT = __dirname;
 const DOCS = path.join(ROOT, 'docs');
 
@@ -26,11 +28,30 @@ const DOCS = path.join(ROOT, 'docs');
 const allPages = []; // { url, changefreq, priority }
 const llmsFullSections = []; // { title, url, text }
 
+// The live host today is a GitHub Pages *project* site with no custom domain
+// (https://truconsent.github.io/readydpdp/) — every root-relative href="/..."
+// or src="/..." in the generated markup needs the "/readydpdp" prefix or it
+// 404s against the true page root. Rather than thread a basePath through every
+// single link in this file, we rewrite at write-time in one place. Anything
+// already absolute (https://..., mailto:, #fragment, data:) is untouched since
+// it never matches the `href="/` / `src="/` pattern below.
+function applyBasePath(html) {
+  const bp = cfg.basePath || '';
+  if (!bp) return html;
+  return html.replace(/\b(href|src|action)="\/(?!\/)/g, (_m, attr) => `${attr}="${bp}/`);
+}
+
 function writePage(urlPath, html, { changefreq = 'monthly', priority = 0.6 } = {}) {
   const filePath = urlPath === '/' ? path.join(DOCS, 'index.html') : path.join(DOCS, urlPath.replace(/^\//, ''), 'index.html');
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, html);
+  fs.writeFileSync(filePath, applyBasePath(html));
   allPages.push({ url: urlPath, changefreq, priority });
+}
+
+function writeRaw(urlPath, contents) {
+  const filePath = path.join(DOCS, urlPath.replace(/^\//, ''));
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, contents);
 }
 
 function addLlmsFullText(title, urlPath, text) {
@@ -58,7 +79,7 @@ function heroSection(eyebrow, h1, lede) {
     <p class="lede">${esc(lede)}</p>`;
 }
 
-function ctaBand(text = 'Not sure where you stand on DPDP readiness?', buttonText = 'Book a Readiness Call', href = '/contact/') {
+function ctaBand(text = 'Not sure where you stand on DPDP readiness?', buttonText = 'Book a Free Consulting Call', href = '/contact/') {
   return `<div class="cta-band"><div class="container">
     <h2>${esc(text)}</h2>
     <p>Talk to a ReadyDPDP consultant about your specific data footprint — no obligation, no sales script.</p>
@@ -68,6 +89,96 @@ function ctaBand(text = 'Not sure where you stand on DPDP readiness?', buttonTex
 
 function breadcrumbsFor(items) {
   return breadcrumbHtml(items);
+}
+
+// ---------- visual components (replace card-grid-everywhere with the right shape) ----------
+
+// Readiness ladder: CSS-only stepped/staircase diagram for the 6 DPDP Readiness Levels.
+function readinessLadder(levels, currentLevel) {
+  const heights = [58, 84, 110, 136, 162, 188];
+  return `<div class="ladder-wrap"><div class="ladder">
+    ${levels.map(l => `<a class="ladder-step${l.level === currentLevel ? ' current' : ''}" href="/readiness/${l.slug}/">
+      <div class="ladder-step-bar" style="height:${heights[l.level] || 60}px;">${l.level}</div>
+      <div class="ladder-step-label">
+        <span class="ladder-step-name">${esc(l.name)}</span>
+        <span class="ladder-step-num">Level ${l.level}</span>
+      </div>
+    </a>`).join('\n')}
+  </div></div>`;
+}
+
+// Framework flow diagrams: horizontal SVG process steps with arrow connectors.
+function svgWrapText(label, x, yStart, maxChars = 15, lineHeight = 14) {
+  const words = label.split(' ');
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const test = cur ? `${cur} ${w}` : w;
+    if (test.length > maxChars && cur) { lines.push(cur); cur = w; } else { cur = test; }
+  }
+  if (cur) lines.push(cur);
+  return lines.map((line, i) => `<tspan x="${x}" dy="${i === 0 ? 0 : lineHeight}">${esc(line)}</tspan>`).join('');
+}
+
+function flowDiagramSvg(steps) {
+  const n = steps.length;
+  const width = 1080;
+  const height = 176;
+  const boxW = 148;
+  const boxH = 92;
+  const gap = (width - n * boxW) / (n + 1);
+  const y = 34;
+  let boxes = '';
+  let arrows = '';
+  steps.forEach((s, i) => {
+    const x = gap + i * (boxW + gap);
+    const cx = x + boxW / 2;
+    boxes += `<g>
+      <rect x="${x}" y="${y}" width="${boxW}" height="${boxH}" rx="10" fill="#162316" stroke="#76E000" stroke-width="1.5" />
+      <text x="${cx}" y="${y + 22}" text-anchor="middle" fill="#76E000" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.06em">STEP ${i + 1}</text>
+      <text x="${cx}" y="${y + 44}" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">${svgWrapText(s.label, cx, y + 44)}</text>
+    </g>`;
+    if (i < n - 1) {
+      const x1 = x + boxW;
+      const x2 = x1 + gap;
+      const midY = y + boxH / 2;
+      arrows += `<line x1="${x1 + 4}" y1="${midY}" x2="${x2 - 10}" y2="${midY}" stroke="#76E000" stroke-width="2" marker-end="url(#flowArrow)"/>`;
+    }
+  });
+  return `<div class="flow-diagram"><svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Process flow diagram: ${esc(steps.map(s => s.label).join(' then '))}">
+    <defs><marker id="flowArrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#76E000"/></marker></defs>
+    ${arrows}
+    ${boxes}
+  </svg></div>`;
+}
+
+// Phase timeline: CSS flex timeline with a connecting line.
+function phaseTimelineHtml(phases) {
+  return `<div class="phase-timeline-wrap"><div class="phase-timeline">
+    ${phases.map((p, i) => `<div class="phase-timeline-item">
+      <div class="phase-timeline-dot">${i + 1}</div>
+      <h3>${esc(p.title)}</h3>
+      <p>${esc(p.desc)}</p>
+    </div>`).join('\n')}
+  </div></div>`;
+}
+
+// Comparison matrix: real <table>, not a card grid. cell values: 'yes' | 'no' | 'partial'.
+function cmpSymbol(v) {
+  if (v === 'yes') return '<span class="cmp-yes">✓</span>';
+  if (v === 'partial') return '<span class="cmp-partial">~</span>';
+  return '<span class="cmp-no">✗</span>';
+}
+function comparisonTableHtml(c) {
+  return `<div class="comparison-table-wrap">
+    <table class="comparison-table">
+      <thead><tr><th>Criteria</th><th class="us-col">ReadyDPDP</th><th>${esc(c.altLabel)}</th></tr></thead>
+      <tbody>
+        ${c.matrix.map(m => `<tr><td>${esc(m.criterion)}</td><td class="cmp-cell us-col">${cmpSymbol(m.us)}</td><td class="cmp-cell">${cmpSymbol(m.them)}</td></tr>`).join('\n')}
+      </tbody>
+    </table>
+  </div>
+  <p class="comparison-legend"><span><span class="cmp-yes">✓</span> Yes</span><span><span class="cmp-partial">~</span> Partial / depends on scope</span><span><span class="cmp-no">✗</span> No</span></p>`;
 }
 
 // =====================================================================
@@ -100,7 +211,7 @@ function buildHome() {
           <li>Evidence-based findings, not policy-review guesswork</li>
           <li>A board-ready executive summary</li>
         </ol>
-        <a class="btn btn-primary" href="/contact/" style="margin-top:10px;display:inline-block;">Book a Scoping Call</a>
+        <a class="btn btn-primary" href="/contact/" style="margin-top:10px;display:inline-block;">Book a Free Consulting Call</a>
       </div>
     </div>
   </section>
@@ -156,6 +267,19 @@ function buildHome() {
         <div class="card"><h3>DPDR — Digital Personal Data Register</h3><p>The field-level inventory of every personal data element you hold, why you hold it, and when it must be purged.</p><a class="card-link" href="/frameworks/dpdr/">Explore the DPDR →</a></div>
         <div class="card"><h3>CDJR — Customer Data Journey Registry</h3><p>Every consent collection point across your customer journey, mapped to purpose and kept current.</p><a class="card-link" href="/frameworks/cdjr/">Explore the CDJR →</a></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Insights</span>
+      <hr class="rule" />
+      <h2>Latest thinking on DPDPA compliance</h2>
+      <p class="lede">${insights.length} articles — Rules explainers, penalty breakdowns, sector deep-dives, and practical readiness guidance from our advisory team.</p>
+      <div class="grid grid-3" style="margin-top:24px;">
+        ${[...insights].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3).map(a => `<a class="card" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek)}</p></a>`).join('\n')}
+      </div>
+      <p style="margin-top:20px;"><a class="btn btn-secondary" href="/insights/">Read all ${insights.length} Insights articles →</a></p>
     </div>
   </section>
 
@@ -312,7 +436,8 @@ function buildReadiness() {
   <div class="container">
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'DPDP Readiness', url: '/readiness/' }])}
     ${heroSection('DPDP Readiness Levels', 'The DPDP Readiness Model', 'A six-level maturity model — Level 0 Unaware through Level 5 Optimised — used across every ReadyDPDP engagement to benchmark where an organisation stands and what advancing to the next level requires.')}
-    <div class="grid grid-3" style="margin-top:12px;">
+    ${readinessLadder(readinessLevels, null)}
+    <div class="grid grid-3" style="margin-top:32px;">
       ${readinessLevels.map(l => `<a class="card" href="/readiness/${l.slug}/" style="text-decoration:none;">
         <span class="level-badge">${l.level}</span>
         <h3 style="margin-top:12px;">${esc(l.name)}</h3>
@@ -344,7 +469,8 @@ function buildReadiness() {
     <div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'DPDP Readiness', url: '/readiness/' }, { name: `Level ${l.level} — ${l.name}`, url: `/readiness/${l.slug}/` }])}
       ${heroSection(`Readiness Level ${l.level}`, `Level ${l.level}: ${l.name}`, l.summary)}
-      <h2>Criteria</h2>
+      ${readinessLadder(readinessLevels, l.level)}
+      <h2 style="margin-top:32px;">Criteria</h2>
       <hr class="rule" />
       <ul>${l.criteria.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
       <h2 style="margin-top:28px;">Typical organisation profile</h2>
@@ -401,10 +527,22 @@ function buildGapAssessment() {
       relatedItem('DPDP Gap Assessment (service)', '/services/dpdp-gap-assessment/', 'Service'),
       ...others.slice(0, 3).map(x => relatedItem(x.title, `/gap-assessment/${x.slug}/`, 'Deep dive'))
     ];
+    const phaseTimeline = g.slug === 'methodology' ? `
+      <h2>The engagement, phase by phase</h2>
+      <hr class="rule" />
+      ${phaseTimelineHtml([
+        { title: 'Scoping Call', desc: 'A free 30-minute call to define the assessment boundary — business units, products and systems in scope.' },
+        { title: 'Evidence Collection', desc: 'Structured interviews, artefact review (consent flows, notices, contracts), and targeted technical verification.' },
+        { title: 'Two-Axis Scoring', desc: 'Every finding scored for regulatory exposure and remediation effort — not a flat, undifferentiated list.' },
+        { title: 'Report & Roadmap', desc: 'Executive summary, detailed findings, prioritised roadmap and your DPDP Readiness Level rating, delivered.' },
+        { title: 'Post-Assessment Execution', desc: 'Remediation begins — typically via DPO-as-a-Service or targeted services mapped to your specific findings.' }
+      ])}
+    ` : '';
     const body = `
     <div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: 'Gap Assessment', url: '/gap-assessment/' }, { name: g.title, url: `/gap-assessment/${g.slug}/` }])}
       ${heroSection('Gap Assessment', g.title, g.dek)}
+      ${phaseTimeline}
       ${paragraphs(g.body)}
       ${relatedLinksHtml('Related pages', related)}
     </div>
@@ -424,10 +562,14 @@ function buildGapAssessment() {
 // FRAMEWORKS: DPDR + CDJR
 // =====================================================================
 function buildFrameworkOverview(fw, otherFw) {
+  const flowSteps = fw.fields.filter(f => f.slug !== 'interview-driven-vs-scan-driven').map(f => ({ label: f.name }));
   const body = `
   <div class="container">
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Frameworks', url: '/frameworks/' }, { name: fw.fullName, url: `/frameworks/${fw.slug}/` }])}
     ${heroSection('Methodology', `${fw.name} — ${fw.fullName}`, fw.tagline)}
+    <h2>The ${esc(fw.name)} build sequence</h2>
+    <hr class="rule" />
+    ${flowDiagramSvg(flowSteps)}
     ${paragraphs(fw.overview)}
     <h2 style="margin-top:32px;">How we build it: Interview-Driven vs. Scan-Driven</h2>
     <hr class="rule" />
@@ -768,6 +910,9 @@ function buildComparisons() {
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Comparisons', url: '/comparisons/' }, { name: c.title, url: `/comparisons/${c.slug}/` }])}
       ${heroSection('Comparison', c.title, c.dek)}
       ${paragraphs(c.body)}
+      <h2 style="margin-top:8px;">Head-to-head</h2>
+      <hr class="rule" />
+      ${comparisonTableHtml(c)}
       ${relatedLinksHtml('Other comparisons', others)}
     </div>
     ${ctaBand()}`;
@@ -789,7 +934,7 @@ function buildResourcesHub() {
   const body = `
   <div class="container">
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }])}
-    ${heroSection('Resources', 'The ReadyDPDP Resource Hub', 'Glossary, FAQs, frameworks and comparisons — everything we\'ve written to help you understand the DPDP Act 2023, in one place.')}
+    ${heroSection('Resources', 'The ReadyDPDP Resource Hub', 'Glossary, FAQs, frameworks, comparisons, and real downloadable checklists and templates — everything we\'ve written to help you understand and act on the DPDP Act 2023, in one place.')}
     <div class="grid grid-2" style="margin-top:12px;">
       <a class="card" href="/glossary/" style="text-decoration:none;"><h3>Glossary</h3><p>${glossary.length} plain-language DPDPA term definitions.</p></a>
       <a class="card" href="/faq/" style="text-decoration:none;"><h3>FAQs</h3><p>${faqs.length} real questions, answered, across 14 categories.</p></a>
@@ -798,15 +943,147 @@ function buildResourcesHub() {
       <a class="card" href="/comparisons/" style="text-decoration:none;"><h3>Comparisons</h3><p>ReadyDPDP vs. in-house, generalist consultancies, legal-only firms, and software-only tools.</p></a>
       <a class="card" href="/readiness/" style="text-decoration:none;"><h3>DPDP Readiness Levels</h3><p>Our six-level maturity model for benchmarking compliance posture.</p></a>
     </div>
+
+    <section class="downloads-section">
+      <span class="eyebrow">Downloads</span>
+      <hr class="rule" />
+      <h2>Free checklists, templates and worksheets</h2>
+      <p class="lede">${resources.length} standalone, printable resources — each a real file you can save, not just another page to read. Print-optimised HTML pages for "Save as PDF," plus a working CSV or Markdown companion for anything tabular or fillable.</p>
+      <div class="downloads-grid">
+        ${resources.map(r => `<div class="download-card">
+          <h3>${esc(r.title)}</h3>
+          <p>${esc(r.description)}</p>
+          <div class="download-links">
+            <a class="btn btn-secondary" href="/resources/downloads/${r.slug}/">View / Print</a>
+            ${r.companion ? `<a class="btn btn-secondary" href="/resources/downloads/${r.slug}/${r.slug}.${r.companion}" download>Download .${r.companion}</a>` : ''}
+          </div>
+        </div>`).join('\n')}
+      </div>
+    </section>
   </div>
   ${ctaBand()}`;
   writePage('/resources/', layout({
-    title: `Resources — Glossary, FAQs, Frameworks & Insights | ${cfg.brand}`,
-    description: 'The ReadyDPDP resource hub: DPDPA glossary, FAQs, DPDR/CDJR frameworks, insights and comparisons — everything you need to understand the DPDP Act 2023.',
+    title: `Resources — Glossary, FAQs, Frameworks & Downloads | ${cfg.brand}`,
+    description: `The ReadyDPDP resource hub: DPDPA glossary, FAQs, DPDR/CDJR frameworks, insights, comparisons, and ${resources.length} downloadable checklists and templates.`,
     path: '/resources/',
     bodyHtml: body,
     jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }])]
   }), { priority: 0.9 });
+}
+
+// =====================================================================
+// DOWNLOADABLE RESOURCES (/resources/downloads/*)
+// =====================================================================
+function csvEsc(v) {
+  const s = String(v == null ? '' : v);
+  if (/[",\n]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
+  return s;
+}
+function toCsv(header, rows) {
+  return [header.map(csvEsc).join(','), ...rows.map(r => r.map(csvEsc).join(','))].join('\n') + '\n';
+}
+
+function checklistHtml(r) {
+  return r.sections.map(sec => `<div class="checklist-group"><h2>${esc(sec.heading)}</h2><ul class="checklist">${sec.items.map(it => `<li>${esc(it)}</li>`).join('')}</ul></div>`).join('\n');
+}
+function checklistCsv(r) {
+  const rows = [];
+  r.sections.forEach(sec => sec.items.forEach(it => rows.push([sec.heading, it])));
+  return toCsv(['Category', 'Item'], rows);
+}
+
+function worksheetHtml(r) {
+  const qBlocks = r.questions.map((q, i) => `<div class="worksheet-q"><h3>${i + 1}. ${esc(q.q)}</h3><ol type="a">${q.options.map(o => `<li>${esc(o.label)} <em>— Level ${o.level}</em></li>`).join('')}</ol></div>`).join('\n');
+  const guide = `<h2 style="margin-top:32px;">Scoring guide</h2>
+    <hr class="rule" />
+    <p>For each question above, note the level number of the option that best matches your organisation today. Average your answers across all ${r.questions.length} questions and round to the nearest whole number for a directional DPDP Readiness Level.</p>
+    <div class="comparison-table-wrap"><table class="comparison-table scoring-guide">
+      <thead><tr><th>Average score</th><th>Approximate level</th></tr></thead>
+      <tbody>${r.levelsRef.map(l => `<tr><td>${l.level}.0 – ${l.level}.99</td><td class="level-cell"><a href="/readiness/${l.slug}/">Level ${l.level} — ${esc(l.name)}</a></td></tr>`).join('')}</tbody>
+    </table></div>
+    <p style="margin-top:10px;">This worksheet is a directional self-assessment, not a substitute for an independent <a href="/services/dpdp-gap-assessment/">DPDP Gap Assessment</a>.</p>`;
+  return qBlocks + guide;
+}
+function worksheetCsv(r) {
+  const rows = r.questions.map((q, i) => [`Q${i + 1}`, q.q, '']);
+  return toCsv(['#', 'Question', 'Your Selected Level (0-5)'], rows);
+}
+
+function tableHtml(r) {
+  const rows = r.rows.map((row, i) => {
+    if (r.linkColumn != null && r.linkSlugs) {
+      const cells = row.map((c, ci) => ci === r.linkColumn ? `<a href="${r.linkPrefix}${r.linkSlugs[i]}/">${esc(c)}</a>` : esc(c));
+      return `<tr>${cells.map(c => `<td>${c}</td>`).join('')}</tr>`;
+    }
+    return `<tr>${row.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`;
+  }).join('\n');
+  return `<div class="comparison-table-wrap"><table class="comparison-table"><thead><tr>${r.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+function tableCsv(r) {
+  return toCsv(r.columns, r.rows);
+}
+
+function logHtml(r) {
+  const exampleRow = `<tr>${r.exampleRow.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`;
+  const blankRows = Array.from({ length: 8 }, () => `<tr>${r.columns.map(() => '<td>&nbsp;</td>').join('')}</tr>`).join('\n');
+  return `<p><span class="tag">Example row</span></p>
+  <div class="comparison-table-wrap"><table class="comparison-table">
+    <thead><tr>${r.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead>
+    <tbody>${exampleRow}${blankRows}</tbody>
+  </table></div>`;
+}
+function logCsv(r) {
+  const blanks = Array.from({ length: r.blankRowCount }, () => r.columns.map(() => ''));
+  return toCsv(r.columns, blanks);
+}
+
+function onepagerHtml(r) {
+  return r.sections2.map(sec => `<div class="checklist-group"><h2>${esc(sec.heading)}</h2>${sec.body.map(b => `<p>${esc(b)}</p>`).join('')}</div>`).join('\n');
+}
+
+function buildDownloads() {
+  resources.forEach(r => {
+    let bodyContent = '';
+    let csvContent = null;
+    if (r.render === 'checklist') { bodyContent = checklistHtml(r); csvContent = checklistCsv(r); }
+    else if (r.render === 'worksheet') { bodyContent = worksheetHtml(r); csvContent = worksheetCsv(r); }
+    else if (r.render === 'table') { bodyContent = tableHtml(r); csvContent = tableCsv(r); }
+    else if (r.render === 'log') { bodyContent = logHtml(r); csvContent = logCsv(r); }
+    else if (r.render === 'onepager') { bodyContent = onepagerHtml(r); }
+
+    const downloadLinks = [];
+    if (r.companion === 'csv' && csvContent) {
+      writeRaw(`/resources/downloads/${r.slug}/${r.slug}.csv`, csvContent);
+      downloadLinks.push(`<a class="btn btn-secondary" href="/resources/downloads/${r.slug}/${r.slug}.csv" download>Download .csv</a>`);
+    }
+    if (r.companion === 'md' && r.mdTemplate) {
+      writeRaw(`/resources/downloads/${r.slug}/${r.slug}.md`, r.mdTemplate);
+      downloadLinks.push(`<a class="btn btn-secondary" href="/resources/downloads/${r.slug}/${r.slug}.md" download>Download .md</a>`);
+    }
+
+    const body = `
+    <div class="container resource-doc">
+      ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }, { name: r.title, url: `/resources/downloads/${r.slug}/` }])}
+      ${heroSection('Downloadable Resource', r.title, r.dek)}
+      <div class="print-actions">
+        <button onclick="window.print()">Print / Save as PDF</button>
+        ${downloadLinks.join(' ')}
+      </div>
+      ${paragraphs(r.intro)}
+      ${bodyContent}
+      ${relatedLinksHtml('More free resources', resources.filter(x => x.slug !== r.slug).slice(0, 4).map(x => relatedItem(x.title, `/resources/downloads/${x.slug}/`, 'Download')))}
+    </div>
+    ${ctaBand('Want this built and maintained for you, not just filled in once?', 'Book a Free Consulting Call', '/contact/')}`;
+
+    writePage(`/resources/downloads/${r.slug}/`, layout({
+      title: `${r.title} (Free Download) | ${cfg.brand}`,
+      description: r.description,
+      path: `/resources/downloads/${r.slug}/`,
+      bodyHtml: body,
+      jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }, { name: r.title, url: `/resources/downloads/${r.slug}/` }])]
+    }), { priority: 0.6 });
+    addLlmsFullText(`Download: ${r.title}`, `/resources/downloads/${r.slug}/`, r.description);
+  });
 }
 
 // =====================================================================
@@ -834,12 +1111,12 @@ function buildStaticPages() {
 
   // Contact
   writePage('/contact/', layout({
-    title: `Contact ReadyDPDP | Book a DPDP Readiness Call`,
-    description: 'Get in touch with ReadyDPDP to book a free DPDP Act 2023 readiness scoping call.',
+    title: `Book a Free Consulting Call | ${cfg.brand}`,
+    description: 'Get in touch with ReadyDPDP to book a free DPDP Act 2023 consulting call.',
     path: '/contact/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }])}
-      ${heroSection('Contact', 'Talk to a ReadyDPDP Consultant', 'Every engagement starts with a free 30-minute scoping call — no obligation, no sales script. Tell us about your organisation and we\'ll tell you honestly whether, and how, we can help.')}
+      ${heroSection('Contact', 'Book a Free Consulting Call', 'Every engagement starts with a free 30-minute consulting call — no obligation, no sales script. Tell us about your organisation and we\'ll tell you honestly whether, and how, we can help.')}
       <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 32px; margin-top:8px;">
         <form class="contact-form" action="mailto:${cfg.email}" method="post" enctype="text/plain">
           <div><label for="name">Full name</label><input id="name" name="name" type="text" required /></div>
@@ -963,7 +1240,7 @@ function build404() {
     path: '/404.html',
     bodyHtml: body
   });
-  fs.writeFileSync(path.join(DOCS, '404.html'), html);
+  fs.writeFileSync(path.join(DOCS, '404.html'), applyBasePath(html));
 }
 
 // =====================================================================
@@ -1056,6 +1333,7 @@ function main() {
   buildFaqs();
   buildInsights();
   buildComparisons();
+  buildDownloads();
   buildResourcesHub();
   buildStaticPages();
   build404();

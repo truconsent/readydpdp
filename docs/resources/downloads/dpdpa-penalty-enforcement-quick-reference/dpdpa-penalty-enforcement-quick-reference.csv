@@ -1,0 +1,7 @@
+Violation Category,Penalty Exposure,What It Typically Covers
+Failure of reasonable security safeguards resulting in a breach,Up to ₹250 crore — the Act's highest published cap,Inadequate technical/organisational security that leads to an actual personal data breach
+Failure to notify the Board or affected Data Principals of a breach,"A dedicated, substantial cap distinct from the underlying security failure",Mishandling or missing the breach notification obligation itself
+Children's data and verifiable parental consent violations,A dedicated cap reflecting heightened statutory concern,Processing children's data without proper verifiable parental consent or in breach of restrictions
+Significant Data Fiduciary obligation failures,A dedicated cap for SDF-specific non-compliance,"DPO appointment, DPIA, independent audit and algorithmic accountability failures"
+General / residual non-compliance,A lower residual cap for other violations,"Notice, consent-mechanics and general obligation failures not otherwise categorised"
+Data Principal duties violations,A modest cap distinct from Data Fiduciary penalties,Applies to Data Principals themselves — e.g. furnishing false information

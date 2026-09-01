@@ -1,0 +1,21 @@
+Category,Item
+Content Requirements,"States what personal data is being collected, itemised rather than summarised"
+Content Requirements,States the specific purpose for each item of data collected
+Content Requirements,Identifies how a Data Principal can exercise their rights and contact the organisation
+Content Requirements,"Discloses whether the data will be shared with any third party, and for what purpose"
+Language & Accessibility,"Written in plain language, not lifted from a legal template"
+Language & Accessibility,Available in English and any scheduled language relevant to the user base
+Language & Accessibility,Presented at a readable font size and contrast — not buried in dense fine print
+Language & Accessibility,Free of jargon that an ordinary user would not reasonably understand
+Specificity & Bundling,"Each distinct purpose has its own separate, itemised consent — not one blanket checkbox"
+Specificity & Bundling,Consent to this notice is not bundled with acceptance of unrelated Terms of Service
+Specificity & Bundling,No purpose is pre-selected or opted in by default
+Specificity & Bundling,Sensitive or higher-risk purposes are not folded into a lower-visibility bundled purpose
+Withdrawal Mechanics,A clear withdrawal path is described in or alongside the notice itself
+Withdrawal Mechanics,Withdrawing is at least as easy as giving consent — not a multi-step support request
+Withdrawal Mechanics,"The consequence of withdrawal (e.g. feature loss) is disclosed honestly, without discouraging it"
+Withdrawal Mechanics,Downstream systems that must stop processing on withdrawal are identified and owned
+Technical Implementation,"Consent capture is a genuine affirmative action (e.g. an unchecked checkbox), not implied by continued use"
+Technical Implementation,"A timestamped consent record is stored, including notice version and purpose"
+Technical Implementation,"The notice is shown before or at the time of collection, not after the fact"
+Technical Implementation,The implementation has been checked against this checklist after any product change to the flow

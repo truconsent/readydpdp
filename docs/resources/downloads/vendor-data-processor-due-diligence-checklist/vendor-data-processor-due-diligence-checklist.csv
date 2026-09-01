@@ -1,0 +1,21 @@
+Category,Item
+Pre-Engagement Screening,Vendor is added to the inventory with categories of personal data it will access
+Pre-Engagement Screening,Vendor is risk-tiered based on data sensitivity and scope of access
+Pre-Engagement Screening,Vendor's own security posture and any prior incident history has been reviewed
+Pre-Engagement Screening,Hosting region(s) are confirmed and checked against any applicable localisation rules
+Pre-Engagement Screening,A standard due diligence questionnaire has been completed by the vendor
+Contractual (DPA) Requirements,The agreement is instruction-bound — the vendor may only process data as directed
+Contractual (DPA) Requirements,Breach notification duties and a notification timeframe are explicitly stated
+Contractual (DPA) Requirements,Deletion or return of data on contract termination is contractually required
+Contractual (DPA) Requirements,"Sub-processor use requires disclosure and, where appropriate, prior approval"
+Contractual (DPA) Requirements,Audit rights or evidence-of-compliance rights are included for higher-risk vendors
+Security & Sub-processor Controls,Reasonable technical and organisational security safeguards are contractually specified
+Security & Sub-processor Controls,"Sub-processors are listed and individually risk-assessed, not treated as a black box"
+Security & Sub-processor Controls,Cross-border transfer by the vendor or its sub-processors is disclosed and screened
+Security & Sub-processor Controls,Access controls limiting vendor staff to only the data they need are confirmed
+Security & Sub-processor Controls,Encryption at rest and in transit is confirmed for sensitive data categories
+Ongoing Monitoring,Vendor risk tier and DPA are refreshed at least annually
+Ongoing Monitoring,"A lightweight review is triggered whenever the vendor changes region, scope or sub-processors"
+Ongoing Monitoring,"Outstanding contract remediation items are tracked to closure, not left open indefinitely"
+Ongoing Monitoring,"Vendor breach notification, if it ever occurs, is logged and reviewed against the DPA terms"
+Ongoing Monitoring,Underperforming or unresponsive vendors are escalated for contract or relationship review

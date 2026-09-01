@@ -1,0 +1,18 @@
+Category,Item
+Immediate (First Few Hours),"Suspected incident is logged with timestamp, discovery method, and initial scope"
+Immediate (First Few Hours),"Escalation chain is triggered per the pre-built RACI, not an ad hoc phone tree"
+Immediate (First Few Hours),Incident is triaged against the breach classification framework to determine notifiability
+Immediate (First Few Hours),Technical containment begins in parallel with the regulatory/communications workstream
+Short Window (Within the Internal Target Notification Period),Scope of affected data categories and approximate number of Data Principals is estimated
+Short Window (Within the Internal Target Notification Period),Draft Data Protection Board notification is prepared from the pre-built template
+Short Window (Within the Internal Target Notification Period),Legal counsel reviews the classification decision and draft notification
+Short Window (Within the Internal Target Notification Period),A decision is made and documented on whether Data Principal notification is also required
+Data Protection Board Notification,Notification is submitted using the organisation's designated point of contact
+Data Protection Board Notification,A fuller follow-up report is prepared per the Board's specified format and window
+Data Protection Board Notification,All notification submissions and timestamps are logged for the audit trail
+Data Principal Communication,Affected-user communication is accurate and avoids unnecessary panic or overclaiming
+Data Principal Communication,"Communication explains what happened, what data was involved, and what the organisation is doing"
+Data Principal Communication,"Support channels are staffed and briefed before the communication goes out, not after"
+Post-Incident,A structured post-incident review is run to identify process gaps the incident exposed
+Post-Incident,The breach classification framework and templates are updated based on lessons learned
+Post-Incident,Vendor contracts are reviewed if the breach originated with a Data Processor

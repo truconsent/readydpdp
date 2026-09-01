@@ -1,0 +1,17 @@
+Cadence,Task,Why it matters
+Continuous,Screen every new product feature or vendor for DPDPA impact before launch,Catching exposure before launch is far cheaper than remediating after
+Continuous,Log and track every Data Principal rights request against its SLA,Untracked requests are the most common source of missed obligations
+Continuous,Monitor Data Protection Board guidance and finalised Rules,The Rules are still maturing — obligations get more concrete over time
+Monthly,Review open remediation roadmap items with the accountable owner,Keeps a Gap Assessment roadmap from stalling once initial urgency fades
+Quarterly,Reconcile the Digital Personal Data Register (DPDR) against actual systems,Legacy fields and shadow IT accumulate quietly between reviews
+Quarterly,Review vendor risk tiering for any new or changed Data Processors,"New vendors are a common, easily-missed compliance blind spot"
+Quarterly,Report compliance posture and open risks to leadership,Board-level visibility is itself part of demonstrable governance
+Semi-Annually,Re-run or refresh your DPDP Readiness Level self-assessment,"Tracks actual progress against the roadmap, not just completed tasks"
+Annually,Refresh Data Processing Agreements and re-run vendor due diligence,Contract language and vendor risk both drift without a forced review
+Annually,Run a breach response tabletop exercise,An untested plan is the single most common gap we find in Level 3 organisations
+Annually,Refresh employee DPDPA training for all data-handling roles,Awareness decays and teams turn over — training needs a renewal cadence
+Annually,Review and reissue privacy notices and internal policy documents,Product and purpose changes routinely outpace notice content
+Trigger: New Product / Feature,Run a DPIA-style screen before launch,"High-risk processing needs assessment before it ships, not after"
+Trigger: New Vendor,Run due diligence and execute a DPDPA-aligned DPA before onboarding,Retrofitting a contract after data has already started flowing is much harder
+Trigger: Security Incident,Classify against your breach framework within your internal target window,"Fast, consistent triage is what makes a real notification deadline achievable"
+Trigger: New Market / M&A,Re-map cross-border data flows and localisation exposure,New geographies and acquired systems change your transfer risk profile

@@ -2547,3 +2547,91 @@ URL: https://www.readydpdp.com/comparisons/vs-software-only-tools/
 A growing market of software-only consent management platforms lets organisations self-serve a technical consent banner, cookie notice, and preference centre — often with minimal setup effort and an appealing low upfront cost.
 The gap this leaves is upstream and downstream of the software itself. Upstream: does your organisation actually have a correct, complete purpose taxonomy and data inventory feeding into the tool's configuration, or is the tool being configured based on guesswork about what data you actually collect and why? Downstream: does consent captured in the tool actually propagate to every system that subsequently processes that data, or does withdrawal recorded in the banner leave data flowing unchanged through five other systems that never check it?
 A software platform is genuinely valuable infrastructure once the underlying compliance architecture — purpose taxonomy, data register, consent enforcement logic — has been correctly designed. Buying the software first and hoping the architecture question resolves itself afterward is a common and costly ordering mistake. Our Consent Management Advisory and Central Consent Engine design work is specifically built to get that architecture right, whether or not a client ultimately layers a specific software platform, including truConsent's own, on top of it.
+
+
+---
+
+## Download: DPDP Gap Assessment Checklist
+URL: https://www.readydpdp.com/resources/downloads/dpdp-gap-assessment-checklist/
+
+A 7-area checklist covering everything a DPDP Gap Assessment should test — notice & consent, rights fulfilment, vendor DPAs, cross-border transfer and more.
+
+
+---
+
+## Download: DPDP Readiness Self-Assessment Worksheet
+URL: https://www.readydpdp.com/resources/downloads/dpdp-readiness-self-assessment-worksheet/
+
+A scored, 8-question worksheet that maps your answers to a directional DPDP Readiness Level (0–5) — the same six-level model used across the site.
+
+
+---
+
+## Download: DPDPA Glossary Quick-Reference
+URL: https://www.readydpdp.com/resources/downloads/dpdpa-glossary-quick-reference/
+
+All 68 DPDPA terms from our full glossary, condensed into a single one-line-per-term reference sheet you can print or keep open while reading the Act.
+
+
+---
+
+## Download: DPDPA Compliance Calendar
+URL: https://www.readydpdp.com/resources/downloads/dpdpa-compliance-calendar/
+
+A recurring compliance cadence — continuous, quarterly, annual and trigger-based tasks — so DPDPA compliance stays a maintained discipline, not a one-time project.
+
+
+---
+
+## Download: Consent Notice Drafting Checklist
+URL: https://www.readydpdp.com/resources/downloads/consent-notice-drafting-checklist/
+
+A checklist for drafting or auditing a consent notice against the DPDPA's free, specific, informed, unconditional and unambiguous standard.
+
+
+---
+
+## Download: Vendor / Data Processor Due-Diligence Checklist
+URL: https://www.readydpdp.com/resources/downloads/vendor-data-processor-due-diligence-checklist/
+
+A checklist for screening and contractually securing every third party that processes personal data on your behalf.
+
+
+---
+
+## Download: Board Briefing One-Pager
+URL: https://www.readydpdp.com/resources/downloads/board-briefing-one-pager/
+
+A fill-in-the-blank template for briefing your board or leadership team on DPDPA exposure, current readiness, and what you're asking them to approve.
+
+
+---
+
+## Download: DPIA Template & Checklist
+URL: https://www.readydpdp.com/resources/downloads/dpia-template-checklist/
+
+A structured checklist for running a Data Protection Impact Assessment — trigger screening, data flow mapping, necessity testing, risk scoring and mitigation sign-off.
+
+
+---
+
+## Download: Breach Notification Response Checklist
+URL: https://www.readydpdp.com/resources/downloads/breach-notification-response-checklist/
+
+A phase-by-phase checklist for the hours and days after a suspected personal data breach — classification through post-incident review.
+
+
+---
+
+## Download: Data Principal Rights Request Log Template
+URL: https://www.readydpdp.com/resources/downloads/data-principal-rights-request-log-template/
+
+A ready-to-use log template for tracking access, correction, erasure, nomination and withdrawal requests against your SLA, with one worked example row.
+
+
+---
+
+## Download: DPDPA Penalty & Enforcement Quick-Reference
+URL: https://www.readydpdp.com/resources/downloads/dpdpa-penalty-enforcement-quick-reference/
+
+A one-page summary of how the DPDPA's penalty schedule maps to categories of non-compliance, from security safeguard failures to procedural gaps.

@@ -1,0 +1,21 @@
+Category,Item
+Trigger Assessment,The processing activity involves large-scale profiling or automated decisioning
+Trigger Assessment,The activity involves sensitive processing or children's data
+Trigger Assessment,The activity represents a materially new purpose or a significant change in scale
+Trigger Assessment,A lighter-weight privacy check was considered and ruled insufficient for this activity
+Data Flow Mapping,Every system and third party involved in the activity is identified
+Data Flow Mapping,The specific personal data elements involved are listed at field level
+Data Flow Mapping,"Data flows into and out of the activity are diagrammed, not just described"
+Data Flow Mapping,Cross-border transfer exposure for this specific activity is identified
+Necessity & Proportionality,Each data element collected is justified against the stated purpose
+Necessity & Proportionality,Less data-intensive alternatives were genuinely considered
+Necessity & Proportionality,Retention period for data used in this activity is defined and justified
+Necessity & Proportionality,The activity has a lawful basis (consent or a specific Legitimate Use) clearly identified
+Risk Scoring,"Risks are scored by likelihood and severity to Data Principals, not just to the business"
+Risk Scoring,Risks specific to vulnerable groups (e.g. children) are separately considered
+Risk Scoring,Algorithmic or AI-driven components are assessed for bias and accuracy risk
+Risk Scoring,Risk scoring is documented with enough detail to be independently reviewed later
+Mitigation & Sign-off,A mitigation plan exists for every risk scored above an acceptable threshold
+Mitigation & Sign-off,"Mitigation owners and target dates are assigned, not just described"
+Mitigation & Sign-off,"A formal DPIA report is produced, suitable for board or regulator review"
+Mitigation & Sign-off,Sign-off is obtained from the accountable owner before the activity proceeds

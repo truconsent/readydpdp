@@ -1,4 +1,11 @@
 /* ReadyDPDP — brand system shared with truConsent */
+
+/* Progressive-enhancement cross-fade between same-origin page loads.
+   Supported in Chromium browsers today; silently ignored elsewhere — zero JS, zero risk. */
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --bg-primary: #000000;
   --bg-secondary: #111111;
@@ -20,13 +27,14 @@ body {
   color: var(--text-primary);
   font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--brand-green); text-decoration: none; }
 a:hover { text-decoration: underline; }
 ul { padding-left: 1.1rem; }
+p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { line-height: 1.65; }
 .skip-link {
   position: absolute; left: -999px; top: 0; background: var(--brand-green); color: #000;
   padding: 8px 16px; z-index: 200;
@@ -38,7 +46,12 @@ ul { padding-left: 1.1rem; }
   position: sticky; top: 0; z-index: 100;
   background: rgba(0,0,0,0.92);
   border-bottom: 1px solid #1e1e1e;
-  backdrop-filter: blur(6px);
+  /* No backdrop-filter here: it (like filter/transform/perspective) makes this
+     element a containing block for position:fixed descendants — including the
+     mobile .primary-nav overlay nested inside — which collapses that overlay's
+     top/bottom to the header's own tiny box instead of the viewport, so the
+     open mobile menu renders as a near-invisible sliver instead of a full-screen
+     panel. background is already near-opaque, so blur isn't worth that bug. */
 }
 .header-inner {
   max-width: var(--max-width); margin: 0 auto; padding: 14px 20px;
@@ -55,6 +68,12 @@ ul { padding-left: 1.1rem; }
   color: var(--text-secondary); font-weight: 600; font-size: 14.5px;
 }
 .primary-nav a:hover, .primary-nav a.active { color: var(--brand-green); text-decoration: none; }
+/* `.primary-nav a` (0,1,1) otherwise beats `.btn-primary` (0,1,0) and repaints the
+   nav-cta's dark button text as light var(--text-secondary) on a bright green
+   background — a real contrast failure. Restate button colors at higher specificity. */
+.primary-nav a.btn-primary { color: #06120a; }
+.primary-nav a.btn-primary:hover { color: #06120a; }
+.primary-nav a.btn-secondary { color: var(--brand-green); }
 .btn {
   display: inline-block; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 14px;
   border: 1.5px solid var(--brand-green);
@@ -194,6 +213,85 @@ th { color: var(--text-primary); background: var(--bg-secondary); }
   background: var(--card-bg); border: 2px solid var(--brand-green); color: var(--brand-green); font-weight: 800; font-size: 18px;
 }
 
+/* Readiness ladder — CSS-only stepped maturity diagram (Level 0 -> Level 5) */
+.ladder-wrap { margin: 28px 0 8px; overflow-x: auto; }
+.ladder { display: flex; align-items: flex-end; gap: 10px; min-width: 560px; }
+.ladder-step { flex: 1; text-decoration: none; display: block; }
+.ladder-step:hover { text-decoration: none; }
+.ladder-step-bar {
+  border-radius: 8px 8px 0 0; border: 1.5px solid var(--border); background: var(--card-bg);
+  display: flex; align-items: flex-start; justify-content: center; padding-top: 10px;
+  color: var(--brand-green); font-weight: 800; font-size: 15px; transition: background .15s, border-color .15s;
+}
+.ladder-step-label { margin-top: 10px; text-align: center; }
+.ladder-step-name { display: block; font-weight: 700; font-size: 13px; color: var(--text-primary); }
+.ladder-step-num { display: block; font-size: 10.5px; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
+.ladder-step:hover .ladder-step-bar { border-color: var(--accent); }
+.ladder-step.current .ladder-step-bar { background: var(--brand-green); color: #06120a; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(118,224,0,0.25); }
+.ladder-step.current .ladder-step-name { color: var(--brand-green); }
+
+/* Framework flow diagrams — inline SVG process steps */
+.flow-diagram { margin: 20px 0 8px; overflow-x: auto; }
+.flow-diagram svg { width: 100%; height: auto; display: block; min-width: 560px; }
+
+/* Phase timeline — CSS flex timeline with connecting line */
+.phase-timeline-wrap { overflow-x: auto; }
+.phase-timeline { display: flex; position: relative; margin: 32px 0 8px; padding-top: 4px; min-width: 620px; }
+.phase-timeline::before { content: ''; position: absolute; top: 24px; left: 0; right: 0; height: 2px; background: #1e1e1e; }
+.phase-timeline-item { flex: 1; text-align: center; position: relative; padding: 0 10px; }
+.phase-timeline-dot {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--card-bg); border: 2px solid var(--brand-green);
+  color: var(--brand-green); display: flex; align-items: center; justify-content: center; font-weight: 800;
+  margin: 0 auto 14px; position: relative; z-index: 1; font-size: 15px;
+}
+.phase-timeline-item h3 { font-size: 15px; color: var(--text-primary); }
+.phase-timeline-item p { font-size: 13px; margin: 0; }
+
+/* Comparison tables — real matrix, not a card grid */
+.comparison-table-wrap { overflow-x: auto; margin: 24px 0; }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.comparison-table th, .comparison-table td { border: 1px solid #222; padding: 12px 14px; text-align: left; }
+.comparison-table thead th { background: var(--bg-secondary); color: var(--text-primary); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+.comparison-table thead th.us-col { color: var(--brand-green); background: rgba(118,224,0,0.08); }
+.comparison-table td.us-col { background: rgba(118,224,0,0.05); }
+.comparison-table tbody td:first-child { color: var(--text-primary); font-weight: 600; }
+.comparison-table td.cmp-cell { text-align: center; font-size: 17px; }
+.cmp-yes { color: var(--brand-green); font-weight: 800; }
+.cmp-no { color: #666; font-weight: 800; }
+.cmp-partial { color: #d9a441; font-weight: 800; }
+.comparison-legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
+
+/* Downloadable resources */
+.downloads-section { margin-top: 40px; }
+.downloads-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+.download-card { background: var(--card-bg); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
+.download-card h3 { color: var(--text-primary); margin-bottom: 6px; }
+.download-card p { font-size: 14px; margin: 0 0 14px; }
+.download-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.download-links a { font-weight: 700; font-size: 13.5px; }
+.download-links .btn { padding: 7px 14px; font-size: 13px; }
+.resource-doc .checklist-group { margin: 24px 0; break-inside: avoid; }
+.resource-doc .checklist-group h2 { margin-bottom: 6px; }
+.resource-doc ul.checklist { list-style: none; padding: 0; margin: 12px 0; }
+.resource-doc ul.checklist li {
+  position: relative; padding: 8px 0 8px 30px; border-bottom: 1px solid #1a1a1a; color: var(--text-secondary);
+}
+.resource-doc ul.checklist li::before {
+  content: ''; position: absolute; left: 0; top: 11px; width: 16px; height: 16px; border-radius: 3px;
+  border: 1.5px solid var(--brand-green); background: transparent;
+}
+.resource-doc .worksheet-q { border: 1px solid #1e1e1e; border-radius: var(--radius); padding: 16px 18px; margin-bottom: 14px; background: var(--bg-secondary); }
+.resource-doc .worksheet-q h3 { color: var(--text-primary); font-size: 15.5px; }
+.resource-doc .worksheet-q ol { margin: 8px 0 0; padding-left: 1.2rem; }
+.resource-doc .worksheet-q li { margin-bottom: 4px; font-size: 14px; }
+.resource-doc .scoring-guide td.level-cell { color: var(--brand-green); font-weight: 700; }
+.print-actions { margin: 18px 0 0; }
+.print-actions button {
+  font: inherit; cursor: pointer; display: inline-block; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 14px;
+  border: 1.5px solid var(--brand-green); background: transparent; color: var(--brand-green);
+}
+.print-actions button:hover { background: rgba(118,224,0,0.08); }
+
 /* Forms */
 form.contact-form { display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
 form.contact-form label { font-size: 13.5px; color: var(--text-secondary); font-weight: 600; }
@@ -220,4 +318,28 @@ form.contact-form input:focus, form.contact-form textarea:focus { outline: 1.5px
   .nav-cta { margin-top: 18px; }
   .footer-inner { grid-template-columns: 1fr; }
   h1 { font-size: 30px; }
+  .downloads-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .phase-timeline { flex-direction: column; gap: 26px; min-width: 0; }
+  .phase-timeline::before { top: 0; bottom: 0; left: 21px; right: auto; width: 2px; height: auto; }
+  .phase-timeline-item { text-align: left; padding: 0 0 0 58px; }
+  .phase-timeline-dot { position: absolute; left: 0; top: 0; margin: 0; }
+}
+
+/* Print — used by the /resources/downloads/ pages via "Print / Save as PDF";
+   applied globally so any page prints cleanly, not just the download pages. */
+@media print {
+  .site-header, .site-footer, .cta-band, .skip-link, .breadcrumbs, .related,
+  .nav-toggle, .print-actions { display: none !important; }
+  body { background: #fff; color: #000; }
+  * { color: #000 !important; background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+  a { color: #000 !important; text-decoration: underline; }
+  .container { max-width: 100%; padding: 0; }
+  h1, h2, h3 { color: #000 !important; }
+  .rule { background: #000 !important; }
+  .comparison-table th, .comparison-table td, table th, table td { border-color: #000 !important; }
+  .cmp-yes, .cmp-no, .cmp-partial { color: #000 !important; }
+  .resource-doc .checklist-group, .resource-doc .worksheet-q { break-inside: avoid; }
+  .resource-doc ul.checklist li::before { border-color: #000; }
 }

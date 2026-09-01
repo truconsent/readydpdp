@@ -1,0 +1,69 @@
+Term,Definition
+Adjudicating Officer,The Data Protection Board member or officer empowered to conduct inquiries and impose penalties under the DPDPA.
+Anonymization,"The process of rendering personal data no longer identifiable to a specific individual, taking it outside the Act's scope — if done rigorously."
+Appellate Tribunal,The forum for appeals against Data Protection Board orders — the Telecom Disputes Settlement and Appellate Tribunal (TDSAT) under the DPDPA framework.
+Automated Decision-Making,"Decisions made about a Data Principal through automated processing, without meaningful human involvement — an area of growing regulatory attention."
+Automated Means,"Any equipment capable of automatically operating in response to instructions given for performing specific tasks — the technical basis of the Act's ""processing"" scope."
+Breach Notification Timeline,The window within which a Data Fiduciary must notify the Data Protection Board and affected Data Principals of a personal data breach.
+Central Consent Engine,A rule-based service architecture that enforces the consent and purpose rules defined in a Digital Personal Data Register (DPDR) and Customer Data Journey Registry (CDJR) at runtime.
+Child's Data,"Personal data of an individual under 18, subject to the DPDPA's strictest consent and processing restrictions."
+Collection Point,"The specific touchpoint — a form, screen, script, or API — where personal data is originally captured from a Data Principal."
+Consent Artefact,"The structured, machine-readable record of a specific consent event — what was consented to, when, under which notice version, and how."
+Consent Fatigue,"The degraded quality of consent decisions that results from Data Principals being asked to consent too frequently, too vaguely, or too repetitively."
+Consent Manager,"A registered entity that lets Data Principals give, manage, review and withdraw consent across multiple Data Fiduciaries through one interface."
+Consent Manager Registration,The process and criteria by which an entity becomes a registered Consent Manager with the Data Protection Board.
+Consent Withdrawal Propagation,The technical and operational process of ensuring a consent withdrawal actually stops downstream processing across every system that received the data.
+Cross-Border Data Transfer,"Transfer of personal data outside India — permitted by default under the DPDPA, subject to any government-notified restrictions."
+Data Audit,"A periodic, independent review of a Data Fiduciary's data processing activities and compliance posture, required of Significant Data Fiduciaries."
+Data Breach,"Any unauthorised processing, or accidental disclosure, acquisition, sharing, or loss of access, of personal data that compromises its confidentiality, integrity or availability."
+Data Element,"A single, discrete field of personal data — such as an email address or PAN — and the base unit of granularity in a structured data register."
+Data Fiduciary,Any person who alone or with others determines the purpose and means of processing personal data — the primary duty-bearer under the DPDPA.
+Data Fiduciary Accuracy Obligation,"The duty to ensure personal data used to make a decision affecting a Data Principal, or disclosed to another Fiduciary, is accurate and complete."
+Data Fiduciary Contact Person,"The individual or department a Data Principal can contact regarding their personal data, required of every Data Fiduciary."
+Data Fiduciary Contact Publication,The requirement that Data Fiduciaries make contact details for data protection queries readily and prominently available to Data Principals.
+Data Fiduciary Obligations,"The umbrella set of duties the DPDPA imposes on every Data Fiduciary — notice, consent, security, accuracy, retention, and rights fulfilment."
+Data Localisation,"A requirement that certain data be stored or processed within a specific country's borders, distinct from and layered on top of DPDPA transfer rules."
+Data Minimization,"Collecting and retaining only the personal data genuinely necessary for the disclosed purpose — no more, ""just in case."""
+Data Principal,The individual to whom the personal data relates — the person the DPDPA is designed to protect.
+Data Principal Rights (DPR),"The umbrella term for the full set of rights the DPDPA grants individuals over their own personal data — access, correction, erasure, grievance redressal, nomination and withdrawal."
+Data Processor,"An entity that processes personal data on behalf of a Data Fiduciary, under the Fiduciary's instructions."
+Data Protection Board,"The regulatory and adjudicatory body established under the DPDPA to enforce the Act, primarily operating digitally."
+Data Protection by Design,"The practice of embedding privacy considerations into product and system design from the earliest stage, rather than retrofitting compliance after launch."
+Data Protection Impact Assessment,"A structured evaluation of the necessity, proportionality and risk of a specific processing activity, mandatory for Significant Data Fiduciaries."
+Data Protection Officer,The individual designated to represent a Data Fiduciary's data protection function — mandatory for Significant Data Fiduciaries.
+Data Retention,The obligation to erase personal data once its purpose is fulfilled and retention is no longer necessary for a legal or business reason.
+Data Sharing Disclosure,"The obligation to disclose, as part of the right to access, the identities of Data Processors and other Data Fiduciaries a Data Principal's data has been shared with."
+Deemed Consent,"An earlier drafting-era term now generally absorbed into the DPDPA's ""Legitimate Uses"" provisions covering consent-free processing scenarios."
+Digital Personal Data,"The DPDPA's actual scope: personal data in digital form, and personal data collected offline that is later digitised."
+"Draft DPDP Rules, 2025",The subordinate legislation that operationalises the DPDPA 2023's framework provisions with specific procedural detail.
+Employment Purposes,A recognised Legitimate Use allowing processing of employee personal data necessary for employment-related purposes without separate consent for each instance.
+Exemptions,"Specific categories of processing or entities the DPDPA exempts, wholly or partly, from particular provisions of the Act."
+Grievance Redressal Officer,The individual responsible for responding to a Data Principal's grievance regarding the processing of their personal data.
+Harm,"A broadly defined concept under the DPDPA covering bodily, psychological, financial, reputational and other injury a Data Principal may suffer from data misuse."
+Independent Data Auditor,"A third-party auditor who conducts the periodic data audit required of Significant Data Fiduciaries, distinct from internal compliance review."
+Instrumentality of State,"A related concept to State Instrumentality, describing bodies substantially controlled by government that may fall within specific DPDPA exemption provisions."
+Legitimate Uses,"Specific scenarios under the DPDPA where personal data may be processed without obtaining consent, distinct from Deemed Consent."
+Ministry of Electronics and Information Technology (MeitY),"The administering ministry responsible for the DPDPA's implementation, Rules-making, and the constitution of the Data Protection Board."
+Notice,"The disclosure a Data Fiduciary must give a Data Principal before or at the time of seeking consent, in clear and plain language."
+Notice Language Requirements,"The DPDPA requires notice content be available, at the Data Principal's option, in English or a language listed in the Eighth Schedule to the Constitution."
+Penalties & Adjudication,"The DPDPA's financial penalty regime, adjudicated by the Data Protection Board, with penalties reaching up to ₹250 crore for the most severe breaches."
+Personal Data,Any data about an individual who is identifiable by or in relation to that data — the DPDPA's foundational scope term.
+Processing,"Any wholly or partly automated operation performed on digital personal data — collection, storage, use, sharing, disclosure, erasure, and more."
+Profiling,"Automated processing used to analyse or predict aspects of a Data Principal's behaviour, preferences or attributes."
+Public Interest Processing,"Processing carried out for functions like providing benefits, subsidies, licences, or services, which the Act treats through specific Legitimate Use and exemption provisions."
+Purpose,"The specific, disclosed reason personal data is collected or processed — the unit of granularity the DPDPA's notice and consent requirements are built around."
+Purpose Limitation,The principle that personal data may only be processed for the specific purpose disclosed and consented to — not repurposed silently.
+Purpose Taxonomy,"A defined, non-overlapping list of processing purposes an organisation uses consistently across notices, consent flows, and data registers."
+Reasonable Security Safeguards,The obligation to protect personal data through appropriate technical and organisational measures proportionate to risk.
+"Research, Archiving and Statistical Purposes Exemption","A specific exemption for processing carried out for research, archiving, or statistical purposes, subject to standards the Central Government may prescribe."
+Right of Nomination,A Data Principal's right to nominate another individual to exercise their rights in the event of death or incapacity.
+Right to Access,A Data Principal's right to obtain a summary of their personal data being processed and the processing activities undertaken.
+Right to Correction and Erasure,"A Data Principal's right to have inaccurate or incomplete personal data corrected, and to have data erased once no longer necessary."
+Right to Grievance Redressal,A Data Principal's right to have a readily available means of registering a grievance about processing or rights fulfilment.
+Rights Fulfilment SLA,The internally defined target turnaround time for responding to a specific type of Data Principal rights request.
+Sensitive Personal Data,"A nuanced concept: the DPDPA itself does not formally define a separate ""sensitive"" category, unlike GDPR or India's earlier SPDI Rules."
+Significant Data Fiduciary,"A Data Fiduciary designated by the Central Government for enhanced obligations, based on factors like data volume, sensitivity and risk."
+State Instrumentality,A concept relevant to how certain exemptions and obligations apply differently to government bodies and their instrumentalities under the Act.
+Verifiable Parental Consent,"The heightened consent standard required before processing a child's personal data — consent must be genuinely verifiable, not merely self-declared."
+Voluntary Undertaking,"A commitment a Data Fiduciary can voluntarily offer to the Data Protection Board to address a compliance issue, potentially resolving proceedings without a full penalty order."
+Withdrawal of Consent,"A Data Principal's right to withdraw previously given consent at any time, with a withdrawal process as easy to use as the consent process."

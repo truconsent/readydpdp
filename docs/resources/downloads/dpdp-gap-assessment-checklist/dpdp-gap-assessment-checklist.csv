@@ -1,0 +1,28 @@
+Category,Item
+Notice & Consent,"Every distinct processing purpose is disclosed separately, not bundled into one blanket notice"
+Notice & Consent,Consent is captured through clear affirmative action — no pre-ticked boxes or implied consent
+Notice & Consent,"Withdrawing consent is at least as easy as giving it, with no multi-step support-ticket detour"
+Notice & Consent,"Notice content is available in plain language, not lifted verbatim from a GDPR template"
+Notice & Consent,"Notice is given before or at the time of collection, not buried in a policy page discovered later"
+Data Principal Rights,"A documented process exists for access, correction, erasure and nomination requests"
+Data Principal Rights,Requests are logged with a defined SLA and an identity verification step
+Data Principal Rights,A named Grievance Redressal Officer or equivalent contact is published and reachable
+Data Principal Rights,"Rights-fulfilment volume has been stress-tested against a realistic spike, not just designed on paper"
+Data Fiduciary Obligations,"Reasonable security safeguards are documented and actually implemented, not just referenced"
+Data Fiduciary Obligations,"A retention schedule exists and is enforced, not left to accumulate indefinitely"
+Data Fiduciary Obligations,Personal data accuracy is maintained through a defined update process
+Data Fiduciary Obligations,"A designated owner exists for data protection compliance, even if fractional"
+Vendor & Data Processor Relationships,"Every vendor with access to personal data is inventoried, not just the largest few"
+Vendor & Data Processor Relationships,Data Processing Agreements are instruction-bound and include breach notification duties
+Vendor & Data Processor Relationships,Sub-processor use is disclosed and contractually controlled
+Vendor & Data Processor Relationships,"Vendor DPAs are reviewed at least annually, not signed once and forgotten"
+Cross-Border Data Transfer,"Every instance of personal data leaving India is mapped — cloud regions, vendors, group transfers"
+Cross-Border Data Transfer,Transfers are screened against currently notified government restrictions
+Cross-Border Data Transfer,Sector-specific localisation rules (e.g. RBI payment data rules) are layered in where applicable
+Children's Data & Parental Consent,Age-verification and verifiable parental consent mechanisms exist where applicable
+Children's Data & Parental Consent,"Tracking, behavioural monitoring and targeted advertising to children is explicitly restricted"
+Children's Data & Parental Consent,Data collected from children is limited to what is strictly necessary for the service
+Governance & Ownership,A named owner is formally accountable for data protection compliance
+Governance & Ownership,Leadership or the board receives some recurring compliance reporting
+Governance & Ownership,Privacy policy and internal policies have been substantively reviewed since the DPDPA was notified
+Governance & Ownership,A breach response plan exists and has been tested via tabletop exercise or a real incident
