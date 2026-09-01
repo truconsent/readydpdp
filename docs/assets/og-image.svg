@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect x="0" y="0" width="1200" height="630" fill="#111111" opacity="0.4"/>
+  <path d="M110 140 L230 175 V300 C230 400 170 460 110 500 C50 460 -10 400 -10 300" fill="none" stroke="#76E000" stroke-width="0" />
+  <g transform="translate(90,115)">
+    <path d="M60 0 L120 22 V96 C120 148 90 176 60 196 C30 176 0 148 0 96 V22 Z" fill="none" stroke="#76E000" stroke-width="8"/>
+    <path d="M36 100 L54 122 L92 68" fill="none" stroke="#A8F020" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="280" y="270" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF">ReadyDPDP</text>
+  <text x="280" y="330" font-family="Arial, sans-serif" font-size="34" fill="#76E000" font-weight="700" letter-spacing="2">GET DPDP READY.</text>
+  <text x="280" y="390" font-family="Arial, sans-serif" font-size="26" fill="#CCCCCC">DPDP Act 2023 Readiness &amp; Compliance Advisory</text>
+  <rect x="280" y="420" width="220" height="6" fill="#76E000"/>
+  <text x="280" y="480" font-family="Arial, sans-serif" font-size="22" fill="#CCCCCC">Powered by truConsent</text>
+</svg>

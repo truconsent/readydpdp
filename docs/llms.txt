@@ -1,0 +1,31 @@
+# ReadyDPDP
+
+> India's DPDP Act 2023 readiness and compliance advisory practice. Powered by truConsent.
+
+ReadyDPDP ("Get DPDP Ready.") is India's DPDP Act 2023 readiness and compliance advisory practice. We run DPDP Gap Assessments, provide fractional DPO-as-a-Service, design consent architecture, and build the structured DPDR (Digital Personal Data Register) and CDJR (Customer Data Journey Registry) that underpin a defensible DPDPA compliance programme.
+
+## Services
+- [All Services](https://www.readydpdp.com/services/): 15 specialist DPDP Act 2023 compliance services, from Gap Assessment to Incident Response Retainer.
+- [DPDP Gap Assessment](https://www.readydpdp.com/services/dpdp-gap-assessment/): Our foundational diagnostic engagement, with a full [deep-dive section](https://www.readydpdp.com/gap-assessment/) on methodology, scope, pricing and deliverables.
+
+## DPDP Readiness Levels
+- [Readiness Levels overview](https://www.readydpdp.com/readiness/): A six-level maturity model (Unaware → Optimised) for benchmarking DPDPA compliance posture.
+
+## Frameworks
+- [DPDR — Digital Personal Data Register](https://www.readydpdp.com/frameworks/dpdr/): The field-level personal data inventory methodology.
+- [CDJR — Customer Data Journey Registry](https://www.readydpdp.com/frameworks/cdjr/): The consent collection point mapping methodology.
+
+## Resources
+- [Glossary](https://www.readydpdp.com/glossary/): 68 plain-language DPDPA term definitions.
+- [FAQs](https://www.readydpdp.com/faq/): 103 frequently asked questions across 14 categories.
+- [Insights](https://www.readydpdp.com/insights/): 21 articles analysing DPDPA compliance topics.
+- [Comparisons](https://www.readydpdp.com/comparisons/): How ReadyDPDP compares to in-house teams, generalist consultancies, legal-only firms, and software-only tools.
+
+## Industries
+- [Industries overview](https://www.readydpdp.com/industries/): Sector-specific DPDP Act 2023 risk framing for BFSI, Healthcare, EdTech, E-commerce, SaaS, and more.
+
+## Company
+- [About](https://www.readydpdp.com/about/)
+- [Contact](https://www.readydpdp.com/contact/)
+
+Full page content for LLM ingestion is available at https://www.readydpdp.com/llms-full.txt

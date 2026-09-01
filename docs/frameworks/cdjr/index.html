@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CDJR — Customer Data Journey Registry | ReadyDPDP Methodology</title>
+<meta name="description" content="Every consent collection point along your customer and data journey, registered, mapped to purpose, and kept current." />
+<link rel="canonical" href="https://www.readydpdp.com/frameworks/cdjr/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23000000%22%2F%3E%3Cpath%20d%3D%22M32%2010%20L52%2018%20V32%20C52%2045%2043%2053%2032%2057%20C21%2053%2012%2045%2012%2032%20V18%20Z%22%20fill%3D%22none%22%20stroke%3D%22%2376E000%22%20stroke-width%3D%224%22%2F%3E%3Cpath%20d%3D%22M22%2033%20L29%2040%20L43%2024%22%20fill%3D%22none%22%20stroke%3D%22%23A8F020%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="ReadyDPDP" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="CDJR — Customer Data Journey Registry | ReadyDPDP Methodology" />
+<meta property="og:description" content="Every consent collection point along your customer and data journey, registered, mapped to purpose, and kept current." />
+<meta property="og:url" content="https://www.readydpdp.com/frameworks/cdjr/" />
+<meta property="og:site_name" content="ReadyDPDP" />
+<meta property="og:image" content="https://www.readydpdp.com/assets/og-image.svg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CDJR — Customer Data Journey Registry | ReadyDPDP Methodology" />
+<meta name="twitter:description" content="Every consent collection point along your customer and data journey, registered, mapped to purpose, and kept current." />
+<meta name="twitter:image" content="https://www.readydpdp.com/assets/og-image.svg" />
+<link rel="stylesheet" href="/assets/style.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.readydpdp.com/"},{"@type":"ListItem","position":2,"name":"Frameworks","item":"https://www.readydpdp.com/frameworks/"},{"@type":"ListItem","position":3,"name":"Customer Data Journey Registry","item":"https://www.readydpdp.com/frameworks/cdjr/"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logo.svg" alt="ReadyDPDP logo" width="28" height="28" />
+        <span class="brand-name">ReadyDPDP</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+<li><a href="/services/">Services</a></li>
+<li><a href="/readiness/">DPDP Readiness</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="/industries/">Industries</a></li>
+<li><a href="/insights/">Insights</a></li>
+<li><a href="/contact/">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="/contact/">Get a Readiness Call</a>
+      </nav>
+    </div>
+  </header>
+<main id="main">
+
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/frameworks/">Frameworks</a></li><li class="sep">/</li><li aria-current="page">Customer Data Journey Registry</li></ol></nav>
+    <span class="eyebrow">Methodology</span>
+    <hr class="rule" />
+    <h1>CDJR — Customer Data Journey Registry</h1>
+    <p class="lede">Every consent collection point along your customer and data journey, registered, mapped to purpose, and kept current.</p>
+    <p>The Customer Data Journey Registry, or CDJR, registers every point along a customer's journey — and every internal or partner-facing journey that touches personal data — where consent is actually collected. Where the DPDR answers &quot;what data do we hold and why,&quot; the CDJR answers &quot;where and how do we actually collect it, and is that collection point still live, tested, and correctly configured.&quot;</p>
+<p>We build the CDJR immediately after the DPDR, as step 4.3 of our Data Discovery &amp; Mapping methodology, following the comprehensive discovery exercise (4.1) and DPDR build (4.2), and feeding directly into Data Flow &amp; System Integration Mapping (4.4). Every collection point registered in the CDJR links back to Purpose IDs already defined in the DPDR, so the two registers stay in lockstep rather than drifting into two independent, inconsistent sources of truth.</p>
+<p>A CDJR entry is built around five core fields: a Collection Point ID and Name identifying the specific touchpoint, an Asset identifying the app or channel hosting it, one or more Purpose IDs linking it to the DPDR's purpose taxonomy, a Consent Mechanism describing exactly how consent is captured at that point, and a Status showing whether the collection point is live, in testing, or still in draft. A Last Updated field keeps the register honest as products change.</p>
+    <h2 style="margin-top:32px;">How we build it: Interview-Driven vs. Scan-Driven</h2>
+    <hr class="rule" />
+    <p>Like the DPDR, we build a client's CDJR through a blend of Interview-Driven discovery — walking product and channel owners through every entry point a customer or data principal can encounter (web, mobile app, IVR, point-of-sale, partner integrations) — and Scan-Driven discovery, tracing collection points directly from front-end code, form definitions, and API call sites. The two approaches catch different blind spots: interviews surface offline and human-mediated collection points (a call-centre script, a physical KYC form) that a code scan cannot see, while a scan catches collection points a product team may have forgotten existed, especially in older or acquired products.</p>
+    <h2 style="margin-top:32px;">Core fields</h2>
+    <hr class="rule" />
+    <div class="grid grid-3">
+      <div class="card"><h3>Collection Point ID &amp; Name</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">CP002 – KYC Document Upload</p><a class="card-link" href="/frameworks/cdjr/collection-point-id-name/">Read more →</a></div>
+<div class="card"><h3>Asset</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">Android App, Web App, IVR, Point-of-Sale</p><a class="card-link" href="/frameworks/cdjr/asset/">Read more →</a></div>
+<div class="card"><h3>Purpose Linkage</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">Links to PUR_004_KYC_Verification, PUR_009_Fraud_Screening</p><a class="card-link" href="/frameworks/cdjr/purpose-linkage/">Read more →</a></div>
+<div class="card"><h3>Consent Mechanism</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">Checkbox, Just-in-Time (JIT) modal, Inline banner</p><a class="card-link" href="/frameworks/cdjr/consent-mechanism/">Read more →</a></div>
+<div class="card"><h3>Status / Active Toggle</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">Draft → Testing → Live</p><a class="card-link" href="/frameworks/cdjr/status-lifecycle/">Read more →</a></div>
+<div class="card"><h3>Interview-Driven vs Scan-Driven Build</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">Two complementary discovery methods used together</p><a class="card-link" href="/frameworks/cdjr/interview-driven-vs-scan-driven/">Read more →</a></div>
+    </div>
+    <section class="related">
+    <h2>Related pages</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/frameworks/dpdr/"><span class="related-eyebrow">Framework</span><span class="related-title">DPDR — Digital Personal Data Register</span></a>
+<a class="related-card" href="/services/dpdp-gap-assessment/"><span class="related-eyebrow">Service</span><span class="related-title">DPDP Gap Assessment</span></a>
+<a class="related-card" href="/gap-assessment/methodology/"><span class="related-eyebrow">Deep dive</span><span class="related-title">Data Discovery methodology</span></a>
+<a class="related-card" href="/services/consent-management-advisory/"><span class="related-eyebrow">Service</span><span class="related-title">Consent Management Advisory</span></a>
+    </div>
+  </section>
+  </div>
+  <div class="cta-band"><div class="container">
+    <h2>Not sure where you stand on DPDP readiness?</h2>
+    <p>Talk to a ReadyDPDP consultant about your specific data footprint — no obligation, no sales script.</p>
+    <a class="btn btn-primary" href="/contact/">Book a Readiness Call</a>
+  </div></div>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <a class="brand" href="/">
+          <img src="/assets/logo.svg" alt="ReadyDPDP logo" width="24" height="24" />
+          <span class="brand-name">ReadyDPDP</span>
+        </a>
+        <p class="footer-tagline">Get DPDP Ready.</p>
+        <p class="footer-byline">Powered by truConsent</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/">All Services</a></li>
+          <li><a href="/services/dpdp-gap-assessment/">DPDP Gap Assessment</a></li>
+          <li><a href="/services/dpo-as-a-service/">DPO-as-a-Service</a></li>
+          <li><a href="/services/data-protection-impact-assessment/">DPIA</a></li>
+          <li><a href="/services/significant-data-fiduciary-compliance/">SDF Compliance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/resources/">Resource Hub</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq/">FAQs</a></li>
+          <li><a href="/frameworks/dpdr/">DPDR Framework</a></li>
+          <li><a href="/frameworks/cdjr/">CDJR Framework</a></li>
+          <li><a href="/insights/">Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/readiness/">Readiness Levels</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-of-service/">Terms of Service</a></li>
+          <li><a href="/cookie-policy/">Cookie Policy</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ReadyDPDP. All rights reserved. Powered by truConsent.</p>
+    </div>
+  </footer>
+<script src="/assets/nav.js"></script>
+</body>
+</html>
