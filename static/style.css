@@ -153,6 +153,56 @@ p { color: var(--text-secondary); }
   padding: 3px 9px; border-radius: 20px; margin: 0 6px 6px 0;
 }
 
+/* ---------------------------------------------------------------------
+   Non-card feature layouts. The bordered .card is one option among
+   several, not the default answer for every "3 things" section — these
+   exist so feature/value-prop/benefit content doesn't read as the same
+   repeated box everywhere on the site. */
+
+/* 1. Feature row — borderless, numbered, hairline top rule. No box. */
+.feature-row-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 8px; }
+.feature-row-item { border-top: 2px solid var(--brand-green); padding-top: 18px; }
+.feature-row-index {
+  display: block; font-size: 13px; font-weight: 800; color: var(--brand-green);
+  letter-spacing: 0.1em; margin-bottom: 12px;
+}
+.feature-row-item h3 { color: var(--text-primary); font-size: 19px; margin-bottom: 8px; }
+.feature-row-item p { margin: 0; }
+
+/* 2. Stat-led row — oversized numeral/mark, vertical hairline dividers, no box. */
+.stat-led-row { display: flex; flex-wrap: wrap; margin-top: 8px; border-top: 1px solid #1e1e1e; border-bottom: 1px solid #1e1e1e; }
+.stat-led-item { flex: 1 1 240px; padding: 30px 30px 30px 0; border-left: 1px solid #1e1e1e; padding-left: 30px; }
+.stat-led-item:first-child { border-left: none; padding-left: 0; }
+.stat-led-num {
+  display: block; font-size: 46px; font-weight: 800; color: var(--brand-green); line-height: 1;
+  margin-bottom: 14px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
+}
+.stat-led-item h3 { color: var(--text-primary); font-size: 16.5px; margin-bottom: 8px; }
+.stat-led-item p { margin: 0; font-size: 14px; }
+
+/* 3. Split feature — asymmetric visual+text, alternates sides via .reverse. */
+.split-feature { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center; margin: 40px 0; }
+.split-feature.reverse { grid-template-columns: 1.15fr 0.85fr; }
+.split-feature.reverse .split-feature-visual { order: 2; }
+.split-feature.reverse .split-feature-text { order: 1; }
+.split-feature-visual {
+  background: var(--card-bg); border: 1px solid #1e1e1e; border-radius: 16px; padding: 28px;
+  min-height: 200px; display: flex; align-items: center; justify-content: center;
+}
+.split-feature-text h3 { font-size: 23px; color: var(--text-primary); margin: 10px 0 12px; }
+.split-feature-text p { margin: 0 0 10px; }
+
+/* Chip-stack — a compact numbered field list used inside a split-feature visual slot. */
+.chip-stack { width: 100%; }
+.chip-stack-kicker { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 14px; }
+.chip-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #1e1e1e; font-size: 14px; color: var(--text-primary); font-weight: 600; }
+.chip-row:last-child { border-bottom: none; }
+.chip-num {
+  width: 26px; height: 26px; border-radius: 50%; background: #0d1a0d; border: 1.5px solid var(--brand-green);
+  color: var(--brand-green); font-size: 12px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+}
+
 /* Breadcrumbs */
 .breadcrumbs { padding: 16px 0 0; }
 .breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; padding: 0; margin: 0; gap: 6px; font-size: 13px; color: #888; }
@@ -304,6 +354,12 @@ form.contact-form input:focus, form.contact-form textarea:focus { outline: 1.5px
 @media (max-width: 900px) {
   .hero-grid, .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  .feature-row-list { grid-template-columns: 1fr; gap: 28px; }
+  .split-feature, .split-feature.reverse { grid-template-columns: 1fr; margin: 32px 0; }
+  .split-feature.reverse .split-feature-visual, .split-feature.reverse .split-feature-text { order: initial; }
+  .stat-led-row { flex-direction: column; border-top: none; border-bottom: none; }
+  .stat-led-item { border-left: none !important; padding-left: 0 !important; border-top: 1px solid #1e1e1e; }
+  .stat-led-item:first-child { border-top: none; }
 }
 @media (max-width: 720px) {
   .primary-nav {

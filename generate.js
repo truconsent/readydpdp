@@ -181,6 +181,50 @@ function comparisonTableHtml(c) {
   <p class="comparison-legend"><span><span class="cmp-yes">✓</span> Yes</span><span><span class="cmp-partial">~</span> Partial / depends on scope</span><span><span class="cmp-no">✗</span> No</span></p>`;
 }
 
+// Feature row — borderless, numbered, hairline top rule. Default replacement
+// for the bordered .card as a "3-4 things" value-prop layout.
+function featureRowList(items) {
+  return `<div class="feature-row-list">
+    ${items.map((it, i) => `<div class="feature-row-item">
+      <span class="feature-row-index">0${i + 1}</span>
+      <h3>${esc(it.title)}</h3>
+      <p>${esc(it.body)}</p>
+    </div>`).join('\n')}
+  </div>`;
+}
+
+// Stat-led row — oversized numeral/mark, vertical hairline dividers, no box.
+function statLedRow(items) {
+  return `<div class="stat-led-row">
+    ${items.map(it => `<div class="stat-led-item">
+      <span class="stat-led-num">${esc(it.num)}</span>
+      <h3>${esc(it.title)}</h3>
+      <p>${esc(it.body)}</p>
+    </div>`).join('\n')}
+  </div>`;
+}
+
+// Chip-stack — compact numbered field list, used inside a split-feature visual slot.
+function chipStackHtml(kicker, items) {
+  return `<div class="chip-stack">
+    <span class="chip-stack-kicker">${esc(kicker)}</span>
+    ${items.map((it, i) => `<div class="chip-row"><span class="chip-num">${i + 1}</span><span>${esc(it)}</span></div>`).join('\n')}
+  </div>`;
+}
+
+// Split feature — asymmetric visual+text row, alternates sides via reverse:true.
+function splitFeatureHtml({ visualHtml, kicker, title, body, linkLabel, linkHref, reverse }) {
+  return `<div class="split-feature${reverse ? ' reverse' : ''}">
+    <div class="split-feature-visual">${visualHtml}</div>
+    <div class="split-feature-text">
+      <span class="eyebrow">${esc(kicker)}</span>
+      <h3>${esc(title)}</h3>
+      <p>${esc(body)}</p>
+      ${linkHref ? `<a class="card-link" href="${linkHref}">${esc(linkLabel)} →</a>` : ''}
+    </div>
+  </div>`;
+}
+
 // =====================================================================
 // HOMEPAGE
 // =====================================================================
@@ -221,11 +265,11 @@ function buildHome() {
       <span class="eyebrow">Why organisations engage us</span>
       <hr class="rule" />
       <h2>DPDPA compliance built to be operated, not just documented</h2>
-      <div class="grid grid-3" style="margin-top:24px;">
-        <div class="card"><h3>Evidence, not assumption</h3><p>We test your consent flows, contracts and systems directly instead of taking your privacy policy's word for it.</p></div>
-        <div class="card"><h3>Sequenced, not overwhelming</h3><p>Every finding is scored for regulatory exposure and remediation effort, so you always know what to fix first.</p></div>
-        <div class="card"><h3>Built to be sustained</h3><p>From DPO-as-a-Service to incident retainers, we stay engaged through the parts of compliance that never really finish.</p></div>
-      </div>
+      ${featureRowList([
+        { title: 'Evidence, not assumption', body: 'We test your consent flows, contracts and systems directly instead of taking your privacy policy\'s word for it.' },
+        { title: 'Sequenced, not overwhelming', body: 'Every finding is scored for regulatory exposure and remediation effort, so you always know what to fix first.' },
+        { title: 'Built to be sustained', body: 'From DPO-as-a-Service to incident retainers, we stay engaged through the parts of compliance that never really finish.' }
+      ])}
     </div>
   </section>
 
@@ -263,10 +307,21 @@ function buildHome() {
       <span class="eyebrow">Methodology</span>
       <hr class="rule" />
       <h2>Two registers. One defensible compliance architecture.</h2>
-      <div class="grid grid-2" style="margin-top:24px;">
-        <div class="card"><h3>DPDR — Digital Personal Data Register</h3><p>The field-level inventory of every personal data element you hold, why you hold it, and when it must be purged.</p><a class="card-link" href="/frameworks/dpdr/">Explore the DPDR →</a></div>
-        <div class="card"><h3>CDJR — Customer Data Journey Registry</h3><p>Every consent collection point across your customer journey, mapped to purpose and kept current.</p><a class="card-link" href="/frameworks/cdjr/">Explore the CDJR →</a></div>
-      </div>
+      ${splitFeatureHtml({
+        visualHtml: chipStackHtml('DPDR core fields', dpdr.fields.map(f => f.name)),
+        kicker: 'Register 1',
+        title: 'DPDR — Digital Personal Data Register',
+        body: 'The field-level inventory of every personal data element you hold, why you hold it, and when it must be purged.',
+        linkLabel: 'Explore the DPDR', linkHref: '/frameworks/dpdr/'
+      })}
+      ${splitFeatureHtml({
+        visualHtml: chipStackHtml('CDJR core fields', cdjr.fields.filter(f => f.slug !== 'interview-driven-vs-scan-driven').map(f => f.name)),
+        kicker: 'Register 2',
+        title: 'CDJR — Customer Data Journey Registry',
+        body: 'Every consent collection point across your customer journey, mapped to purpose and kept current.',
+        linkLabel: 'Explore the CDJR', linkHref: '/frameworks/cdjr/',
+        reverse: true
+      })}
     </div>
   </section>
 
@@ -288,11 +343,11 @@ function buildHome() {
       <span class="eyebrow">Why ReadyDPDP</span>
       <hr class="rule" />
       <h2>Built specifically for the DPDP Act — not retrofitted from GDPR</h2>
-      <div class="grid grid-3" style="margin-top:24px;">
-        <div class="card-plain"><h3>DPDPA-native methodology</h3><p>Our readiness model, registers and playbooks are built around India's specific law, not adapted from someone else's.</p></div>
-        <div class="card-plain"><h3>Backed by a real platform team</h3><p>Powered by truConsent, an IITM-incubated Privacy Intelligence Suite — our advisory work is grounded in what actually gets built.</p></div>
-        <div class="card-plain"><h3>Sector-specific depth</h3><p>BFSI, healthcare, EdTech and e-commerce risk profiles we've actually mapped, not generic checklists applied everywhere.</p></div>
-      </div>
+      ${statLedRow([
+        { num: '01', title: 'DPDPA-native methodology', body: 'Our readiness model, registers and playbooks are built around India\'s specific law, not adapted from someone else\'s.' },
+        { num: '02', title: 'Backed by a real platform team', body: 'Powered by truConsent, an IITM-incubated Privacy Intelligence Suite — our advisory work is grounded in what actually gets built.' },
+        { num: '03', title: 'Sector-specific depth', body: 'BFSI, healthcare, EdTech and e-commerce risk profiles we\'ve actually mapped, not generic checklists applied everywhere.' }
+      ])}
     </div>
   </section>
 
@@ -1098,12 +1153,26 @@ function buildStaticPages() {
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }])}
       ${heroSection('About', 'About ReadyDPDP', 'We are the consulting and advisory practice built specifically around India\'s DPDP Act 2023 — assessment, architecture, and sustained governance, not a generic global privacy playbook applied locally.')}
-      <h2>Why we exist</h2><hr class="rule" />
-      <p>The DPDP Act 2023 is India's first comprehensive data protection law, and it is structurally different from GDPR and the frameworks most global privacy consultancies were built around — a permissive cross-border transfer default, a novel Consent Manager intermediary, specific Legitimate Uses provisions, and its own Significant Data Fiduciary tier. ReadyDPDP exists because organisations need advisors who think in the DPDPA's own terms, not a GDPR playbook lightly adapted.</p>
-      <h2 style="margin-top:28px;">Powered by truConsent</h2><hr class="rule" />
-      <p>ReadyDPDP is the consulting arm powered by truConsent, an IITM-incubated Privacy Intelligence Suite built specifically for DPDP Act 2023 compliance. Our advisory work is grounded in direct familiarity with the technical architecture DPDPA compliance actually runs on — structured data registers, purpose-based consent engines, and rights-fulfilment infrastructure — not abstracted legal theory alone.</p>
-      <h2 style="margin-top:28px;">How we work</h2><hr class="rule" />
-      <p>Every engagement starts with evidence, not assumption — we test your actual consent flows, contracts and systems rather than reviewing your policy documents in isolation. Every finding is scored for regulatory exposure and remediation effort, so you get a sequenced roadmap, not an undifferentiated wall of risk. And we design for sustainability: compliance is not a project with an end date, and our retainer services exist because the work of staying compliant never really finishes.</p>
+      ${splitFeatureHtml({
+        visualHtml: chipStackHtml('What makes the DPDPA different', ['Permissive cross-border transfer default', 'A novel Consent Manager intermediary', 'Specific Legitimate Uses provisions', 'Its own Significant Data Fiduciary tier']),
+        kicker: 'Why we exist',
+        title: 'Built for the DPDPA\'s own terms, not GDPR lightly adapted',
+        body: 'The DPDP Act 2023 is India\'s first comprehensive data protection law, and it is structurally different from GDPR and the frameworks most global privacy consultancies were built around. ReadyDPDP exists because organisations need advisors who think in the DPDPA\'s own terms.'
+      })}
+      ${splitFeatureHtml({
+        visualHtml: chipStackHtml('Grounded in real infrastructure', ['Structured data registers (DPDR / CDJR)', 'Purpose-based consent engines', 'Rights-fulfilment infrastructure']),
+        kicker: 'Powered by truConsent',
+        title: 'Advisory grounded in what actually gets built',
+        body: 'ReadyDPDP is the consulting arm powered by truConsent, an IITM-incubated Privacy Intelligence Suite built specifically for DPDP Act 2023 compliance — not abstracted legal theory alone.',
+        reverse: true
+      })}
+      <h2 style="margin-top:12px;">How we work</h2>
+      <hr class="rule" />
+      ${statLedRow([
+        { num: '01', title: 'Evidence, not assumption', body: 'We test your actual consent flows, contracts and systems rather than reviewing policy documents in isolation.' },
+        { num: '02', title: 'Sequenced, not overwhelming', body: 'Every finding is scored for regulatory exposure and remediation effort — a sequenced roadmap, not a wall of risk.' },
+        { num: '03', title: 'Built to be sustained', body: 'Compliance is not a project with an end date, and our retainer services exist because the work never really finishes.' }
+      ])}
       ${relatedLinksHtml('Learn more', [relatedItem('Our Services', '/services/', 'Services'), relatedItem('DPDP Readiness Levels', '/readiness/', 'Readiness'), relatedItem('Contact us', '/contact/', 'Contact')])}
     </div>${ctaBand()}`,
     jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }])]
