@@ -1,4 +1,9 @@
-/* ReadyDPDP — brand system shared with truConsent */
+/* DPDP Untangled — brand system shared with truConsent.
+   Font scoping (see /dpdp-untangled-brand.md for the full rationale):
+     Syne      -> logo/wordmark ONLY, never page headings
+     Fraunces  -> general page H1/H2 (upright); italic reserved for the
+                  tagline and pull-quote/statement moments
+     Inter     -> body copy and UI chrome (nav, buttons, cards, forms) */
 
 /* Progressive-enhancement cross-fade between same-origin page loads.
    Supported in Chromium browsers today; silently ignored elsewhere — zero JS, zero risk. */
@@ -9,14 +14,26 @@
 :root {
   --bg-primary: #000000;
   --bg-secondary: #111111;
+  --panel: #0c0d0b;
+  --panel-alt: #111210;
   --card-bg: #162316;
   --brand-green: #76E000;
   --accent: #A8F020;
+  /* Secondary content-pillar colours — see brand doc for the pillar mapping.
+     Services keeps brand green; these three are for Frameworks & Readiness,
+     Industries, and Resources & Insights respectively. */
+  --pillar-amber: #E8A33D;
+  --pillar-blue: #5B8DEF;
+  --pillar-coral: #E2694A;
   --text-primary: #FFFFFF;
   --text-secondary: #CCCCCC;
+  --text-muted: #9a9a92;
   --border: #76E000;
   --radius: 10px;
   --max-width: 1180px;
+  --font-body: 'Inter', 'Montserrat', Arial, sans-serif;
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-display: 'Syne', Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -25,7 +42,7 @@ body {
   margin: 0;
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -58,8 +75,26 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
   display: flex; align-items: center; justify-content: space-between;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand-name { font-weight: 800; font-size: 19px; color: var(--text-primary); letter-spacing: -0.02em; }
 .brand:hover { text-decoration: none; }
+.brand-icon { width: 26px; height: 26px; flex-shrink: 0; }
+
+/* Wordmark: "DPDP" in Syne 800 with a brand-green rule beneath it, followed
+   by "untangled." in Fraunces italic, muted grey. Syne appears ONLY here. */
+.wordmark { display: flex; align-items: center; gap: 8px; }
+.wordmark-dpdp-group { display: flex; flex-direction: column; align-items: flex-start; }
+.wordmark-dpdp {
+  font-family: var(--font-display); font-weight: 800; font-size: 18px;
+  text-transform: uppercase; letter-spacing: -0.01em; color: var(--text-primary); line-height: 1;
+}
+.wordmark-rule { display: block; width: 100%; height: 5px; border-radius: 3px; background: var(--brand-green); margin-top: 4px; }
+.wordmark-untangled {
+  font-family: var(--font-heading); font-style: italic; font-weight: 500; font-size: 17px;
+  color: var(--text-muted); line-height: 1;
+}
+.site-footer .wordmark-dpdp { font-size: 20px; }
+.site-footer .wordmark-untangled { font-size: 19px; }
+.site-footer .brand-icon { width: 30px; height: 30px; }
+
 .primary-nav ul {
   display: flex; gap: 22px; list-style: none; margin: 0; padding: 0;
 }
@@ -67,7 +102,12 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
 .primary-nav a {
   color: var(--text-secondary); font-weight: 600; font-size: 14.5px;
 }
-.primary-nav a:hover, .primary-nav a.active { color: var(--brand-green); text-decoration: none; }
+.primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--brand-green); text-decoration: none; }
+/* Pillar-coloured hover/active states for nav items outside the Services pillar —
+   see brand doc: amber = Frameworks & Readiness, blue = Industries, coral = Resources & Insights. */
+.primary-nav a.nav-pillar-amber:hover, .primary-nav a.nav-pillar-amber[aria-current="page"] { color: var(--pillar-amber); }
+.primary-nav a.nav-pillar-blue:hover, .primary-nav a.nav-pillar-blue[aria-current="page"] { color: var(--pillar-blue); }
+.primary-nav a.nav-pillar-coral:hover, .primary-nav a.nav-pillar-coral[aria-current="page"] { color: var(--pillar-coral); }
 /* `.primary-nav a` (0,1,1) otherwise beats `.btn-primary` (0,1,0) and repaints the
    nav-cta's dark button text as light var(--text-secondary) on a bright green
    background — a real contrast failure. Restate button colors at higher specificity. */
@@ -97,7 +137,14 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
 .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 .footer-col a { color: var(--text-secondary); font-size: 14px; }
 .footer-col a:hover { color: var(--brand-green); }
-.footer-tagline { color: var(--text-secondary); margin: 10px 0 4px; font-size: 14px; }
+.footer-tagline {
+  font-family: var(--font-heading); font-style: italic; color: var(--text-primary);
+  margin: 14px 0 2px; font-size: 16px;
+}
+.footer-tagline-secondary {
+  font-family: var(--font-heading); font-style: italic; color: var(--text-muted);
+  margin: 0 0 10px; font-size: 13.5px;
+}
 .footer-byline { color: #888; font-size: 12.5px; margin: 0; }
 .footer-bottom {
   border-top: 1px solid #1e1e1e; text-align: center; padding: 18px 20px; color: #777; font-size: 13px;
@@ -112,11 +159,16 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
   text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px;
 }
 .rule { width: 64px; height: 4px; background: var(--brand-green); border: none; margin: 14px 0 22px; border-radius: 2px; }
-h1 { font-size: 38px; line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
-h2 { font-size: 25px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+/* General page headings use Fraunces upright/regular — NOT Syne (logo-only) and
+   NOT italic (italic is reserved for tagline/pull-quote moments, see .tagline-italic). */
+h1 { font-family: var(--font-heading); font-weight: 600; font-size: 38px; line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.01em; }
+h2 { font-family: var(--font-heading); font-weight: 600; font-size: 27px; margin: 0 0 8px; letter-spacing: -0.005em; }
 h3 { font-size: 19px; font-weight: 600; margin: 0 0 8px; }
 p { color: var(--text-secondary); }
 .lede { font-size: 18px; color: var(--text-secondary); max-width: 720px; }
+/* Tagline / pull-quote / statement moments only — the one deliberate italic use of Fraunces. */
+.tagline-italic { font-style: italic; font-weight: 500; }
+.lede-secondary { font-family: var(--font-heading); font-style: italic; color: var(--text-muted); font-size: 19px; max-width: 640px; margin-top: -6px; }
 
 /* Hero */
 .hero { padding: 72px 0 48px; background: radial-gradient(ellipse at top, #0e150a 0%, #000000 60%); border-bottom: 1px solid #1a1a1a; }
@@ -152,6 +204,27 @@ p { color: var(--text-secondary); }
   color: var(--brand-green); background: rgba(118,224,0,0.08); border: 1px solid rgba(118,224,0,0.35);
   padding: 3px 9px; border-radius: 20px; margin: 0 6px 6px 0;
 }
+.tag-flagship {
+  color: #06120a; background: var(--brand-green); border-color: var(--brand-green); font-weight: 800;
+}
+
+/* Services hub — grouped by service line (Assessments / Tech Architecture & Build /
+   Training & Enablement / Advisory & Ongoing Support). All lines stay under the
+   green Services pillar — lines are a sub-grouping, not separate content pillars. */
+.service-line { margin-top: 48px; }
+.service-line:first-of-type { margin-top: 8px; }
+.service-line-intro { color: var(--text-secondary); max-width: 680px; margin: 0 0 4px; }
+.service-line-grid { margin-top: 20px; }
+
+/* Flagship service card — the CMP Codebase & Deployment offering gets a visually
+   distinct, full-width treatment inside its line's grid instead of a same-size card. */
+.card--flagship {
+  grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+  border-width: 2px; box-shadow: 0 0 0 1px rgba(118,224,0,0.15), 0 12px 34px rgba(118,224,0,0.10);
+  background: linear-gradient(135deg, var(--card-bg) 0%, #0d1a0d 100%);
+}
+.card--flagship h3 { font-size: 22px; }
+.card--flagship p { font-size: 15px; max-width: 620px; }
 
 /* ---------------------------------------------------------------------
    Non-card feature layouts. The bordered .card is one option among
@@ -353,6 +426,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { outline: 1.5px
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid, .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+  .card--flagship { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .feature-row-list { grid-template-columns: 1fr; gap: 28px; }
   .split-feature, .split-feature.reverse { grid-template-columns: 1fr; margin: 32px 0; }

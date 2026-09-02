@@ -2,6 +2,7 @@
 module.exports = [
   {
     slug: 'dpdp-gap-assessment',
+    line: 'assessments',
     name: 'DPDP Gap Assessment',
     short: 'A structured audit of your current data practices against the DPDP Act 2023, producing a prioritised roadmap instead of a compliance checklist.',
     whatItIs: `A DPDP Gap Assessment is the diagnostic starting point for almost every engagement we run. We map what personal data your organisation actually collects, processes, stores and shares — not what your privacy policy says you do — and compare that reality against the obligations set out in the DPDP Act 2023 and the draft DPDP Rules, 2025. The output is not a scorecard; it is a prioritised, resourced roadmap that your leadership team can act on immediately.`,
@@ -23,6 +24,7 @@ module.exports = [
   },
   {
     slug: 'dpo-as-a-service',
+    line: 'advisorySupport',
     name: 'DPO-as-a-Service',
     short: 'Fractional Data Protection Officer coverage for organisations that need senior DPDPA expertise without a full-time hire.',
     whatItIs: `DPO-as-a-Service gives your organisation a named, experienced Data Protection Officer on retainer — someone who chairs your privacy governance, reviews new products and vendor contracts for DPDPA exposure, owns your grievance redressal process, and represents your organisation credibly to the Data Protection Board if it ever comes to that. Most mid-market organisations don't need a full-time DPO on day one; they need a senior one, part-time, from day one.`,
@@ -44,6 +46,7 @@ module.exports = [
   },
   {
     slug: 'consent-management-advisory',
+    line: 'techArchitecture',
     name: 'Consent Management Advisory',
     short: 'Design or re-architect your consent capture, notice and withdrawal flows so they satisfy DPDPA\'s "free, specific, informed, unconditional and unambiguous" standard.',
     whatItIs: `Consent under the DPDPA has a precise bar: it must be free, specific, informed, unconditional and unambiguous, given through clear affirmative action, and as easy to withdraw as it was to give. Most legacy consent flows — a single "I agree to Terms & Privacy Policy" checkbox — fail this standard outright. We redesign your notice content, consent capture UI, purpose-level granularity and withdrawal mechanics so your consent record actually holds up as evidence.`,
@@ -65,6 +68,7 @@ module.exports = [
   },
   {
     slug: 'data-principal-rights-fulfillment-setup',
+    line: 'techArchitecture',
     name: 'Data Principal Rights (DPR) Fulfillment Setup',
     short: 'Build an operational process — not just a form — for handling access, correction, erasure and grievance requests within a defensible turnaround time.',
     whatItIs: `Data Principals have the right to access a summary of their personal data and processing activities, request correction or erasure, nominate another individual to exercise their rights in the event of death or incapacity, and lodge a grievance. Publishing an email address is not fulfilment infrastructure. We design and stand up the intake, verification, routing, and response workflow that lets you actually meet these rights within a defensible timeframe.`,
@@ -86,6 +90,7 @@ module.exports = [
   },
   {
     slug: 'breach-response-notification-readiness',
+    line: 'advisorySupport',
     name: 'Breach Response & Notification Readiness',
     short: 'Build the incident response plan, escalation chain and Data Protection Board notification playbook before you need it — not during.',
     whatItIs: `A personal data breach under the DPDPA triggers notification obligations to both the Data Protection Board and affected Data Principals. Building that process during an actual incident is how organisations miss deadlines, notify incorrectly, or under-communicate to regulators. We build your breach classification criteria, escalation chain, notification templates and DPB communication playbook in advance, and run a tabletop exercise to pressure-test it.`,
@@ -107,6 +112,7 @@ module.exports = [
   },
   {
     slug: 'vendor-data-processor-due-diligence',
+    line: 'assessments',
     name: 'Vendor / Data Processor Due Diligence',
     short: 'Assess and contractually secure every third party that processes personal data on your behalf, closing the biggest blind spot in most compliance programmes.',
     whatItIs: `Under the DPDPA, a Data Fiduciary remains accountable for personal data processed on its behalf by a Data Processor — outsourcing the activity does not outsource the liability. We inventory every vendor with data access, assess their DPDPA posture, and rework your Data Processing Agreements so obligations, breach notification duties, sub-processing restrictions and audit rights are actually enforceable.`,
@@ -128,6 +134,7 @@ module.exports = [
   },
   {
     slug: 'data-protection-impact-assessment',
+    line: 'assessments',
     name: 'Data Protection Impact Assessment (DPIA)',
     short: 'A structured, evidence-based assessment of privacy risk for high-risk processing activities, required for Significant Data Fiduciaries and good practice for everyone else.',
     whatItIs: `A DPIA is a structured evaluation of the necessity, proportionality and risk of a specific processing activity — typically triggered by new products, sensitive processing, large-scale profiling, or a change in purpose. Significant Data Fiduciaries are required to conduct DPIAs periodically; we recommend the discipline to any organisation launching a materially new use of personal data.`,
@@ -149,6 +156,7 @@ module.exports = [
   },
   {
     slug: 'significant-data-fiduciary-compliance',
+    line: 'advisorySupport',
     name: 'Significant Data Fiduciary (SDF) Compliance',
     short: 'The enhanced obligation set for organisations the Central Government designates as Significant Data Fiduciaries — DPO appointment, DPIAs, audits and algorithmic accountability.',
     whatItIs: `Significant Data Fiduciaries — designated by the Central Government based on factors like data volume, sensitivity, and risk to sovereignty or electoral democracy — carry an enhanced compliance tier: appointing a India-based Data Protection Officer reporting to the board, appointing an independent data auditor, conducting periodic DPIAs and data audits, and evaluating algorithmic systems used for processing. We build the governance structure this designation requires.`,
@@ -170,6 +178,7 @@ module.exports = [
   },
   {
     slug: 'policy-notice-drafting',
+    line: 'advisorySupport',
     name: 'Policy & Notice Drafting',
     short: 'Plain-language privacy notices, internal data protection policies and process documentation that satisfy DPDPA disclosure requirements without legal jargon.',
     whatItIs: `Section 5 of the DPDPA requires that notice be given in clear and plain language, itemising the personal data collected and the purpose of processing, before or at the time of collection. Most existing privacy policies were written for GDPR, by a law firm, for a lawyer to read. We rewrite your external notices and internal policies so they are legally sound and genuinely understandable to the people they govern.`,
@@ -191,6 +200,7 @@ module.exports = [
   },
   {
     slug: 'employee-training-awareness',
+    line: 'trainingEnablement',
     name: 'Employee Training & Awareness',
     short: 'Role-specific DPDPA training for engineering, product, marketing, HR and support teams — the people who make daily data decisions.',
     whatItIs: `Policies fail when the people making daily decisions — the engineer adding a new form field, the marketer building a campaign list, the support agent handling a rights request — don't understand what the DPDPA requires of them specifically. We build role-specific training, not one generic all-hands deck, so each function understands its own obligations and failure points.`,
@@ -212,6 +222,7 @@ module.exports = [
   },
   {
     slug: 'cross-border-data-transfer-advisory',
+    line: 'techArchitecture',
     name: 'Cross-Border Data Transfer Advisory',
     short: 'Navigate the DPDPA\'s transfer regime — permitted by default, subject to government-notified country and sector restrictions.',
     whatItIs: `Unlike GDPR's adequacy-based model, the DPDPA permits cross-border transfer of personal data by default, subject to restrictions the Central Government may notify for specific countries or contexts, and subject to any sector-specific data localisation requirements (such as RBI mandates for payments data). We assess your current data flows against notified restrictions and sector rules, and advise on contractual and architectural safeguards.`,
@@ -233,6 +244,7 @@ module.exports = [
   },
   {
     slug: 'compliance-audit-certification-support',
+    line: 'assessments',
     name: 'Compliance Audit & Certification Support',
     short: 'Prepare for internal audits, independent data audits, and customer or partner security-and-privacy due diligence with organised, defensible evidence.',
     whatItIs: `Whether it's a customer's vendor security questionnaire, an investor's diligence process, or a Significant Data Fiduciary's independent data audit obligation, being audit-ready means having organised, retrievable evidence — not scrambling to reconstruct your compliance posture under deadline pressure. We build your audit evidence repository and represent your programme credibly to external reviewers.`,
@@ -254,6 +266,7 @@ module.exports = [
   },
   {
     slug: 'incident-response-retainer',
+    line: 'advisorySupport',
     name: 'Incident Response Retainer',
     short: 'On-call DPDPA-specific incident support when a suspected breach or regulatory inquiry happens — not a generic cybersecurity retainer.',
     whatItIs: `A cybersecurity incident response retainer handles the technical containment of a breach. This retainer handles the regulatory and Data Principal-facing dimension: classifying whether the incident is a notifiable personal data breach, drafting the Data Protection Board notification, coordinating Data Principal communication, and managing the compliance timeline under pressure — alongside, not instead of, your technical responders.`,
@@ -275,6 +288,7 @@ module.exports = [
   },
   {
     slug: 'legacy-data-remediation',
+    line: 'techArchitecture',
     name: 'Legacy Data Remediation',
     short: 'Bring years of historically collected personal data — with no clear consent trail or purpose record — into a defensible, compliant state.',
     whatItIs: `Most organisations didn't start collecting personal data the day the DPDPA was enacted. Years of legacy databases, marketing lists, and archived records often have no clear consent trail, unclear or expired purpose, and no retention discipline. We assess this legacy data, classify what can be retained, what requires fresh consent or a Legitimate Uses justification, and what should be securely purged.`,
@@ -296,6 +310,7 @@ module.exports = [
   },
   {
     slug: 'board-leadership-dpdp-briefings',
+    line: 'trainingEnablement',
     name: 'Board & Leadership DPDP Briefings',
     short: 'Concise, decision-focused DPDPA briefings for boards and executive teams who need to govern the risk, not implement it.',
     whatItIs: `Boards and C-suite leaders need a fundamentally different DPDPA briefing than an engineering team does: what is our actual exposure, what decisions do we need to make, what is this going to cost, and what happens if we do nothing. We deliver focused briefings — typically 60–90 minutes — that translate the Gap Assessment findings and regulatory landscape into decisions the leadership team can actually make.`,
@@ -314,5 +329,75 @@ module.exports = [
       { q: 'Is this useful without a prior Gap Assessment?', a: 'It\'s most valuable following an assessment or audit, since there are then concrete findings to translate. Without one, we can still deliver a general DPDPA exposure and obligations briefing, but recommend an assessment as the natural next step.' },
       { q: 'How often should boards receive these briefings?', a: 'We recommend at least annually, with an additional briefing ahead of any major event — funding round, IPO, new market entry, or M&A — that changes your data risk profile.' }
     ]
+  },
+  {
+    slug: 'consent-management-platform-codebase-deployment',
+    line: 'techArchitecture',
+    flagship: true,
+    name: 'Consent Management Platform — Codebase & Deployment',
+    short: 'A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend.',
+    whatItIs: [
+      `Most consent platforms are rented. You pay per month, per Data Principal, or per API call, forever — and the moment you stop paying, your consent infrastructure stops working. This is the alternative: we build and deploy a real CMP codebase — purpose-based consent capture, a Consent Artefact ledger, withdrawal handling, and DPDR/CDJR-aligned data mapping — directly onto your own infrastructure, then hand you the keys.`,
+      `You get source access, deployment scripts, and a working system your engineering team can read, extend, and maintain without us. No seat licences. No usage metering. No vendor lock-in on the thing your compliance posture depends on.`,
+      `This is still backed by DPDPA-specific expertise, not a generic open-source template — the schema, the consent-capture flows, and the withdrawal mechanics are built to the same standard our advisory practice holds every consent architecture engagement to.`
+    ],
+    who: 'Engineering-capable organisations that would rather own their consent infrastructure outright than rent a subscription platform indefinitely — typically companies past their first consent-architecture review who are ready to stop treating consent management as someone else\'s product.',
+    features: [
+      { title: 'Purpose-based consent capture', body: 'Granular, per-purpose consent collection and versioned notice delivery — not a single bundled checkbox.' },
+      { title: 'Consent Artefact ledger', body: 'An auditable, timestamped record of every consent event — given, withdrawn, or re-obtained — structured to stand up as evidence.' },
+      { title: 'Withdrawal & rights-request handling', body: 'Withdrawal flows and Data Principal rights-request routing built in from day one, not bolted on later.' },
+      { title: 'DPDR/CDJR-aligned data model', body: 'The schema maps directly onto the Digital Personal Data Register and Customer Data Journey Registry structure, so your registers and your platform stay in sync.' },
+      { title: 'Deploy on your own infrastructure', body: 'Ships as a deployable codebase for your own cloud environment — no third-party hosting dependency, no data leaving your perimeter unless you choose to.' },
+      { title: 'API-first, integration-ready', body: 'Clean APIs for your existing product, CRM, and marketing stack to check and record consent state directly.' }
+    ],
+    included: [
+      'Full CMP source code, licensed to you outright',
+      'Guided deployment onto your chosen infrastructure (cloud or on-prem)',
+      'Environment setup, configuration, and a working production deployment',
+      'Technical handover documentation and an architecture walkthrough for your engineering team',
+      'A defined post-launch support window to fix deployment-specific issues'
+    ],
+    ownershipModel: 'You own the codebase outright after delivery — there is no recurring licence fee and no per-seat or per-event metering. You run it on your own infrastructure, and your own engineers can read, modify, and extend it going forward. We are available afterward on a time-and-materials basis for further build-out, but nothing about the platform continuing to run depends on an ongoing contract with us.',
+    process: [
+      { title: 'Architecture & scoping', body: 'We confirm which consent flows, purposes, and systems the platform needs to cover, and agree the deployment target (your cloud account, your infrastructure).' },
+      { title: 'Configuration & customisation', body: 'The codebase is configured to your purpose taxonomy, notice content, and brand — and extended where your product has needs the base build doesn\'t cover.' },
+      { title: 'Deployment', body: 'We deploy to your environment, wire up integrations with your existing product and CRM systems, and run through a full consent-flow test pass.' },
+      { title: 'Handover', body: 'Your engineering team gets a full architecture walkthrough, source access, and documentation — this is the point where you\'re no longer dependent on us to keep it running.' },
+      { title: 'Post-launch support window', body: 'A defined period of deployment-specific support after go-live, so early issues get resolved fast without turning into a standing retainer you didn\'t ask for.' }
+    ],
+    deliverables: ['Full CMP source code (yours, outright)', 'Production deployment on your infrastructure', 'Technical handover documentation and architecture walkthrough', 'Defined post-launch support window'],
+    timeline: '6–10 weeks from scoping to production deployment, depending on integration complexity — followed by a defined post-launch support window.',
+    faqs: [
+      { q: 'How is this different from buying a consent-management SaaS subscription?', a: 'A SaaS subscription is rented — you pay indefinitely, your data typically lives on their infrastructure, and you lose the platform the moment you stop paying. This is a one-time build-and-deploy engagement: you get the actual source code, deployed on your own infrastructure, and you own it outright with no recurring licence fee.' },
+      { q: 'Do we need our own engineering team to maintain it afterward?', a: 'Yes — this is built for organisations with engineering capacity who want to own and run their own consent infrastructure. If you don\'t have that capacity yet, our DPO-as-a-Service or Consent Architecture Design engagements may be a better starting point.' },
+      { q: 'Can you still support us after the post-launch window ends?', a: 'Yes, on a time-and-materials basis for further build-out or feature work — but the platform itself doesn\'t stop working or require a paid relationship with us to keep functioning. That\'s the whole point of owning it outright.' },
+      { q: 'Does this replace the need for a Gap Assessment or Consent Architecture Design?', a: 'Not necessarily — many clients run a Gap Assessment or Consent Architecture Design engagement first to define exactly what the consent model needs to capture, then commission this as the build phase. If you already know your consent architecture requirements, you can start here directly.' }
+    ]
+  }
+];
+
+// Metadata for the 4 service lines the Services hub groups these under.
+// Every line lives inside the green-branded Services content pillar — lines are
+// a sub-grouping within Services, not separate colour-coded content pillars.
+module.exports.LINES = [
+  {
+    key: 'assessments',
+    name: 'Assessments',
+    intro: 'Independent, evidence-based diagnostics that tell you exactly where you stand — and what to fix first.'
+  },
+  {
+    key: 'techArchitecture',
+    name: 'Tech Architecture & Build',
+    intro: 'Where compliance becomes software: consent infrastructure, data-discovery build-out, and — our flagship offering — a consent platform you own outright instead of renting.'
+  },
+  {
+    key: 'trainingEnablement',
+    name: 'Training & Enablement',
+    intro: 'Getting your people, and your board, fluent in what the DPDP Act actually requires of them.'
+  },
+  {
+    key: 'advisorySupport',
+    name: 'Advisory & Ongoing Support',
+    intro: 'The retained expertise that keeps a compliance programme alive after the assessment report is filed.'
   }
 ];

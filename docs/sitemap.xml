@@ -1,1462 +1,1462 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.readydpdp.com/</loc>
+    <loc>https://dpdpuntangled.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/</loc>
+    <loc>https://dpdpuntangled.com/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/dpdp-gap-assessment/</loc>
+    <loc>https://dpdpuntangled.com/services/dpdp-gap-assessment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/dpo-as-a-service/</loc>
+    <loc>https://dpdpuntangled.com/services/dpo-as-a-service/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/consent-management-advisory/</loc>
+    <loc>https://dpdpuntangled.com/services/consent-management-advisory/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/data-principal-rights-fulfillment-setup/</loc>
+    <loc>https://dpdpuntangled.com/services/data-principal-rights-fulfillment-setup/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/breach-response-notification-readiness/</loc>
+    <loc>https://dpdpuntangled.com/services/breach-response-notification-readiness/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/vendor-data-processor-due-diligence/</loc>
+    <loc>https://dpdpuntangled.com/services/vendor-data-processor-due-diligence/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/data-protection-impact-assessment/</loc>
+    <loc>https://dpdpuntangled.com/services/data-protection-impact-assessment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/significant-data-fiduciary-compliance/</loc>
+    <loc>https://dpdpuntangled.com/services/significant-data-fiduciary-compliance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/policy-notice-drafting/</loc>
+    <loc>https://dpdpuntangled.com/services/policy-notice-drafting/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/employee-training-awareness/</loc>
+    <loc>https://dpdpuntangled.com/services/employee-training-awareness/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/cross-border-data-transfer-advisory/</loc>
+    <loc>https://dpdpuntangled.com/services/cross-border-data-transfer-advisory/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/compliance-audit-certification-support/</loc>
+    <loc>https://dpdpuntangled.com/services/compliance-audit-certification-support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/incident-response-retainer/</loc>
+    <loc>https://dpdpuntangled.com/services/incident-response-retainer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/legacy-data-remediation/</loc>
+    <loc>https://dpdpuntangled.com/services/legacy-data-remediation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/services/board-leadership-dpdp-briefings/</loc>
+    <loc>https://dpdpuntangled.com/services/board-leadership-dpdp-briefings/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/</loc>
+    <loc>https://dpdpuntangled.com/services/consent-management-platform-codebase-deployment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://dpdpuntangled.com/readiness/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-0-unaware/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-0-unaware/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-1-aware/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-1-aware/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-2-developing/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-2-developing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-3-defined/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-3-defined/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-4-managed/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-4-managed/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/readiness/level-5-optimised/</loc>
+    <loc>https://dpdpuntangled.com/readiness/level-5-optimised/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/methodology/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/methodology/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/scope-checklist/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/scope-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/deliverables-report-structure/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/deliverables-report-structure/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/timeline-pricing/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/timeline-pricing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/sample-findings-categories/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/sample-findings-categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/gap-assessment/post-assessment-roadmap/</loc>
+    <loc>https://dpdpuntangled.com/gap-assessment/post-assessment-roadmap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/element-id/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/element-id/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/purpose-id/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/purpose-id/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/processing-activity-id/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/processing-activity-id/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/asset-id/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/asset-id/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/collection-point-id/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/collection-point-id/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/dpdr/consent-expiry/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/dpdr/consent-expiry/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/collection-point-id-name/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/collection-point-id-name/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/asset/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/asset/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/purpose-linkage/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/purpose-linkage/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/consent-mechanism/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/consent-mechanism/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/status-lifecycle/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/status-lifecycle/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/frameworks/cdjr/interview-driven-vs-scan-driven/</loc>
+    <loc>https://dpdpuntangled.com/frameworks/cdjr/interview-driven-vs-scan-driven/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/</loc>
+    <loc>https://dpdpuntangled.com/industries/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/bfsi/</loc>
+    <loc>https://dpdpuntangled.com/industries/bfsi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/healthcare-life-sciences/</loc>
+    <loc>https://dpdpuntangled.com/industries/healthcare-life-sciences/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/edtech/</loc>
+    <loc>https://dpdpuntangled.com/industries/edtech/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/ecommerce-d2c/</loc>
+    <loc>https://dpdpuntangled.com/industries/ecommerce-d2c/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/saas-it/</loc>
+    <loc>https://dpdpuntangled.com/industries/saas-it/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/manufacturing/</loc>
+    <loc>https://dpdpuntangled.com/industries/manufacturing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/government-psu/</loc>
+    <loc>https://dpdpuntangled.com/industries/government-psu/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/insurance/</loc>
+    <loc>https://dpdpuntangled.com/industries/insurance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/telecom/</loc>
+    <loc>https://dpdpuntangled.com/industries/telecom/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/media-entertainment/</loc>
+    <loc>https://dpdpuntangled.com/industries/media-entertainment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/hrtech-staffing/</loc>
+    <loc>https://dpdpuntangled.com/industries/hrtech-staffing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/real-estate-proptech/</loc>
+    <loc>https://dpdpuntangled.com/industries/real-estate-proptech/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/industries/logistics/</loc>
+    <loc>https://dpdpuntangled.com/industries/logistics/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/</loc>
+    <loc>https://dpdpuntangled.com/glossary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-fiduciary/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-fiduciary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-principal/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-principal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-processor/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-processor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/significant-data-fiduciary/</loc>
+    <loc>https://dpdpuntangled.com/glossary/significant-data-fiduciary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/consent-manager/</loc>
+    <loc>https://dpdpuntangled.com/glossary/consent-manager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-protection-board/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-protection-board/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-protection-officer/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-protection-officer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-fiduciary-contact-person/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-fiduciary-contact-person/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/personal-data/</loc>
+    <loc>https://dpdpuntangled.com/glossary/personal-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/sensitive-personal-data/</loc>
+    <loc>https://dpdpuntangled.com/glossary/sensitive-personal-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/processing/</loc>
+    <loc>https://dpdpuntangled.com/glossary/processing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/profiling/</loc>
+    <loc>https://dpdpuntangled.com/glossary/profiling/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/anonymization/</loc>
+    <loc>https://dpdpuntangled.com/glossary/anonymization/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-breach/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-breach/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/cross-border-data-transfer/</loc>
+    <loc>https://dpdpuntangled.com/glossary/cross-border-data-transfer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-localisation/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-localisation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/consent-artefact/</loc>
+    <loc>https://dpdpuntangled.com/glossary/consent-artefact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/legitimate-uses/</loc>
+    <loc>https://dpdpuntangled.com/glossary/legitimate-uses/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/deemed-consent/</loc>
+    <loc>https://dpdpuntangled.com/glossary/deemed-consent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/notice/</loc>
+    <loc>https://dpdpuntangled.com/glossary/notice/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/withdrawal-of-consent/</loc>
+    <loc>https://dpdpuntangled.com/glossary/withdrawal-of-consent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/purpose-limitation/</loc>
+    <loc>https://dpdpuntangled.com/glossary/purpose-limitation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-minimization/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-minimization/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-retention/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-retention/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/reasonable-security-safeguards/</loc>
+    <loc>https://dpdpuntangled.com/glossary/reasonable-security-safeguards/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/grievance-redressal-officer/</loc>
+    <loc>https://dpdpuntangled.com/glossary/grievance-redressal-officer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/right-to-access/</loc>
+    <loc>https://dpdpuntangled.com/glossary/right-to-access/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/right-to-correction-and-erasure/</loc>
+    <loc>https://dpdpuntangled.com/glossary/right-to-correction-and-erasure/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/right-to-grievance-redressal/</loc>
+    <loc>https://dpdpuntangled.com/glossary/right-to-grievance-redressal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/right-of-nomination/</loc>
+    <loc>https://dpdpuntangled.com/glossary/right-of-nomination/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-principal-rights/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-principal-rights/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/childs-data/</loc>
+    <loc>https://dpdpuntangled.com/glossary/childs-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/verifiable-parental-consent/</loc>
+    <loc>https://dpdpuntangled.com/glossary/verifiable-parental-consent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-protection-impact-assessment/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-protection-impact-assessment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-audit/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-audit/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/penalties-and-adjudication/</loc>
+    <loc>https://dpdpuntangled.com/glossary/penalties-and-adjudication/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/adjudicating-officer/</loc>
+    <loc>https://dpdpuntangled.com/glossary/adjudicating-officer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/appellate-tribunal/</loc>
+    <loc>https://dpdpuntangled.com/glossary/appellate-tribunal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/voluntary-undertaking/</loc>
+    <loc>https://dpdpuntangled.com/glossary/voluntary-undertaking/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/exemptions/</loc>
+    <loc>https://dpdpuntangled.com/glossary/exemptions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/state-instrumentality/</loc>
+    <loc>https://dpdpuntangled.com/glossary/state-instrumentality/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/digital-personal-data/</loc>
+    <loc>https://dpdpuntangled.com/glossary/digital-personal-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/automated-means/</loc>
+    <loc>https://dpdpuntangled.com/glossary/automated-means/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/central-consent-engine/</loc>
+    <loc>https://dpdpuntangled.com/glossary/central-consent-engine/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-element/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-element/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/collection-point/</loc>
+    <loc>https://dpdpuntangled.com/glossary/collection-point/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/purpose/</loc>
+    <loc>https://dpdpuntangled.com/glossary/purpose/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/automated-decision-making/</loc>
+    <loc>https://dpdpuntangled.com/glossary/automated-decision-making/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/instrumentality-of-state/</loc>
+    <loc>https://dpdpuntangled.com/glossary/instrumentality-of-state/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/public-interest-processing/</loc>
+    <loc>https://dpdpuntangled.com/glossary/public-interest-processing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/research-archiving-statistical-exemption/</loc>
+    <loc>https://dpdpuntangled.com/glossary/research-archiving-statistical-exemption/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/employment-purposes/</loc>
+    <loc>https://dpdpuntangled.com/glossary/employment-purposes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-fiduciary-obligations/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-fiduciary-obligations/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-accuracy-obligation/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-accuracy-obligation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/breach-notification-timeline/</loc>
+    <loc>https://dpdpuntangled.com/glossary/breach-notification-timeline/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/notice-language-requirements/</loc>
+    <loc>https://dpdpuntangled.com/glossary/notice-language-requirements/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/draft-dpdp-rules-2025/</loc>
+    <loc>https://dpdpuntangled.com/glossary/draft-dpdp-rules-2025/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/meity/</loc>
+    <loc>https://dpdpuntangled.com/glossary/meity/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/consent-fatigue/</loc>
+    <loc>https://dpdpuntangled.com/glossary/consent-fatigue/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/purpose-taxonomy/</loc>
+    <loc>https://dpdpuntangled.com/glossary/purpose-taxonomy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/contact-publication-requirement/</loc>
+    <loc>https://dpdpuntangled.com/glossary/contact-publication-requirement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/independent-data-auditor/</loc>
+    <loc>https://dpdpuntangled.com/glossary/independent-data-auditor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-protection-by-design/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-protection-by-design/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/rights-fulfilment-sla/</loc>
+    <loc>https://dpdpuntangled.com/glossary/rights-fulfilment-sla/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/consent-withdrawal-propagation/</loc>
+    <loc>https://dpdpuntangled.com/glossary/consent-withdrawal-propagation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/data-sharing-disclosure/</loc>
+    <loc>https://dpdpuntangled.com/glossary/data-sharing-disclosure/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/harm-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/glossary/harm-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/glossary/consent-manager-registration/</loc>
+    <loc>https://dpdpuntangled.com/glossary/consent-manager-registration/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/</loc>
+    <loc>https://dpdpuntangled.com/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/general/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/general/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/applicability/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/applicability/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/consent/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/consent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/rights/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/rights/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/obligations/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/obligations/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/sdf/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/sdf/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/crossborder/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/crossborder/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/penalties/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/penalties/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/breach/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/breach/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/governance/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/governance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/vendor/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/vendor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/sector/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/sector/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/timelines/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/timelines/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/category/engagement/</loc>
+    <loc>https://dpdpuntangled.com/faq/category/engagement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-dpdp-act-2023/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-dpdp-act-2023/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/when-did-the-dpdp-act-come-into-force/</loc>
+    <loc>https://dpdpuntangled.com/faq/when-did-the-dpdp-act-come-into-force/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-is-the-dpdpa-different-from-gdpr/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-is-the-dpdpa-different-from-gdpr/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-the-dpdpa-apply-to-data-processed-outside-india/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-the-dpdpa-apply-to-data-processed-outside-india/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/is-there-a-threshold-below-which-small-businesses-are-exempt-from-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/is-there-a-threshold-below-which-small-businesses-are-exempt-from-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-difference-between-the-dpdpa-and-the-draft-dpdp-rules/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-difference-between-the-dpdpa-and-the-draft-dpdp-rules/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/who-enforces-the-dpdp-act/</loc>
+    <loc>https://dpdpuntangled.com/faq/who-enforces-the-dpdp-act/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-the-dpdpa-apply-to-my-company-if-we-only-process-employee-data/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-the-dpdpa-apply-to-my-company-if-we-only-process-employee-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-b2b-companies-with-no-consumer-product-covered-by-the-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-b2b-companies-with-no-consumer-product-covered-by-the-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-dpdpa-apply-to-data-collected-before-the-act-was-passed/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-dpdpa-apply-to-data-collected-before-the-act-was-passed/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-the-dpdpa-apply-to-anonymised-or-aggregated-data/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-the-dpdpa-apply-to-anonymised-or-aggregated-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-non-profits-and-educational-institutions-covered/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-non-profits-and-educational-institutions-covered/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-the-dpdpa-cover-data-about-deceased-individuals/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-the-dpdpa-cover-data-about-deceased-individuals/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-about-data-of-foreign-nationals-visiting-or-working-in-india/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-about-data-of-foreign-nationals-visiting-or-working-in-india/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-makes-consent-valid-under-the-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-makes-consent-valid-under-the-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-consent-be-implied-through-continued-use-of-a-product/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-consent-be-implied-through-continued-use-of-a-product/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-consent-for-every-single-data-field-we-collect/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-consent-for-every-single-data-field-we-collect/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-we-pre-tick-a-consent-checkbox/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-we-pre-tick-a-consent-checkbox/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-specific-does-a-consent-purpose-need-to-be/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-specific-does-a-consent-purpose-need-to-be/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-a-consent-manager-and-do-we-need-to-integrate-with-one/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-a-consent-manager-and-do-we-need-to-integrate-with-one/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-happens-if-a-data-principal-withdraws-consent/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-happens-if-a-data-principal-withdraws-consent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-rights-does-a-data-principal-have-under-the-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-rights-does-a-data-principal-have-under-the-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-do-we-verify-the-identity-of-someone-making-a-rights-request/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-do-we-verify-the-identity-of-someone-making-a-rights-request/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-a-data-principal-request-we-delete-all-their-data-immediately/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-a-data-principal-request-we-delete-all-their-data-immediately/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-right-of-nomination-and-how-common-are-requests-likely-to-be/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-right-of-nomination-and-how-common-are-requests-likely-to-be/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-a-self-service-rights-portal-or-can-we-handle-requests-manually/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-a-self-service-rights-portal-or-can-we-handle-requests-manually/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-happens-if-we-miss-the-deadline-to-respond-to-a-rights-request/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-happens-if-we-miss-the-deadline-to-respond-to-a-rights-request/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-minors-have-the-same-rights-as-adult-data-principals/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-minors-have-the-same-rights-as-adult-data-principals/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-are-the-core-obligations-of-a-data-fiduciary/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-are-the-core-obligations-of-a-data-fiduciary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-a-written-data-protection-policy/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-a-written-data-protection-policy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-counts-as-reasonable-security-safeguards/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-counts-as-reasonable-security-safeguards/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-to-appoint-a-dpo-even-if-we-re-not-a-significant-data-fiduciary/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-to-appoint-a-dpo-even-if-we-re-not-a-significant-data-fiduciary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-long-can-we-retain-personal-data/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-long-can-we-retain-personal-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-we-obligated-to-conduct-an-annual-privacy-audit/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-we-obligated-to-conduct-an-annual-privacy-audit/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-obligations-apply-specifically-when-we-share-data-with-a-third-party/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-obligations-apply-specifically-when-we-share-data-with-a-third-party/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-does-an-organisation-know-if-it-will-be-designated-a-significant-data-fiduci/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-does-an-organisation-know-if-it-will-be-designated-a-significant-data-fiduci/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-additional-obligations-apply-to-a-significant-data-fiduciary/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-additional-obligations-apply-to-a-significant-data-fiduciary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-a-significant-data-fiduciary-use-a-fractional-dpo/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-a-significant-data-fiduciary-use-a-fractional-dpo/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-algorithmic-accountability-requirement-for-sdfs/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-algorithmic-accountability-requirement-for-sdfs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-sdf-designation-apply-to-the-whole-company-or-a-specific-product/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-sdf-designation-apply-to-the-whole-company-or-a-specific-product/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-often-must-an-sdf-conduct-a-dpia/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-often-must-an-sdf-conduct-a-dpia/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-happens-if-an-sdf-fails-to-meet-its-enhanced-obligations/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-happens-if-an-sdf-fails-to-meet-its-enhanced-obligations/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-we-store-customer-data-on-servers-outside-india/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-we-store-customer-data-on-servers-outside-india/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-do-we-know-if-a-country-is-restricted-for-data-transfer/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-do-we-know-if-a-country-is-restricted-for-data-transfer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-using-an-international-cloud-provider-count-as-a-cross-border-transfer/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-using-an-international-cloud-provider-count-as-a-cross-border-transfer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-a-data-transfer-agreement-for-cross-border-transfers/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-a-data-transfer-agreement-for-cross-border-transfers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-outsourcing-customer-support-to-a-bpo-in-another-country-count-as-a-transfe/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-outsourcing-customer-support-to-a-bpo-in-another-country-count-as-a-transfe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-does-the-dpdpa-interact-with-rbi-s-payment-data-localisation-rules/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-does-the-dpdpa-interact-with-rbi-s-payment-data-localisation-rules/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-should-we-do-if-a-country-we-currently-transfer-data-to-gets-newly-restrict/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-should-we-do-if-a-country-we-currently-transfer-data-to-gets-newly-restrict/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-maximum-penalty-under-the-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-maximum-penalty-under-the-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/who-decides-how-much-penalty-to-impose/</loc>
+    <loc>https://dpdpuntangled.com/faq/who-decides-how-much-penalty-to-impose/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-an-organisation-appeal-a-data-protection-board-penalty/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-an-organisation-appeal-a-data-protection-board-penalty/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/is-there-a-way-to-resolve-a-compliance-issue-without-a-formal-penalty/</loc>
+    <loc>https://dpdpuntangled.com/faq/is-there-a-way-to-resolve-a-compliance-issue-without-a-formal-penalty/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-the-data-protection-board-only-act-on-complaints-or-can-it-investigate-proa/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-the-data-protection-board-only-act-on-complaints-or-can-it-investigate-proa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-individual-employees-personally-liable-for-company-non-compliance/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-individual-employees-personally-liable-for-company-non-compliance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-does-penalty-exposure-factor-into-deciding-whether-to-invest-in-compliance-n/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-does-penalty-exposure-factor-into-deciding-whether-to-invest-in-compliance-n/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-counts-as-a-notifiable-personal-data-breach/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-counts-as-a-notifiable-personal-data-breach/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-quickly-must-a-breach-be-reported-to-the-data-protection-board/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-quickly-must-a-breach-be-reported-to-the-data-protection-board/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-to-notify-affected-individuals-as-well-as-the-regulator/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-to-notify-affected-individuals-as-well-as-the-regulator/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-every-security-incident-require-notification-even-minor-ones/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-every-security-incident-require-notification-even-minor-ones/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-should-our-breach-response-plan-actually-contain/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-should-our-breach-response-plan-actually-contain/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/if-our-vendor-causes-the-breach-who-is-responsible-for-notifying/</loc>
+    <loc>https://dpdpuntangled.com/faq/if-our-vendor-causes-the-breach-who-is-responsible-for-notifying/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-we-test-our-breach-response-plan-without-an-actual-incident/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-we-test-our-breach-response-plan-without-an-actual-incident/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/is-appointing-a-dpo-mandatory-for-every-organisation/</loc>
+    <loc>https://dpdpuntangled.com/faq/is-appointing-a-dpo-mandatory-for-every-organisation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-does-a-dpo-actually-do-day-to-day/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-does-a-dpo-actually-do-day-to-day/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-our-general-counsel-also-serve-as-dpo/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-our-general-counsel-also-serve-as-dpo/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-often-should-the-board-receive-compliance-updates/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-often-should-the-board-receive-compliance-updates/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-governance-structure-does-the-act-require-for-a-standard-non-sdf-data-fiduc/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-governance-structure-does-the-act-require-for-a-standard-non-sdf-data-fiduc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-a-privacy-committee-or-can-one-person-own-everything/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-a-privacy-committee-or-can-one-person-own-everything/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-do-we-keep-our-compliance-programme-current-as-the-rules-evolve/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-do-we-keep-our-compliance-programme-current-as-the-rules-evolve/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-all-our-vendors-need-a-data-processing-agreement/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-all-our-vendors-need-a-data-processing-agreement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-should-a-dpdpa-aligned-data-processing-agreement-include/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-should-a-dpdpa-aligned-data-processing-agreement-include/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-we-liable-if-our-vendor-has-a-data-breach/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-we-liable-if-our-vendor-has-a-data-breach/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-often-should-we-re-review-our-vendor-relationships/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-often-should-we-re-review-our-vendor-relationships/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-about-free-or-low-cost-saas-tools-our-teams-adopt-without-formal-procuremen/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-about-free-or-low-cost-saas-tools-our-teams-adopt-without-formal-procuremen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-to-audit-our-vendors-subprocessors-too/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-to-audit-our-vendors-subprocessors-too/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-we-use-offshore-vendors-at-all-under-the-dpdpa/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-we-use-offshore-vendors-at-all-under-the-dpdpa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-dpdpa-compliance-satisfy-rbi-s-data-protection-expectations-for-bfsi-entiti/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-dpdpa-compliance-satisfy-rbi-s-data-protection-expectations-for-bfsi-entiti/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-does-dpdpa-affect-kyc-data-collection-in-financial-services/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-does-dpdpa-affect-kyc-data-collection-in-financial-services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-dpdpa-require-special-handling-for-patient-health-records/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-dpdpa-require-special-handling-for-patient-health-records/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-a-hospital-rely-on-legitimate-uses-for-emergency-treatment-data-processing/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-a-hospital-rely-on-legitimate-uses-for-emergency-treatment-data-processing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-verifiable-parental-consent-and-why-does-it-matter-so-much-for-edtech/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-verifiable-parental-consent-and-why-does-it-matter-so-much-for-edtech/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-edtech-platforms-use-age-gating-alone-to-satisfy-verification-requirements/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-edtech-platforms-use-age-gating-alone-to-satisfy-verification-requirements/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/does-bundling-marketing-consent-with-checkout-count-as-valid-consent-for-e-comme/</loc>
+    <loc>https://dpdpuntangled.com/faq/does-bundling-marketing-consent-with-checkout-count-as-valid-consent-for-e-comme/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/are-third-party-ad-tech-pixels-and-sdks-a-compliance-risk-for-e-commerce-sites/</loc>
+    <loc>https://dpdpuntangled.com/faq/are-third-party-ad-tech-pixels-and-sdks-a-compliance-risk-for-e-commerce-sites/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-should-hr-teams-handle-background-verification-vendor-data-sharing/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-should-hr-teams-handle-background-verification-vendor-data-sharing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-algorithmic-resume-screening-tools-raise-dpdpa-concerns-for-hr-tech/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-algorithmic-resume-screening-tools-raise-dpdpa-concerns-for-hr-tech/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-logistics-companies-need-consent-from-recipients-not-just-senders-for-deliver/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-logistics-companies-need-consent-from-recipients-not-just-senders-for-deliver/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-should-gig-economy-logistics-platforms-handle-delivery-partner-location-trac/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-should-gig-economy-logistics-platforms-handle-delivery-partner-location-trac/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-long-does-a-typical-dpdpa-compliance-programme-take-to-implement/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-long-does-a-typical-dpdpa-compliance-programme-take-to-implement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-should-we-do-first-if-we-re-starting-from-zero/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-should-we-do-first-if-we-re-starting-from-zero/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-we-phase-our-compliance-work-over-a-longer-period-if-budget-is-constrained/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-we-phase-our-compliance-work-over-a-longer-period-if-budget-is-constrained/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-quickly-do-the-dpdp-rules-requirements-need-to-be-met-once-finalised/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-quickly-do-the-dpdp-rules-requirements-need-to-be-met-once-finalised/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/should-we-wait-for-the-rules-to-be-finalised-before-starting-compliance-work/</loc>
+    <loc>https://dpdpuntangled.com/faq/should-we-wait-for-the-rules-to-be-finalised-before-starting-compliance-work/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-long-does-the-dpdp-gap-assessment-itself-take/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-long-does-the-dpdp-gap-assessment-itself-take/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/once-we-complete-remediation-is-the-work-ever-really-done/</loc>
+    <loc>https://dpdpuntangled.com/faq/once-we-complete-remediation-is-the-work-ever-really-done/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-is-readydpdp-different-from-a-law-firm-or-generalist-consultancy/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-is-readydpdp-different-from-a-law-firm-or-generalist-consultancy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-you-replace-the-need-for-legal-counsel/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-you-replace-the-need-for-legal-counsel/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-is-the-relationship-between-readydpdp-and-truconsent/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-is-the-relationship-between-readydpdp-and-truconsent/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/do-we-need-to-buy-any-software-to-work-with-readydpdp/</loc>
+    <loc>https://dpdpuntangled.com/faq/do-we-need-to-buy-any-software-to-work-with-readydpdp/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/how-much-does-a-typical-engagement-cost/</loc>
+    <loc>https://dpdpuntangled.com/faq/how-much-does-a-typical-engagement-cost/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/can-you-work-with-our-existing-in-house-legal-and-compliance-team-rather-than-re/</loc>
+    <loc>https://dpdpuntangled.com/faq/can-you-work-with-our-existing-in-house-legal-and-compliance-team-rather-than-re/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/faq/what-industries-does-readydpdp-have-the-deepest-experience-in/</loc>
+    <loc>https://dpdpuntangled.com/faq/what-industries-does-readydpdp-have-the-deepest-experience-in/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/</loc>
+    <loc>https://dpdpuntangled.com/insights/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/dpdp-rules-2025-explained/</loc>
+    <loc>https://dpdpuntangled.com/insights/dpdp-rules-2025-explained/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/penalty-structure-breakdown/</loc>
+    <loc>https://dpdpuntangled.com/insights/penalty-structure-breakdown/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/consent-manager-ecosystem/</loc>
+    <loc>https://dpdpuntangled.com/insights/consent-manager-ecosystem/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/diy-vs-consultant/</loc>
+    <loc>https://dpdpuntangled.com/insights/diy-vs-consultant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/readiness-checklist/</loc>
+    <loc>https://dpdpuntangled.com/insights/readiness-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/bfsi-deep-dive/</loc>
+    <loc>https://dpdpuntangled.com/insights/bfsi-deep-dive/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/timeline-deadlines-explainer/</loc>
+    <loc>https://dpdpuntangled.com/insights/timeline-deadlines-explainer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/board-level-briefing-content/</loc>
+    <loc>https://dpdpuntangled.com/insights/board-level-briefing-content/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/healthcare-deep-dive/</loc>
+    <loc>https://dpdpuntangled.com/insights/healthcare-deep-dive/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/edtech-deep-dive/</loc>
+    <loc>https://dpdpuntangled.com/insights/edtech-deep-dive/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/ecommerce-deep-dive/</loc>
+    <loc>https://dpdpuntangled.com/insights/ecommerce-deep-dive/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/algorithmic-accountability-sdf/</loc>
+    <loc>https://dpdpuntangled.com/insights/algorithmic-accountability-sdf/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/legacy-data-problem/</loc>
+    <loc>https://dpdpuntangled.com/insights/legacy-data-problem/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/employee-data-blind-spot/</loc>
+    <loc>https://dpdpuntangled.com/insights/employee-data-blind-spot/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/consent-architecture-mistakes/</loc>
+    <loc>https://dpdpuntangled.com/insights/consent-architecture-mistakes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/gap-assessment-vs-audit/</loc>
+    <loc>https://dpdpuntangled.com/insights/gap-assessment-vs-audit/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/building-a-purpose-taxonomy/</loc>
+    <loc>https://dpdpuntangled.com/insights/building-a-purpose-taxonomy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/cross-border-transfer-model-explained/</loc>
+    <loc>https://dpdpuntangled.com/insights/cross-border-transfer-model-explained/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/grievance-redressal-officer-role/</loc>
+    <loc>https://dpdpuntangled.com/insights/grievance-redressal-officer-role/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/privacy-by-design-for-product-teams/</loc>
+    <loc>https://dpdpuntangled.com/insights/privacy-by-design-for-product-teams/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/insights/sector-specific-vs-generic-programmes/</loc>
+    <loc>https://dpdpuntangled.com/insights/sector-specific-vs-generic-programmes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/comparisons/</loc>
+    <loc>https://dpdpuntangled.com/comparisons/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/comparisons/vs-in-house/</loc>
+    <loc>https://dpdpuntangled.com/comparisons/vs-in-house/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/comparisons/vs-big4-generalist-consultants/</loc>
+    <loc>https://dpdpuntangled.com/comparisons/vs-big4-generalist-consultants/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/comparisons/vs-legal-only-firms/</loc>
+    <loc>https://dpdpuntangled.com/comparisons/vs-legal-only-firms/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/comparisons/vs-software-only-tools/</loc>
+    <loc>https://dpdpuntangled.com/comparisons/vs-software-only-tools/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpdp-gap-assessment-checklist/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpdp-gap-assessment-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpdp-readiness-self-assessment-worksheet/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpdp-readiness-self-assessment-worksheet/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpdpa-glossary-quick-reference/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpdpa-glossary-quick-reference/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpdpa-compliance-calendar/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpdpa-compliance-calendar/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/consent-notice-drafting-checklist/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/consent-notice-drafting-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/vendor-data-processor-due-diligence-checklist/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/vendor-data-processor-due-diligence-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/board-briefing-one-pager/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/board-briefing-one-pager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpia-template-checklist/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpia-template-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/breach-notification-response-checklist/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/breach-notification-response-checklist/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/data-principal-rights-request-log-template/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/data-principal-rights-request-log-template/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/downloads/dpdpa-penalty-enforcement-quick-reference/</loc>
+    <loc>https://dpdpuntangled.com/resources/downloads/dpdpa-penalty-enforcement-quick-reference/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/resources/</loc>
+    <loc>https://dpdpuntangled.com/resources/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/about/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.readydpdp.com/contact/</loc>
+    <loc>https://dpdpuntangled.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/careers/</loc>
+    <loc>https://dpdpuntangled.com/careers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/privacy-policy/</loc>
+    <loc>https://dpdpuntangled.com/privacy-policy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/terms-of-service/</loc>
+    <loc>https://dpdpuntangled.com/terms-of-service/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.readydpdp.com/cookie-policy/</loc>
+    <loc>https://dpdpuntangled.com/cookie-policy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ReadyDPDP shield logo">
-  <rect width="64" height="64" rx="12" fill="#000000"/>
-  <path d="M32 10 L52 18 V32 C52 45 43 53 32 57 C21 53 12 45 12 32 V18 Z" fill="none" stroke="#76E000" stroke-width="4"/>
-  <path d="M22 33 L29 40 L43 24" fill="none" stroke="#A8F020" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DPDP Untangled icon mark — a knot resolving into a line">
+  <rect width="64" height="64" rx="14" fill="#000000"/>
+  <g transform="translate(4,4)">
+    <path d="M10,38 C5,28 20,22 16,33 C12,43 27,39 24,28 C21,16 38,20 34,31 L48,24" fill="none" stroke="#76E000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>

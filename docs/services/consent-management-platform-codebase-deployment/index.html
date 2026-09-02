@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consent Management Platform — Codebase &amp; Deployment | DPDP Untangled DPDP Compliance Services</title>
+<meta name="description" content="A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend." />
+<link rel="canonical" href="https://dpdpuntangled.com/services/consent-management-platform-codebase-deployment/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23000000%22%2F%3E%3Cg%20transform%3D%22translate(4%2C4)%22%3E%3Cpath%20d%3D%22M10%2C38%20C5%2C28%2020%2C22%2016%2C33%20C12%2C43%2027%2C39%2024%2C28%20C21%2C16%2038%2C20%2034%2C31%20L48%2C24%22%20fill%3D%22none%22%20stroke%3D%22%2376E000%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" type="image/svg+xml" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="DPDP Untangled" />
+<meta name="view-transition" content="same-origin" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Consent Management Platform — Codebase &amp; Deployment | DPDP Untangled DPDP Compliance Services" />
+<meta property="og:description" content="A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend." />
+<meta property="og:url" content="https://dpdpuntangled.com/services/consent-management-platform-codebase-deployment/" />
+<meta property="og:site_name" content="DPDP Untangled" />
+<meta property="og:image" content="https://dpdpuntangled.com/assets/og-image.svg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Consent Management Platform — Codebase &amp; Deployment | DPDP Untangled DPDP Compliance Services" />
+<meta name="twitter:description" content="A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend." />
+<meta name="twitter:image" content="https://dpdpuntangled.com/assets/og-image.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" />
+<link rel="stylesheet" href="/assets/style.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dpdpuntangled.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://dpdpuntangled.com/services/"},{"@type":"ListItem","position":3,"name":"Consent Management Platform — Codebase & Deployment","item":"https://dpdpuntangled.com/services/consent-management-platform-codebase-deployment/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Consent Management Platform — Codebase & Deployment","name":"Consent Management Platform — Codebase & Deployment","description":"A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend.","provider":{"@type":"Organization","name":"DPDP Untangled","url":"https://dpdpuntangled.com"},"areaServed":"IN"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is this different from buying a consent-management SaaS subscription?","acceptedAnswer":{"@type":"Answer","text":"A SaaS subscription is rented — you pay indefinitely, your data typically lives on their infrastructure, and you lose the platform the moment you stop paying. This is a one-time build-and-deploy engagement: you get the actual source code, deployed on your own infrastructure, and you own it outright with no recurring licence fee."}},{"@type":"Question","name":"Do we need our own engineering team to maintain it afterward?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is built for organisations with engineering capacity who want to own and run their own consent infrastructure. If you don't have that capacity yet, our DPO-as-a-Service or Consent Architecture Design engagements may be a better starting point."}},{"@type":"Question","name":"Can you still support us after the post-launch window ends?","acceptedAnswer":{"@type":"Answer","text":"Yes, on a time-and-materials basis for further build-out or feature work — but the platform itself doesn't stop working or require a paid relationship with us to keep functioning. That's the whole point of owning it outright."}},{"@type":"Question","name":"Does this replace the need for a Gap Assessment or Consent Architecture Design?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily — many clients run a Gap Assessment or Consent Architecture Design engagement first to define exactly what the consent model needs to capture, then commission this as the build phase. If you already know your consent architecture requirements, you can start here directly."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Consent Management Platform — Codebase & Deployment","description":"A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend.","brand":{"@type":"Brand","name":"DPDP Untangled"}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="DPDP Untangled — home">
+      <svg class="brand-icon" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10,38 C5,28 20,22 16,33 C12,43 27,39 24,28 C21,16 38,20 34,31 L48,24" fill="none" stroke="#76E000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="wordmark">
+      <span class="wordmark-dpdp-group">
+        <span class="wordmark-dpdp">DPDP</span>
+        <span class="wordmark-rule" aria-hidden="true"></span>
+      </span>
+      <span class="wordmark-untangled">untangled.</span>
+    </span>
+    </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-pillar-green" href="/">Home</a></li>
+<li><a class="nav-pillar-green" href="/services/">Services</a></li>
+<li><a class="nav-pillar-amber" href="/readiness/">DPDP Readiness</a></li>
+<li><a class="nav-pillar-coral" href="/resources/">Resources</a></li>
+<li><a class="nav-pillar-blue" href="/industries/">Industries</a></li>
+<li><a class="nav-pillar-coral" href="/insights/">Insights</a></li>
+<li><a class="nav-pillar-green" href="/contact/">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="/contact/">Book a Free Consulting Call</a>
+      </nav>
+    </div>
+  </header>
+<main id="main">
+
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li class="sep">/</li><li><a href="/services/">Services</a></li><li class="sep">/</li><li aria-current="page">Consent Management Platform — Codebase &amp; Deployment</li></ol></nav>
+        <span class="eyebrow">Flagship — Tech Architecture &amp; Build</span>
+        <hr class="rule" />
+        <h1>Consent Management Platform — Codebase &amp; Deployment</h1>
+        <p class="lede">A working consent-management platform, deployed on your own infrastructure — source code included, no recurring licence fee, yours to run and extend.</p>
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap:32px; margin-top:24px;">
+          <div>
+            <h2>What it is</h2>
+            <hr class="rule" />
+            <p>Most consent platforms are rented. You pay per month, per Data Principal, or per API call, forever — and the moment you stop paying, your consent infrastructure stops working. This is the alternative: we build and deploy a real CMP codebase — purpose-based consent capture, a Consent Artefact ledger, withdrawal handling, and DPDR/CDJR-aligned data mapping — directly onto your own infrastructure, then hand you the keys.</p>
+<p>You get source access, deployment scripts, and a working system your engineering team can read, extend, and maintain without us. No seat licences. No usage metering. No vendor lock-in on the thing your compliance posture depends on.</p>
+<p>This is still backed by DPDPA-specific expertise, not a generic open-source template — the schema, the consent-capture flows, and the withdrawal mechanics are built to the same standard our advisory practice holds every consent architecture engagement to.</p>
+            <h2 style="margin-top:32px;">What's in the codebase</h2>
+            <hr class="rule" />
+            <div class="feature-row-list">
+    <div class="feature-row-item">
+      <span class="feature-row-index">01</span>
+      <h3>Purpose-based consent capture</h3>
+      <p>Granular, per-purpose consent collection and versioned notice delivery — not a single bundled checkbox.</p>
+    </div>
+<div class="feature-row-item">
+      <span class="feature-row-index">02</span>
+      <h3>Consent Artefact ledger</h3>
+      <p>An auditable, timestamped record of every consent event — given, withdrawn, or re-obtained — structured to stand up as evidence.</p>
+    </div>
+<div class="feature-row-item">
+      <span class="feature-row-index">03</span>
+      <h3>Withdrawal &amp; rights-request handling</h3>
+      <p>Withdrawal flows and Data Principal rights-request routing built in from day one, not bolted on later.</p>
+    </div>
+<div class="feature-row-item">
+      <span class="feature-row-index">04</span>
+      <h3>DPDR/CDJR-aligned data model</h3>
+      <p>The schema maps directly onto the Digital Personal Data Register and Customer Data Journey Registry structure, so your registers and your platform stay in sync.</p>
+    </div>
+<div class="feature-row-item">
+      <span class="feature-row-index">05</span>
+      <h3>Deploy on your own infrastructure</h3>
+      <p>Ships as a deployable codebase for your own cloud environment — no third-party hosting dependency, no data leaving your perimeter unless you choose to.</p>
+    </div>
+<div class="feature-row-item">
+      <span class="feature-row-index">06</span>
+      <h3>API-first, integration-ready</h3>
+      <p>Clean APIs for your existing product, CRM, and marketing stack to check and record consent state directly.</p>
+    </div>
+  </div>
+            <h2 style="margin-top:40px;">Who this is for</h2>
+            <hr class="rule" />
+            <p>Engineering-capable organisations that would rather own their consent infrastructure outright than rent a subscription platform indefinitely — typically companies past their first consent-architecture review who are ready to stop treating consent management as someone else's product.</p>
+            <h2 style="margin-top:32px;">How it works</h2>
+            <hr class="rule" />
+            <ol class="steps">
+              <li><h3>Architecture &amp; scoping</h3><p>We confirm which consent flows, purposes, and systems the platform needs to cover, and agree the deployment target (your cloud account, your infrastructure).</p></li>
+<li><h3>Configuration &amp; customisation</h3><p>The codebase is configured to your purpose taxonomy, notice content, and brand — and extended where your product has needs the base build doesn't cover.</p></li>
+<li><h3>Deployment</h3><p>We deploy to your environment, wire up integrations with your existing product and CRM systems, and run through a full consent-flow test pass.</p></li>
+<li><h3>Handover</h3><p>Your engineering team gets a full architecture walkthrough, source access, and documentation — this is the point where you're no longer dependent on us to keep it running.</p></li>
+<li><h3>Post-launch support window</h3><p>A defined period of deployment-specific support after go-live, so early issues get resolved fast without turning into a standing retainer you didn't ask for.</p></li>
+            </ol>
+            <h2 style="margin-top:32px;">Frequently asked questions</h2>
+            <hr class="rule" />
+            <div class="faq-item"><h3>How is this different from buying a consent-management SaaS subscription?</h3><p>A SaaS subscription is rented — you pay indefinitely, your data typically lives on their infrastructure, and you lose the platform the moment you stop paying. This is a one-time build-and-deploy engagement: you get the actual source code, deployed on your own infrastructure, and you own it outright with no recurring licence fee.</p></div>
+<div class="faq-item"><h3>Do we need our own engineering team to maintain it afterward?</h3><p>Yes — this is built for organisations with engineering capacity who want to own and run their own consent infrastructure. If you don't have that capacity yet, our DPO-as-a-Service or Consent Architecture Design engagements may be a better starting point.</p></div>
+<div class="faq-item"><h3>Can you still support us after the post-launch window ends?</h3><p>Yes, on a time-and-materials basis for further build-out or feature work — but the platform itself doesn't stop working or require a paid relationship with us to keep functioning. That's the whole point of owning it outright.</p></div>
+<div class="faq-item"><h3>Does this replace the need for a Gap Assessment or Consent Architecture Design?</h3><p>Not necessarily — many clients run a Gap Assessment or Consent Architecture Design engagement first to define exactly what the consent model needs to capture, then commission this as the build phase. If you already know your consent architecture requirements, you can start here directly.</p></div>
+          </div>
+          <div>
+            <div class="card-plain">
+              <h3>What's included</h3>
+              <ul><li>Full CMP source code, licensed to you outright</li><li>Guided deployment onto your chosen infrastructure (cloud or on-prem)</li><li>Environment setup, configuration, and a working production deployment</li><li>Technical handover documentation and an architecture walkthrough for your engineering team</li><li>A defined post-launch support window to fix deployment-specific issues</li></ul>
+            </div>
+            <div class="card-plain" style="margin-top:16px;">
+              <h3>Ownership &amp; deployment</h3>
+              <p>You own the codebase outright after delivery — there is no recurring licence fee and no per-seat or per-event metering. You run it on your own infrastructure, and your own engineers can read, modify, and extend it going forward. We are available afterward on a time-and-materials basis for further build-out, but nothing about the platform continuing to run depends on an ongoing contract with us.</p>
+            </div>
+            <div class="card-plain" style="margin-top:16px;">
+              <h3>Timeline</h3>
+              <p>6–10 weeks from scoping to production deployment, depending on integration complexity — followed by a defined post-launch support window.</p>
+            </div>
+            <a class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;" href="/contact/">Talk to Us About Owning It</a>
+          </div>
+        </div>
+        <section class="related">
+    <h2>Related services</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/services/consent-management-advisory/"><span class="related-eyebrow">Tech Architecture &amp; Build</span><span class="related-title">Consent Architecture Design</span></a>
+<a class="related-card" href="/services/cross-border-data-transfer-advisory/"><span class="related-eyebrow">Tech Architecture &amp; Build</span><span class="related-title">Cross-Border Data Transfer Architecture</span></a>
+<a class="related-card" href="/services/dpdp-gap-assessment/"><span class="related-eyebrow">Assessments</span><span class="related-title">DPDP Gap Assessment</span></a>
+<a class="related-card" href="/services/"><span class="related-eyebrow">Services</span><span class="related-title">All Services</span></a>
+    </div>
+  </section>
+      </div>
+      <div class="cta-band"><div class="container">
+    <h2>Ready to stop renting your consent platform?</h2>
+    <p>Talk to a DPDP Untangled consultant about your specific data footprint — no obligation, no sales script.</p>
+    <a class="btn btn-primary" href="/contact/">Talk to Us About Owning It</a>
+  </div></div>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <a class="brand" href="/" aria-label="DPDP Untangled — home">
+      <svg class="brand-icon" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10,38 C5,28 20,22 16,33 C12,43 27,39 24,28 C21,16 38,20 34,31 L48,24" fill="none" stroke="#76E000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="wordmark">
+      <span class="wordmark-dpdp-group">
+        <span class="wordmark-dpdp">DPDP</span>
+        <span class="wordmark-rule" aria-hidden="true"></span>
+      </span>
+      <span class="wordmark-untangled">untangled.</span>
+    </span>
+    </a>
+        <p class="footer-tagline">DPDP, untangled.</p>
+        <p class="footer-tagline-secondary">Compliance you can operate, not just file away.</p>
+        <p class="footer-byline">Powered by truConsent</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/">All Services</a></li>
+          <li><a href="/services/consent-management-platform-codebase-deployment/">Consent Platform — Own It</a></li>
+          <li><a href="/services/dpdp-gap-assessment/">DPDP Gap Assessment</a></li>
+          <li><a href="/services/dpo-as-a-service/">DPO-as-a-Service</a></li>
+          <li><a href="/services/data-protection-impact-assessment/">DPIA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/resources/">Resource Hub</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq/">FAQs</a></li>
+          <li><a href="/frameworks/dpdr/">DPDR Framework</a></li>
+          <li><a href="/frameworks/cdjr/">CDJR Framework</a></li>
+          <li><a href="/insights/">Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/readiness/">Readiness Levels</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-of-service/">Terms of Service</a></li>
+          <li><a href="/cookie-policy/">Cookie Policy</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DPDP Untangled. All rights reserved. Powered by truConsent.</p>
+    </div>
+  </footer>
+<script src="/assets/nav.js"></script>
+</body>
+</html>

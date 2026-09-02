@@ -82,7 +82,7 @@ function heroSection(eyebrow, h1, lede) {
 function ctaBand(text = 'Not sure where you stand on DPDP readiness?', buttonText = 'Book a Free Consulting Call', href = '/contact/') {
   return `<div class="cta-band"><div class="container">
     <h2>${esc(text)}</h2>
-    <p>Talk to a ReadyDPDP consultant about your specific data footprint — no obligation, no sales script.</p>
+    <p>Talk to a ${esc(cfg.brand)} consultant about your specific data footprint — no obligation, no sales script.</p>
     <a class="btn btn-primary" href="${href}">${esc(buttonText)}</a>
   </div></div>`;
 }
@@ -172,7 +172,7 @@ function cmpSymbol(v) {
 function comparisonTableHtml(c) {
   return `<div class="comparison-table-wrap">
     <table class="comparison-table">
-      <thead><tr><th>Criteria</th><th class="us-col">ReadyDPDP</th><th>${esc(c.altLabel)}</th></tr></thead>
+      <thead><tr><th>Criteria</th><th class="us-col">${esc(cfg.brand)}</th><th>${esc(c.altLabel)}</th></tr></thead>
       <tbody>
         ${c.matrix.map(m => `<tr><td>${esc(m.criterion)}</td><td class="cmp-cell us-col">${cmpSymbol(m.us)}</td><td class="cmp-cell">${cmpSymbol(m.them)}</td></tr>`).join('\n')}
       </tbody>
@@ -233,16 +233,18 @@ function buildHome() {
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">DPDP Act 2023 Readiness &amp; Compliance Advisory</span>
+        <span class="eyebrow">DPDP Act 2023 Compliance Advisory &amp; Consent Technology</span>
         <hr class="rule" />
-        <h1>Get DPDP Ready.</h1>
-        <p class="lede">ReadyDPDP is the consulting practice that turns the DPDP Act 2023 from a legal document into an operating system for how your organisation actually handles personal data — assessed, architected, and sustained, not just documented.</p>
+        <h1 class="tagline-italic">${esc(cfg.tagline)}</h1>
+        <p class="lede">${esc(cfg.brand)} turns the DPDP Act 2023 from a legal document into an operating system for how your organisation actually handles personal data — assessed, architected, enabled, and sustained. Own the technology outright, or bring in the advisory bench — either way, compliance stops being a filing exercise.</p>
+        <p class="lede-secondary">${esc(cfg.secondaryTagline)}</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/readiness/">Find Your DPDP Readiness Level</a>
+          <a class="btn btn-primary" href="/services/consent-management-platform-codebase-deployment/">Own a Consent Platform, Not a Subscription</a>
+          <a class="btn btn-secondary" href="/readiness/">Find Your DPDP Readiness Level</a>
           <a class="btn btn-secondary" href="/services/dpdp-gap-assessment/">Start with a Gap Assessment</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><b>15</b><span>Specialist advisory services</span></div>
+          <div class="stat"><b>${services.length}</b><span>Specialist services across 4 service lines</span></div>
           <div class="stat"><b>6</b><span>DPDP Readiness Levels mapped</span></div>
           <div class="stat"><b>13</b><span>Industry risk profiles covered</span></div>
         </div>
@@ -257,6 +259,18 @@ function buildHome() {
         </ol>
         <a class="btn btn-primary" href="/contact/" style="margin-top:10px;display:inline-block;">Book a Free Consulting Call</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      ${splitFeatureHtml({
+        visualHtml: chipStackHtml('What you get', ['Full CMP source code, licensed to you', 'Deployed on your own infrastructure', 'No recurring licence fee', 'Extend and maintain it yourselves']),
+        kicker: 'Flagship — Tech Architecture & Build',
+        title: 'Own your consent infrastructure. Outright.',
+        body: 'Most consent platforms are rented, forever. We build and deploy a real CMP codebase onto your own infrastructure, then hand you the keys — source access, no seat licences, no vendor lock-in on the thing your compliance posture depends on.',
+        linkLabel: 'Explore the Consent Management Platform', linkHref: '/services/consent-management-platform-codebase-deployment/'
+      })}
     </div>
   </section>
 
@@ -294,11 +308,11 @@ function buildHome() {
     <div class="container">
       <span class="eyebrow">Services</span>
       <hr class="rule" />
-      <h2>Fifteen ways we help you close the gap</h2>
+      <h2>${services.length} ways we help you close the gap</h2>
       <div class="grid grid-3" style="margin-top:24px;">
-        ${services.slice(0, 6).map(s => `<div class="card"><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`).join('\n')}
+        ${[services.find(s => s.flagship), ...services.filter(s => !s.flagship)].slice(0, 6).map(s => `<div class="card${s.flagship ? ' card--flagship' : ''}">${s.flagship ? '<span class="tag tag-flagship">Flagship</span>' : ''}<h3>${esc(s.name)}</h3><p>${esc(s.short)}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`).join('\n')}
       </div>
-      <p style="margin-top:20px;"><a class="btn btn-secondary" href="/services/">View all 15 services →</a></p>
+      <p style="margin-top:20px;"><a class="btn btn-secondary" href="/services/">View all ${services.length} services →</a></p>
     </div>
   </section>
 
@@ -340,7 +354,7 @@ function buildHome() {
 
   <section class="section">
     <div class="container">
-      <span class="eyebrow">Why ReadyDPDP</span>
+      <span class="eyebrow">Why ${esc(cfg.brand)}</span>
       <hr class="rule" />
       <h2>Built specifically for the DPDP Act — not retrofitted from GDPR</h2>
       ${statLedRow([
@@ -373,84 +387,70 @@ function buildHome() {
   }];
 
   const html = layout({
-    title: `${cfg.brand} — Get DPDP Ready. | DPDP Act 2023 Compliance Advisory`,
-    description: `ReadyDPDP is India's DPDP Act 2023 readiness and compliance advisory practice — gap assessments, DPO-as-a-Service, consent architecture, and sector-specific DPDPA compliance programmes. Powered by truConsent.`,
+    title: `${cfg.brand} — DPDP, untangled. | DPDP Act 2023 Compliance Advisory`,
+    description: `${cfg.brand} is India's DPDP Act 2023 compliance advisory practice and consent-technology partner — gap assessments, DPO-as-a-Service, consent architecture, and an outright-ownable consent management platform. Powered by truConsent.`,
     path: '/',
     bodyHtml: body,
     jsonLd
   });
   writePage('/', html, { changefreq: 'weekly', priority: 1.0 });
-  addLlmsFullText('Homepage', '/', 'ReadyDPDP — Get DPDP Ready. DPDP Act 2023 readiness and compliance advisory practice, powered by truConsent.');
+  addLlmsFullText('Homepage', '/', `${cfg.brand} — DPDP, untangled. DPDP Act 2023 compliance advisory practice and consent-technology partner, powered by truConsent.`);
 }
 
 // =====================================================================
 // SERVICES
 // =====================================================================
+function serviceCardHtml(s) {
+  if (s.flagship) {
+    return `<div class="card card--flagship">
+      <div>
+        <span class="tag tag-flagship">Flagship</span>
+        <h3>${esc(s.name)}</h3>
+        <p>${esc(s.short)}</p>
+      </div>
+      <a class="btn btn-primary" href="/services/${s.slug}/">Explore the platform →</a>
+    </div>`;
+  }
+  return `<div class="card"><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`;
+}
+
 function buildServices() {
-  // hub
+  // hub — grouped into the 4 service lines (Assessments / Tech Architecture &
+  // Build / Training & Enablement / Advisory & Ongoing Support). All 4 lines
+  // stay under the green Services content pillar; the grouping is structural,
+  // not a colour change per line.
   const hubBody = `
   <div class="container">
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }])}
-    ${heroSection('Services', 'DPDP Compliance Services', 'Fifteen specialist services covering every stage of DPDP Act 2023 compliance — from first assessment to sustained governance.')}
-    <div class="grid grid-3" style="margin-top:12px;">
-      ${services.map(s => `<div class="card"><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`).join('\n')}
-    </div>
+    ${heroSection('Services', 'DPDP Compliance Services', `${services.length} specialist services across 4 service lines — from first assessment to a consent platform you own outright.`)}
+    ${services.LINES.map(line => {
+      const lineServices = services.filter(s => s.line === line.key).sort((a, b) => (b.flagship ? 1 : 0) - (a.flagship ? 1 : 0));
+      return `<section class="service-line">
+        <div class="service-line-head">
+          <span class="eyebrow">${esc(line.name)}</span>
+          <hr class="rule" />
+          <p class="service-line-intro">${esc(line.intro)}</p>
+        </div>
+        <div class="grid grid-3 service-line-grid">
+          ${lineServices.map(serviceCardHtml).join('\n')}
+        </div>
+      </section>`;
+    }).join('\n')}
   </div>
   ${ctaBand()}`;
   writePage('/services/', layout({
     title: `DPDP Compliance Services | ${cfg.brand}`,
-    description: 'Fifteen specialist DPDP Act 2023 compliance services: Gap Assessment, DPO-as-a-Service, Consent Management Advisory, DPIA, SDF Compliance and more.',
+    description: `${services.length} specialist DPDP Act 2023 compliance services across Assessments, Tech Architecture & Build, Training & Enablement, and Advisory & Ongoing Support — including an outright-ownable Consent Management Platform.`,
     path: '/services/',
     bodyHtml: hubBody,
     jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }])]
   }), { priority: 0.9 });
-  addLlmsFullText('Services Hub', '/services/', services.map(s => `${s.name}: ${s.short}`).join('\n'));
+  addLlmsFullText('Services Hub', '/services/', services.LINES.map(line => `## ${line.name}\n${line.intro}\n` + services.filter(s => s.line === line.key).map(s => `- ${s.name}: ${s.short}`).join('\n')).join('\n\n'));
 
   services.forEach((s, idx) => {
-    const others = services.filter(x => x.slug !== s.slug);
+    const others = services.filter(x => x.slug !== s.slug && !x.flagship);
     const related = others.sort(() => 0.5 - Math.random()).slice(0, 4).map(x => relatedItem(x.name, `/services/${x.slug}/`, 'Service'));
     const relatedIndustries = industries.filter(ind => ind.servicesNeeded.includes(s.slug)).slice(0, 3);
-
-    const body = `
-    <div class="container">
-      ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: s.name, url: `/services/${s.slug}/` }])}
-      ${heroSection('Service', s.name, s.short)}
-      <div class="grid" style="grid-template-columns: 2fr 1fr; gap:32px; margin-top:8px;">
-        <div>
-          <h2>What it is</h2>
-          <hr class="rule" />
-          ${paragraphs([s.whatItIs])}
-          <h2 style="margin-top:32px;">Who needs this</h2>
-          <hr class="rule" />
-          <p>${esc(s.who)}</p>
-          <h2 style="margin-top:32px;">Our process</h2>
-          <hr class="rule" />
-          <ol class="steps">
-            ${s.process.map(p => `<li><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></li>`).join('\n')}
-          </ol>
-          <h2 style="margin-top:32px;">Frequently asked questions</h2>
-          <hr class="rule" />
-          ${s.faqs.map(f => `<div class="faq-item"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('\n')}
-        </div>
-        <div>
-          <div class="card-plain">
-            <h3>Deliverables</h3>
-            <ul>${s.deliverables.map(d => `<li>${esc(d)}</li>`).join('')}</ul>
-          </div>
-          <div class="card-plain" style="margin-top:16px;">
-            <h3>Timeline</h3>
-            <p>${esc(s.timeline)}</p>
-          </div>
-          ${relatedIndustries.length ? `<div class="card-plain" style="margin-top:16px;">
-            <h3>Common in</h3>
-            <p>${relatedIndustries.map(ind => `<a href="/industries/${ind.slug}/">${esc(ind.name)}</a>`).join(', ')}</p>
-          </div>` : ''}
-          <a class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;" href="/contact/">Discuss This Service</a>
-        </div>
-      </div>
-      ${relatedLinksHtml('Related services', related)}
-    </div>
-    ${ctaBand()}`;
 
     const jsonLd = [
       breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: s.name, url: `/services/${s.slug}/` }]),
@@ -470,16 +470,127 @@ function buildServices() {
       }
     ];
 
+    let body;
+    let llmsText;
+
+    if (s.flagship) {
+      // Product-page voice: feature bullets, shorter sentences, concrete specifics.
+      // This is a deliberate, scoped exception — see /dpdp-untangled-brand.md.
+      jsonLd.push({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: s.name,
+        description: s.short,
+        brand: { '@type': 'Brand', name: cfg.brand }
+      });
+      body = `
+      <div class="container">
+        ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: s.name, url: `/services/${s.slug}/` }])}
+        <span class="eyebrow">Flagship — Tech Architecture &amp; Build</span>
+        <hr class="rule" />
+        <h1>${esc(s.name)}</h1>
+        <p class="lede">${esc(s.short)}</p>
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap:32px; margin-top:24px;">
+          <div>
+            <h2>What it is</h2>
+            <hr class="rule" />
+            ${paragraphs(s.whatItIs)}
+            <h2 style="margin-top:32px;">What's in the codebase</h2>
+            <hr class="rule" />
+            ${featureRowList(s.features)}
+            <h2 style="margin-top:40px;">Who this is for</h2>
+            <hr class="rule" />
+            <p>${esc(s.who)}</p>
+            <h2 style="margin-top:32px;">How it works</h2>
+            <hr class="rule" />
+            <ol class="steps">
+              ${s.process.map(p => `<li><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></li>`).join('\n')}
+            </ol>
+            <h2 style="margin-top:32px;">Frequently asked questions</h2>
+            <hr class="rule" />
+            ${s.faqs.map(f => `<div class="faq-item"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('\n')}
+          </div>
+          <div>
+            <div class="card-plain">
+              <h3>What's included</h3>
+              <ul>${s.included.map(d => `<li>${esc(d)}</li>`).join('')}</ul>
+            </div>
+            <div class="card-plain" style="margin-top:16px;">
+              <h3>Ownership &amp; deployment</h3>
+              <p>${esc(s.ownershipModel)}</p>
+            </div>
+            <div class="card-plain" style="margin-top:16px;">
+              <h3>Timeline</h3>
+              <p>${esc(s.timeline)}</p>
+            </div>
+            <a class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;" href="/contact/">Talk to Us About Owning It</a>
+          </div>
+        </div>
+        ${relatedLinksHtml('Related services', [
+          relatedItem('Consent Architecture Design', '/services/consent-management-advisory/', 'Tech Architecture & Build'),
+          relatedItem('Cross-Border Data Transfer Architecture', '/services/cross-border-data-transfer-advisory/', 'Tech Architecture & Build'),
+          relatedItem('DPDP Gap Assessment', '/services/dpdp-gap-assessment/', 'Assessments'),
+          relatedItem('All Services', '/services/', 'Services')
+        ])}
+      </div>
+      ${ctaBand('Ready to stop renting your consent platform?', 'Talk to Us About Owning It', '/contact/')}`;
+
+      llmsText = `${s.whatItIs.join('\n\n')}\n\nWho this is for: ${s.who}\n\nWhat's in the codebase: ${s.features.map(f => `${f.title} — ${f.body}`).join(' ')}\n\nWhat's included: ${s.included.join('; ')}\n\nOwnership & deployment: ${s.ownershipModel}\n\nTimeline: ${s.timeline}\n\nFAQs: ${s.faqs.map(f => `${f.q} ${f.a}`).join(' ')}`;
+    } else {
+      // Unchanged advisory/expert voice — not part of this pass's tonality exception.
+      body = `
+      <div class="container">
+        ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: s.name, url: `/services/${s.slug}/` }])}
+        ${heroSection('Service', s.name, s.short)}
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap:32px; margin-top:8px;">
+          <div>
+            <h2>What it is</h2>
+            <hr class="rule" />
+            ${paragraphs([s.whatItIs])}
+            <h2 style="margin-top:32px;">Who needs this</h2>
+            <hr class="rule" />
+            <p>${esc(s.who)}</p>
+            <h2 style="margin-top:32px;">Our process</h2>
+            <hr class="rule" />
+            <ol class="steps">
+              ${s.process.map(p => `<li><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></li>`).join('\n')}
+            </ol>
+            <h2 style="margin-top:32px;">Frequently asked questions</h2>
+            <hr class="rule" />
+            ${s.faqs.map(f => `<div class="faq-item"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('\n')}
+          </div>
+          <div>
+            <div class="card-plain">
+              <h3>Deliverables</h3>
+              <ul>${s.deliverables.map(d => `<li>${esc(d)}</li>`).join('')}</ul>
+            </div>
+            <div class="card-plain" style="margin-top:16px;">
+              <h3>Timeline</h3>
+              <p>${esc(s.timeline)}</p>
+            </div>
+            ${relatedIndustries.length ? `<div class="card-plain" style="margin-top:16px;">
+              <h3>Common in</h3>
+              <p>${relatedIndustries.map(ind => `<a href="/industries/${ind.slug}/">${esc(ind.name)}</a>`).join(', ')}</p>
+            </div>` : ''}
+            <a class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;" href="/contact/">Discuss This Service</a>
+          </div>
+        </div>
+        ${relatedLinksHtml('Related services', related)}
+      </div>
+      ${ctaBand()}`;
+
+      llmsText = `${s.whatItIs}\n\nWho needs this: ${s.who}\n\nProcess: ${s.process.map(p => `${p.title} — ${p.body}`).join(' ')}\n\nDeliverables: ${s.deliverables.join('; ')}\n\nTimeline: ${s.timeline}\n\nFAQs: ${s.faqs.map(f => `${f.q} ${f.a}`).join(' ')}`;
+    }
+
     writePage(`/services/${s.slug}/`, layout({
       title: `${s.name} | ${cfg.brand} DPDP Compliance Services`,
       description: s.short,
       path: `/services/${s.slug}/`,
       bodyHtml: body,
       jsonLd
-    }), { priority: 0.8 });
+    }), { priority: s.flagship ? 0.95 : 0.8 });
 
-    addLlmsFullText(`Service: ${s.name}`, `/services/${s.slug}/`,
-      `${s.whatItIs}\n\nWho needs this: ${s.who}\n\nProcess: ${s.process.map(p => `${p.title} — ${p.body}`).join(' ')}\n\nDeliverables: ${s.deliverables.join('; ')}\n\nTimeline: ${s.timeline}\n\nFAQs: ${s.faqs.map(f => `${f.q} ${f.a}`).join(' ')}`);
+    addLlmsFullText(`Service: ${s.name}`, `/services/${s.slug}/`, llmsText);
   });
 }
 
@@ -1145,43 +1256,10 @@ function buildDownloads() {
 // STATIC / LEGAL PAGES
 // =====================================================================
 function buildStaticPages() {
-  // About
-  writePage('/about/', layout({
-    title: `About ReadyDPDP | DPDP Act 2023 Compliance Advisory`,
-    description: 'ReadyDPDP is the consulting and advisory practice powered by truConsent, built specifically for DPDP Act 2023 compliance in India.',
-    path: '/about/',
-    bodyHtml: `<div class="container">
-      ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }])}
-      ${heroSection('About', 'About ReadyDPDP', 'We are the consulting and advisory practice built specifically around India\'s DPDP Act 2023 — assessment, architecture, and sustained governance, not a generic global privacy playbook applied locally.')}
-      ${splitFeatureHtml({
-        visualHtml: chipStackHtml('What makes the DPDPA different', ['Permissive cross-border transfer default', 'A novel Consent Manager intermediary', 'Specific Legitimate Uses provisions', 'Its own Significant Data Fiduciary tier']),
-        kicker: 'Why we exist',
-        title: 'Built for the DPDPA\'s own terms, not GDPR lightly adapted',
-        body: 'The DPDP Act 2023 is India\'s first comprehensive data protection law, and it is structurally different from GDPR and the frameworks most global privacy consultancies were built around. ReadyDPDP exists because organisations need advisors who think in the DPDPA\'s own terms.'
-      })}
-      ${splitFeatureHtml({
-        visualHtml: chipStackHtml('Grounded in real infrastructure', ['Structured data registers (DPDR / CDJR)', 'Purpose-based consent engines', 'Rights-fulfilment infrastructure']),
-        kicker: 'Powered by truConsent',
-        title: 'Advisory grounded in what actually gets built',
-        body: 'ReadyDPDP is the consulting arm powered by truConsent, an IITM-incubated Privacy Intelligence Suite built specifically for DPDP Act 2023 compliance — not abstracted legal theory alone.',
-        reverse: true
-      })}
-      <h2 style="margin-top:12px;">How we work</h2>
-      <hr class="rule" />
-      ${statLedRow([
-        { num: '01', title: 'Evidence, not assumption', body: 'We test your actual consent flows, contracts and systems rather than reviewing policy documents in isolation.' },
-        { num: '02', title: 'Sequenced, not overwhelming', body: 'Every finding is scored for regulatory exposure and remediation effort — a sequenced roadmap, not a wall of risk.' },
-        { num: '03', title: 'Built to be sustained', body: 'Compliance is not a project with an end date, and our retainer services exist because the work never really finishes.' }
-      ])}
-      ${relatedLinksHtml('Learn more', [relatedItem('Our Services', '/services/', 'Services'), relatedItem('DPDP Readiness Levels', '/readiness/', 'Readiness'), relatedItem('Contact us', '/contact/', 'Contact')])}
-    </div>${ctaBand()}`,
-    jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }])]
-  }), { priority: 0.7 });
-
   // Contact
   writePage('/contact/', layout({
     title: `Book a Free Consulting Call | ${cfg.brand}`,
-    description: 'Get in touch with ReadyDPDP to book a free DPDP Act 2023 consulting call.',
+    description: `Get in touch with ${cfg.brand} to book a free DPDP Act 2023 consulting call.`,
     path: '/contact/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }])}
@@ -1193,9 +1271,10 @@ function buildStaticPages() {
           <div><label for="email">Work email</label><input id="email" name="email" type="email" required /></div>
           <div><label for="topic">What do you need help with?</label>
             <select id="topic" name="topic">
+              <option>Consent Management Platform — Codebase &amp; Deployment</option>
               <option>DPDP Gap Assessment</option>
               <option>DPO-as-a-Service</option>
-              <option>Consent Management Advisory</option>
+              <option>Consent Architecture Design</option>
               <option>Significant Data Fiduciary Compliance</option>
               <option>Something else</option>
             </select>
@@ -1219,14 +1298,14 @@ function buildStaticPages() {
 
   // Careers
   writePage('/careers/', layout({
-    title: `Careers at ReadyDPDP`,
-    description: 'Careers at ReadyDPDP — join India\'s DPDP Act 2023 compliance advisory practice.',
+    title: `Careers at ${cfg.brand}`,
+    description: `Careers at ${cfg.brand} — join India's DPDP Act 2023 compliance advisory practice.`,
     path: '/careers/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Careers', url: '/careers/' }])}
-      ${heroSection('Careers', 'Careers at ReadyDPDP', 'We\'re building the leading DPDP Act 2023 advisory practice in India — and we\'re always interested in hearing from experienced privacy, legal and compliance professionals.')}
+      ${heroSection('Careers', `Careers at ${cfg.brand}`, 'We\'re building the leading DPDP Act 2023 advisory and consent-technology practice in India — and we\'re always interested in hearing from experienced privacy, legal and compliance professionals.')}
       <p>We don't have open, actively recruiting roles listed at this moment, but we're consistently interested in connecting with experienced DPDPA practitioners, privacy engineers, and compliance consultants who want to work at the leading edge of India's newest area of law. If that's you, write to us at <a href="mailto:${cfg.email}">${esc(cfg.email)}</a> with a short note about your background — we read every message personally.</p>
-      ${relatedLinksHtml('Learn more about us', [relatedItem('About ReadyDPDP', '/about/', 'About'), relatedItem('Our Services', '/services/', 'Services')])}
+      ${relatedLinksHtml('Learn more', [relatedItem('Our Services', '/services/', 'Services'), relatedItem('Contact us', '/contact/', 'Contact')])}
     </div>`,
     jsonLd: [breadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Careers', url: '/careers/' }])]
   }), { priority: 0.4 });
@@ -1234,7 +1313,7 @@ function buildStaticPages() {
   // Privacy Policy
   writePage('/privacy-policy/', layout({
     title: `Privacy Policy | ${cfg.brand}`,
-    description: 'ReadyDPDP\'s own privacy policy — how we collect, use and protect personal data submitted through this website.',
+    description: `${cfg.brand}'s own privacy policy — how we collect, use and protect personal data submitted through this website.`,
     path: '/privacy-policy/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy-policy/' }])}
@@ -1256,7 +1335,7 @@ function buildStaticPages() {
   // Terms
   writePage('/terms-of-service/', layout({
     title: `Terms of Service | ${cfg.brand}`,
-    description: 'ReadyDPDP\'s terms of service governing use of this website and our advisory engagements.',
+    description: `${cfg.brand}'s terms of service governing use of this website and our advisory engagements.`,
     path: '/terms-of-service/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Terms of Service', url: '/terms-of-service/' }])}
@@ -1264,7 +1343,7 @@ function buildStaticPages() {
       <h2>Website use</h2><hr class="rule" />
       <p>This website and its content — including our Readiness Levels model, glossary, FAQ answers and framework descriptions — are provided for general informational purposes and do not constitute legal advice. Nothing on this site creates an advisory or client relationship; that relationship is established only through a signed engagement letter.</p>
       <h2 style="margin-top:24px;">Intellectual property</h2><hr class="rule" />
-      <p>The ReadyDPDP name, the DPDP Readiness Levels model, and the DPDR and CDJR framework names and descriptions are the intellectual property of ReadyDPDP and its parent practice, truConsent. Content may be referenced with attribution but not reproduced wholesale for commercial purposes without permission.</p>
+      <p>The ${esc(cfg.brand)} name, the DPDP Readiness Levels model, and the DPDR and CDJR framework names and descriptions are the intellectual property of ${esc(cfg.brand)} and its parent practice, truConsent. Content may be referenced with attribution but not reproduced wholesale for commercial purposes without permission.</p>
       <h2 style="margin-top:24px;">No warranty</h2><hr class="rule" />
       <p>While we maintain this site to reflect accurate, current understanding of the DPDP Act 2023 and draft DPDP Rules, law and guidance in this area continues to evolve, and this site's content should not be relied upon as a substitute for engagement-specific advice or independent legal counsel.</p>
       <h2 style="margin-top:24px;">Governing law</h2><hr class="rule" />
@@ -1276,7 +1355,7 @@ function buildStaticPages() {
   // Cookie Policy
   writePage('/cookie-policy/', layout({
     title: `Cookie Policy | ${cfg.brand}`,
-    description: 'How ReadyDPDP uses cookies and similar technologies on this website.',
+    description: `How ${cfg.brand} uses cookies and similar technologies on this website.`,
     path: '/cookie-policy/',
     bodyHtml: `<div class="container">
       ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Cookie Policy', url: '/cookie-policy/' }])}
@@ -1305,7 +1384,7 @@ function build404() {
   </div>`;
   const html = layout({
     title: `Page Not Found | ${cfg.brand}`,
-    description: 'The page you requested could not be found on ReadyDPDP.',
+    description: `The page you requested could not be found on ${cfg.brand}.`,
     path: '/404.html',
     bodyHtml: body
   });
@@ -1335,10 +1414,11 @@ function buildLlmsTxt() {
 
 > ${cfg.longTagline} ${cfg.byline}.
 
-${cfg.brand} ("${cfg.tagline}") is India's DPDP Act 2023 readiness and compliance advisory practice. We run DPDP Gap Assessments, provide fractional DPO-as-a-Service, design consent architecture, and build the structured DPDR (Digital Personal Data Register) and CDJR (Customer Data Journey Registry) that underpin a defensible DPDPA compliance programme.
+${cfg.brand} ("${cfg.tagline}") is India's DPDP Act 2023 compliance advisory practice and consent-technology partner. We run DPDP Gap Assessments, provide fractional DPO-as-a-Service, design consent architecture, build the structured DPDR (Digital Personal Data Register) and CDJR (Customer Data Journey Registry) that underpin a defensible DPDPA compliance programme — and sell an outright-ownable Consent Management Platform codebase and deployment, for organisations that would rather own their consent infrastructure than rent it.
 
 ## Services
-- [All Services](${cfg.domain}/services/): 15 specialist DPDP Act 2023 compliance services, from Gap Assessment to Incident Response Retainer.
+- [All Services](${cfg.domain}/services/): ${services.length} specialist DPDP Act 2023 services across 4 lines — Assessments, Tech Architecture & Build, Training & Enablement, and Advisory & Ongoing Support.
+- [Consent Management Platform — Codebase & Deployment](${cfg.domain}/services/consent-management-platform-codebase-deployment/): Flagship offering — a working CMP codebase deployed on your own infrastructure, source included, no recurring licence fee.
 - [DPDP Gap Assessment](${cfg.domain}/services/dpdp-gap-assessment/): Our foundational diagnostic engagement, with a full [deep-dive section](${cfg.domain}/gap-assessment/) on methodology, scope, pricing and deliverables.
 
 ## DPDP Readiness Levels
@@ -1352,13 +1432,12 @@ ${cfg.brand} ("${cfg.tagline}") is India's DPDP Act 2023 readiness and complianc
 - [Glossary](${cfg.domain}/glossary/): ${glossary.length} plain-language DPDPA term definitions.
 - [FAQs](${cfg.domain}/faq/): ${faqs.length} frequently asked questions across 14 categories.
 - [Insights](${cfg.domain}/insights/): ${insights.length} articles analysing DPDPA compliance topics.
-- [Comparisons](${cfg.domain}/comparisons/): How ReadyDPDP compares to in-house teams, generalist consultancies, legal-only firms, and software-only tools.
+- [Comparisons](${cfg.domain}/comparisons/): How ${cfg.brand} compares to in-house teams, generalist consultancies, legal-only firms, and software-only tools.
 
 ## Industries
 - [Industries overview](${cfg.domain}/industries/): Sector-specific DPDP Act 2023 risk framing for BFSI, Healthcare, EdTech, E-commerce, SaaS, and more.
 
 ## Company
-- [About](${cfg.domain}/about/)
 - [Contact](${cfg.domain}/contact/)
 
 Full page content for LLM ingestion is available at ${cfg.domain}/llms-full.txt
@@ -1382,6 +1461,15 @@ function copyStatic() {
     fs.copyFileSync(path.join(staticDir, file), path.join(destDir, file));
   }
   fs.writeFileSync(path.join(DOCS, '.nojekyll'), '');
+}
+
+// GitHub Pages custom-domain file. Written on every regenerate (docs/ is wiped
+// and rebuilt from scratch each run) so it survives regeneration. This alone
+// doesn't make the custom domain resolve — DNS at the registrar for
+// dpdpuntangled.com still needs to be pointed at GitHub Pages; that's a manual
+// step outside this generator.
+function buildCname() {
+  fs.writeFileSync(path.join(DOCS, 'CNAME'), 'dpdpuntangled.com');
 }
 
 // =====================================================================
@@ -1411,6 +1499,7 @@ function main() {
   buildRobots();
   buildLlmsTxt();
   buildLlmsFullTxt();
+  buildCname();
 
   console.log(`Generated ${allPages.length} pages into ${DOCS}`);
 }

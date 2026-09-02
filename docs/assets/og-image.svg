@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#000000"/>
   <rect x="0" y="0" width="1200" height="630" fill="#111111" opacity="0.4"/>
-  <path d="M110 140 L230 175 V300 C230 400 170 460 110 500 C50 460 -10 400 -10 300" fill="none" stroke="#76E000" stroke-width="0" />
-  <g transform="translate(90,115)">
-    <path d="M60 0 L120 22 V96 C120 148 90 176 60 196 C30 176 0 148 0 96 V22 Z" fill="none" stroke="#76E000" stroke-width="8"/>
-    <path d="M36 100 L54 122 L92 68" fill="none" stroke="#A8F020" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(90,145) scale(1.7)">
+    <path d="M10,38 C5,28 20,22 16,33 C12,43 27,39 24,28 C21,16 38,20 34,31 L48,24" fill="none" stroke="#76E000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="280" y="270" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF">ReadyDPDP</text>
-  <text x="280" y="330" font-family="Arial, sans-serif" font-size="34" fill="#76E000" font-weight="700" letter-spacing="2">GET DPDP READY.</text>
-  <text x="280" y="390" font-family="Arial, sans-serif" font-size="26" fill="#CCCCCC">DPDP Act 2023 Readiness &amp; Compliance Advisory</text>
-  <rect x="280" y="420" width="220" height="6" fill="#76E000"/>
-  <text x="280" y="480" font-family="Arial, sans-serif" font-size="22" fill="#CCCCCC">Powered by truConsent</text>
+  <text x="280" y="270" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="-1" fill="#FFFFFF">DPDP</text>
+  <text x="280" y="270" dx="230" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="62" font-weight="500" fill="#B7B7AE">untangled.</text>
+  <rect x="280" y="288" width="150" height="7" rx="3.5" fill="#76E000"/>
+  <text x="280" y="345" font-family="Arial, sans-serif" font-size="26" fill="#CCCCCC">DPDP Act 2023 Compliance Advisory &amp; Consent Technology</text>
+  <text x="280" y="385" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="24" fill="#9a9a92">Compliance you can operate, not just file away.</text>
+  <text x="280" y="470" font-family="Arial, sans-serif" font-size="22" fill="#CCCCCC">Powered by truConsent</text>
 </svg>
