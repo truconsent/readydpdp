@@ -209,6 +209,13 @@ p { color: var(--text-secondary); }
 .card {
   background: var(--card-bg); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px;
 }
+/* Card border follows its content pillar — the block itself, not just the
+   label above it. Services/Assessments cards keep the default green border
+   (no class needed); everything else needs its pillar class applied at the
+   call site in generate.js. */
+.card.pillar-amber { border-color: var(--pillar-amber); }
+.card.pillar-blue { border-color: var(--pillar-blue); }
+.card.pillar-coral { border-color: var(--pillar-coral); }
 .card h3 { color: var(--text-primary); margin-bottom: 8px; }
 .card p { margin: 0 0 12px; font-size: 14.5px; }
 .card a.card-link { font-weight: 700; font-size: 14px; }

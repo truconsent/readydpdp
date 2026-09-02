@@ -365,7 +365,7 @@ function buildHome() {
       <h2>Where does your organisation actually stand?</h2>
       <p class="lede">A six-level maturity model, Unaware to Optimised — see exactly what closing your next level requires.</p>
       <div class="grid grid-4" style="margin-top:24px;">
-        ${readinessLevels.slice(0, 4).map(l => `<a class="card" href="/readiness/${l.slug}/" style="text-decoration:none;">
+        ${readinessLevels.slice(0, 4).map(l => `<a class="card pillar-amber" href="/readiness/${l.slug}/" style="text-decoration:none;">
           <span class="level-badge pillar-amber">${l.level}</span>
           <h3 style="margin-top:12px;">${esc(l.name)}</h3>
           <p>${esc(l.summary.slice(0, 90))}${l.summary.length > 90 ? '…' : ''}</p>
@@ -393,7 +393,7 @@ function buildHome() {
       <hr class="rule pillar-blue" />
       <h2>Compliance risk looks different by sector</h2>
       <div class="grid grid-4" style="margin-top:24px;">
-        ${industries.slice(0, 4).map(ind => `<a class="card" href="/industries/${ind.slug}/" style="text-decoration:none;"><h3>${esc(ind.name)}</h3><p>${esc(ind.summary.slice(0, 80))}${ind.summary.length > 80 ? '…' : ''}</p></a>`).join('\n')}
+        ${industries.slice(0, 4).map(ind => `<a class="card pillar-blue" href="/industries/${ind.slug}/" style="text-decoration:none;"><h3>${esc(ind.name)}</h3><p>${esc(ind.summary.slice(0, 80))}${ind.summary.length > 80 ? '…' : ''}</p></a>`).join('\n')}
       </div>
       <p style="margin-top:20px;"><a class="btn btn-secondary" href="/industries/">See all ${industries.length} industries →</a></p>
     </div>
@@ -429,7 +429,7 @@ function buildHome() {
       <h2>Latest thinking on DPDPA compliance</h2>
       <p class="lede">${insights.length} articles on DPDPA rules, penalties, and sector-specific readiness.</p>
       <div class="grid grid-3" style="margin-top:24px;">
-        ${[...insights].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3).map(a => `<a class="card" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag pillar-coral">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek.slice(0, 85))}${a.dek.length > 85 ? '…' : ''}</p></a>`).join('\n')}
+        ${[...insights].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3).map(a => `<a class="card pillar-coral" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag pillar-coral">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek.slice(0, 85))}${a.dek.length > 85 ? '…' : ''}</p></a>`).join('\n')}
       </div>
       <p style="margin-top:20px;"><a class="btn btn-secondary" href="/insights/">Read all ${insights.length} Insights articles →</a></p>
     </div>
@@ -718,7 +718,7 @@ function buildReadiness() {
     ${heroSection('DPDP Readiness Levels', 'The DPDP Readiness Model', 'A six-level maturity model — Level 0 Unaware through Level 5 Optimised — used across every ReadyDPDP engagement to benchmark where an organisation stands and what advancing to the next level requires.')}
     ${readinessLadder(readinessLevels, null)}
     <div class="grid grid-3" style="margin-top:32px;">
-      ${readinessLevels.map(l => `<a class="card" href="/readiness/${l.slug}/" style="text-decoration:none;">
+      ${readinessLevels.map(l => `<a class="card pillar-amber" href="/readiness/${l.slug}/" style="text-decoration:none;">
         <span class="level-badge">${l.level}</span>
         <h3 style="margin-top:12px;">${esc(l.name)}</h3>
         <p>${esc(l.summary)}</p>
@@ -857,7 +857,7 @@ function buildFrameworkOverview(fw, otherFw) {
     <h2 style="margin-top:32px;">Core fields</h2>
     <hr class="rule" />
     <div class="grid grid-3">
-      ${fw.fields.map(f => `<div class="card"><h3>${esc(f.name)}</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">${esc(f.example)}</p><a class="card-link" href="/frameworks/${fw.slug}/${f.slug}/">Read more →</a></div>`).join('\n')}
+      ${fw.fields.map(f => `<div class="card pillar-amber"><h3>${esc(f.name)}</h3><p style="font-family:monospace;font-size:13px;color:var(--brand-green);">${esc(f.example)}</p><a class="card-link" href="/frameworks/${fw.slug}/${f.slug}/">Read more →</a></div>`).join('\n')}
     </div>
     ${relatedLinksHtml('Related pages', [
       relatedItem(`${otherFw.name} — ${otherFw.fullName}`, `/frameworks/${otherFw.slug}/`, 'Framework'),
@@ -907,8 +907,8 @@ function buildFrameworks() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Frameworks', url: '/frameworks/' }])}
     ${heroSection('Methodology', 'Our Proprietary Frameworks', 'DPDR and CDJR are the two structured registers we build with every client during Phase 4, Data Discovery & Mapping — the foundation every other compliance artefact builds on.')}
     <div class="grid grid-2" style="margin-top:12px;">
-      <a class="card" href="/frameworks/dpdr/" style="text-decoration:none;"><h3>${esc(dpdr.name)} — ${esc(dpdr.fullName)}</h3><p>${esc(dpdr.tagline)}</p></a>
-      <a class="card" href="/frameworks/cdjr/" style="text-decoration:none;"><h3>${esc(cdjr.name)} — ${esc(cdjr.fullName)}</h3><p>${esc(cdjr.tagline)}</p></a>
+      <a class="card pillar-amber" href="/frameworks/dpdr/" style="text-decoration:none;"><h3>${esc(dpdr.name)} — ${esc(dpdr.fullName)}</h3><p>${esc(dpdr.tagline)}</p></a>
+      <a class="card pillar-amber" href="/frameworks/cdjr/" style="text-decoration:none;"><h3>${esc(cdjr.name)} — ${esc(cdjr.fullName)}</h3><p>${esc(cdjr.tagline)}</p></a>
     </div>
   </div>
   ${ctaBand()}`;
@@ -934,7 +934,7 @@ function buildIndustries() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Industries', url: '/industries/' }])}
     ${heroSection('Industries', 'Sector-Specific DPDP Compliance', 'DPDPA compliance looks different by sector. Here is how we frame the risk, and the services that matter most, for the industries we work in most.')}
     <div class="grid grid-3" style="margin-top:12px;">
-      ${industries.map(ind => `<a class="card" href="/industries/${ind.slug}/" style="text-decoration:none;"><h3>${esc(ind.name)}</h3><p>${esc(ind.summary)}</p></a>`).join('\n')}
+      ${industries.map(ind => `<a class="card pillar-blue" href="/industries/${ind.slug}/" style="text-decoration:none;"><h3>${esc(ind.name)}</h3><p>${esc(ind.summary)}</p></a>`).join('\n')}
     </div>
   </div>
   ${ctaBand()}`;
@@ -990,7 +990,7 @@ function buildGlossary() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }, { name: 'Glossary', url: '/glossary/' }])}
     ${heroSection('Resources', 'DPDPA Glossary', `${glossary.length} plain-language definitions of DPDP Act 2023 and draft DPDP Rules terminology — from Data Fiduciary to Voluntary Undertaking.`)}
     <div class="grid grid-3" style="margin-top:12px;">
-      ${sorted.map(g => `<a class="card" href="/glossary/${g.slug}/" style="text-decoration:none;"><h3>${esc(g.term)}</h3><p>${esc(g.short)}</p></a>`).join('\n')}
+      ${sorted.map(g => `<a class="card pillar-coral" href="/glossary/${g.slug}/" style="text-decoration:none;"><h3>${esc(g.term)}</h3><p>${esc(g.short)}</p></a>`).join('\n')}
     </div>
   </div>
   ${ctaBand()}`;
@@ -1046,7 +1046,7 @@ function buildFaqs() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }, { name: 'FAQs', url: '/faq/' }])}
     ${heroSection('Resources', 'Frequently Asked Questions', `${withSlug.length} real questions about the DPDP Act 2023, answered — grouped by category, from general applicability to sector-specific and consulting-engagement questions.`)}
     <div class="grid grid-3" style="margin-top:12px;">
-      ${Object.keys(faqCategories).map(cat => `<a class="card" href="/faq/category/${cat}/" style="text-decoration:none;"><h3>${esc(faqCategories[cat])}</h3><p>${byCat[cat].length} questions</p></a>`).join('\n')}
+      ${Object.keys(faqCategories).map(cat => `<a class="card pillar-coral" href="/faq/category/${cat}/" style="text-decoration:none;"><h3>${esc(faqCategories[cat])}</h3><p>${byCat[cat].length} questions</p></a>`).join('\n')}
     </div>
   </div>
   ${ctaBand()}`;
@@ -1120,7 +1120,7 @@ function buildInsights() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Insights', url: '/insights/' }])}
     ${heroSection('Insights', 'DPDP Act Insights & Analysis', `${insights.length} articles on DPDPA compliance, from Rules explainers to sector deep-dives to practical readiness checklists.`)}
     <div class="grid grid-3" style="margin-top:12px;">
-      ${sorted.map(a => `<a class="card" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek)}</p></a>`).join('\n')}
+      ${sorted.map(a => `<a class="card pillar-coral" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek)}</p></a>`).join('\n')}
     </div>
   </div>
   ${ctaBand()}`;
@@ -1171,7 +1171,7 @@ function buildComparisons() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Comparisons', url: '/comparisons/' }])}
     ${heroSection('Comparisons', 'How ReadyDPDP Compares', 'Honest comparisons against the other paths organisations consider for DPDP Act 2023 compliance.')}
     <div class="grid grid-2" style="margin-top:12px;">
-      ${comparisons.map(c => `<a class="card" href="/comparisons/${c.slug}/" style="text-decoration:none;"><h3>${esc(c.title)}</h3><p>${esc(c.dek)}</p></a>`).join('\n')}
+      ${comparisons.map(c => `<a class="card pillar-coral" href="/comparisons/${c.slug}/" style="text-decoration:none;"><h3>${esc(c.title)}</h3><p>${esc(c.dek)}</p></a>`).join('\n')}
     </div>
   </div>
   ${ctaBand()}`;
@@ -1216,12 +1216,12 @@ function buildResourcesHub() {
     ${breadcrumbsFor([{ name: 'Home', url: '/' }, { name: 'Resources', url: '/resources/' }])}
     ${heroSection('Resources', 'The ReadyDPDP Resource Hub', 'Glossary, FAQs, frameworks, comparisons, and real downloadable checklists and templates — everything we\'ve written to help you understand and act on the DPDP Act 2023, in one place.')}
     <div class="grid grid-2" style="margin-top:12px;">
-      <a class="card" href="/glossary/" style="text-decoration:none;"><h3>Glossary</h3><p>${glossary.length} plain-language DPDPA term definitions.</p></a>
-      <a class="card" href="/faq/" style="text-decoration:none;"><h3>FAQs</h3><p>${faqs.length} real questions, answered, across 14 categories.</p></a>
-      <a class="card" href="/frameworks/" style="text-decoration:none;"><h3>Frameworks — DPDR &amp; CDJR</h3><p>Our proprietary data discovery and consent journey mapping methodology.</p></a>
-      <a class="card" href="/insights/" style="text-decoration:none;"><h3>Insights</h3><p>${insights.length} articles on DPDPA compliance and sector-specific analysis.</p></a>
-      <a class="card" href="/comparisons/" style="text-decoration:none;"><h3>Comparisons</h3><p>ReadyDPDP vs. in-house, generalist consultancies, legal-only firms, and software-only tools.</p></a>
-      <a class="card" href="/readiness/" style="text-decoration:none;"><h3>DPDP Readiness Levels</h3><p>Our six-level maturity model for benchmarking compliance posture.</p></a>
+      <a class="card pillar-coral" href="/glossary/" style="text-decoration:none;"><h3>Glossary</h3><p>${glossary.length} plain-language DPDPA term definitions.</p></a>
+      <a class="card pillar-coral" href="/faq/" style="text-decoration:none;"><h3>FAQs</h3><p>${faqs.length} real questions, answered, across 14 categories.</p></a>
+      <a class="card pillar-amber" href="/frameworks/" style="text-decoration:none;"><h3>Frameworks — DPDR &amp; CDJR</h3><p>Our proprietary data discovery and consent journey mapping methodology.</p></a>
+      <a class="card pillar-coral" href="/insights/" style="text-decoration:none;"><h3>Insights</h3><p>${insights.length} articles on DPDPA compliance and sector-specific analysis.</p></a>
+      <a class="card pillar-coral" href="/comparisons/" style="text-decoration:none;"><h3>Comparisons</h3><p>ReadyDPDP vs. in-house, generalist consultancies, legal-only firms, and software-only tools.</p></a>
+      <a class="card pillar-amber" href="/readiness/" style="text-decoration:none;"><h3>DPDP Readiness Levels</h3><p>Our six-level maturity model for benchmarking compliance posture.</p></a>
     </div>
 
     <section class="downloads-section">
