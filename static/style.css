@@ -34,6 +34,9 @@
   --font-body: 'Inter', 'Montserrat', Arial, sans-serif;
   --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-display: 'Syne', Arial, sans-serif;
+  /* Scoped narrowly: stat numbers, tags/badges, the status ticker, and the
+     diagnostic tool. Never headings, never running body text. */
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
@@ -57,6 +60,19 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
   padding: 8px 16px; z-index: 200;
 }
 .skip-link:focus { left: 8px; top: 8px; }
+
+/* Status ticker — sits above the header, site-wide. Accurate phrasing only;
+   see statusTicker() in lib/templates.js for the enforcement-date rule. */
+.status-ticker {
+  background: #0a0d07; border-bottom: 1px solid #1e1e1e; padding: 9px 20px;
+  display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 12px; text-align: center;
+}
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand-green); flex-shrink: 0; }
+.status-ticker-text { color: var(--text-secondary); }
+.status-ticker-text strong { color: var(--brand-green); font-weight: 600; }
+.status-ticker-link { color: var(--brand-green); font-weight: 600; white-space: nowrap; }
+@media (max-width: 720px) { .status-ticker-link { display: none; } }
 
 /* Header */
 .site-header {
@@ -174,7 +190,7 @@ p { color: var(--text-secondary); }
 .hero-actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
 .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
 .stat { border: 1px solid #1e1e1e; border-radius: var(--radius); padding: 16px; background: var(--bg-secondary); }
-.stat b { display: block; font-size: 26px; color: var(--brand-green); }
+.stat b { display: block; font-size: 26px; font-family: var(--font-mono); color: var(--brand-green); }
 .stat.pillar-amber b { color: var(--pillar-amber); }
 .stat.pillar-blue b { color: var(--pillar-blue); }
 .stat span { font-size: 13px; color: var(--text-secondary); }
@@ -200,7 +216,7 @@ p { color: var(--text-secondary); }
   background: var(--bg-secondary); border: 1px solid #1e1e1e; border-radius: var(--radius); padding: 20px;
 }
 .tag {
-  display: inline-block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  display: inline-block; font-size: 11px; font-family: var(--font-mono); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
   color: var(--brand-green); background: rgba(118,224,0,0.08); border: 1px solid rgba(118,224,0,0.35);
   padding: 3px 9px; border-radius: 20px; margin: 0 6px 6px 0;
 }
@@ -221,6 +237,63 @@ p { color: var(--text-secondary); }
 .tag.pillar-blue { color: var(--pillar-blue); background: rgba(91,141,239,0.1); border-color: rgba(91,141,239,0.35); }
 .tag.pillar-coral { color: var(--pillar-coral); background: rgba(226,105,74,0.1); border-color: rgba(226,105,74,0.35); }
 .level-badge.pillar-amber { border-color: var(--pillar-amber); color: var(--pillar-amber); }
+
+/* Hero positioning pill */
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px;
+  background: var(--panel); border: 1px solid #262a1e; font-family: var(--font-mono); font-size: 11.5px; margin-bottom: 18px;
+}
+.hero-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-green); flex-shrink: 0; }
+.hero-pill span.label { color: var(--text-secondary); }
+.hero-pill span.value { color: var(--brand-green); font-weight: 600; }
+
+/* Checkmark list — inline SVG, no icon-font dependency */
+.check-list { list-style: none; margin: 0; padding: 14px 0 0; border-top: 1px solid #1e1e1e; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-secondary); }
+.check-list li { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 7px; }
+.check-list svg { flex-shrink: 0; margin-top: 2px; }
+
+/* Penalty table */
+.penalty-table-wrap { overflow-x: auto; margin-top: 24px; border: 1px solid #1e1e1e; border-radius: var(--radius); }
+table.penalty-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+table.penalty-table th {
+  background: var(--panel); text-align: left; padding: 12px 16px; font-family: var(--font-mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid #1e1e1e;
+}
+table.penalty-table td { padding: 14px 16px; border-bottom: 1px solid #161616; color: var(--text-secondary); vertical-align: top; }
+table.penalty-table tr:last-child td { border-bottom: none; }
+table.penalty-table td.violation { color: var(--text-primary); font-weight: 600; }
+table.penalty-table td.amount { font-family: var(--font-mono); font-weight: 600; white-space: nowrap; }
+table.penalty-table td.amount.severity-high { color: var(--pillar-coral); }
+table.penalty-table td.amount.severity-mid { color: var(--pillar-amber); }
+table.penalty-table td.amount.severity-low { color: var(--text-muted); }
+.penalty-note { font-size: 12.5px; color: var(--text-muted); margin-top: 10px; }
+
+/* Diagnostic tool */
+.diagnostic-box { background: var(--panel); border: 1px solid #262a1e; border-radius: 14px; padding: 28px; margin-top: 24px; }
+.diagnostic-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+@media (max-width: 900px) { .diagnostic-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .diagnostic-grid { grid-template-columns: 1fr; } }
+.diagnostic-q { background: var(--panel-alt); border: 1px solid #1e1e1e; border-radius: 8px; padding: 14px; }
+.diagnostic-q label { display: block; font-family: var(--font-mono); font-size: 11px; color: var(--text-primary); font-weight: 600; margin-bottom: 8px; }
+.diagnostic-q p { font-size: 12px; color: var(--text-muted); margin: 0 0 10px; }
+.diagnostic-q select {
+  width: 100%; background: var(--bg-primary); border: 1px solid #262a1e; border-radius: 6px; color: var(--text-primary);
+  font-family: var(--font-mono); font-size: 11.5px; padding: 8px; outline: none;
+}
+.diagnostic-q select:focus { border-color: var(--brand-green); }
+.diagnostic-result {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap; background: var(--panel-alt);
+  border-radius: 10px; padding: 18px 20px; border: 1px solid #1e1e1e;
+}
+.diagnostic-score {
+  width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--border); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: 15px; color: var(--text-primary);
+}
+.diagnostic-score.risk-low { border-color: var(--brand-green); color: var(--brand-green); }
+.diagnostic-score.risk-mid { border-color: var(--pillar-amber); color: var(--pillar-amber); }
+.diagnostic-score.risk-high { border-color: var(--pillar-coral); color: var(--pillar-coral); }
+.diagnostic-result-text h3 { margin: 0 0 4px; font-size: 16px; }
+.diagnostic-result-text p { margin: 0; font-size: 13px; color: var(--text-secondary); max-width: 480px; }
 
 /* Services hub — grouped by service line (Assessments / Tech Architecture & Build /
    Training & Enablement / Advisory & Ongoing Support). All lines stay under the

@@ -204,6 +204,11 @@ function statLedRow(items) {
   </div>`;
 }
 
+// Inline SVG checkmark — deliberately not an icon-font/CDN dependency.
+function checkSvg() {
+  return `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="color:var(--brand-green)"><path d="M2 7l3.5 3.5L12 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
 // Chip-stack — compact numbered field list, used inside a split-feature visual slot.
 function chipStackHtml(kicker, items) {
   return `<div class="chip-stack">
@@ -233,6 +238,7 @@ function buildHome() {
   <section class="hero">
     <div class="container hero-grid">
       <div>
+        <div class="hero-pill"><span class="dot"></span><span class="label">Max statutory exposure:</span><span class="value">₹250 Cr per instance</span></div>
         <span class="eyebrow">DPDP Act 2023 Compliance Advisory &amp; Consent Technology</span>
         <hr class="rule" />
         <h1 class="tagline-italic">${esc(cfg.tagline)}</h1>
@@ -241,7 +247,7 @@ function buildHome() {
         <div class="hero-actions">
           <a class="btn btn-primary" href="/services/consent-management-platform-codebase-deployment/">Own a Consent Platform, Not a Subscription</a>
           <a class="btn btn-secondary" href="/readiness/">Find Your DPDP Readiness Level</a>
-          <a class="btn btn-secondary" href="/services/dpdp-gap-assessment/">Start with a Gap Assessment</a>
+          <a class="btn btn-secondary" href="#diagnostic">Run the Readiness Diagnostic</a>
         </div>
         <div class="hero-stats">
           <div class="stat"><b>${services.length}</b><span>Specialist services across 4 service lines</span></div>
@@ -251,13 +257,91 @@ function buildHome() {
       </div>
       <div class="hero-card">
         <h3>What a Gap Assessment gets you</h3>
-        <ol>
-          <li>A DPDP Readiness Level rating for your organisation</li>
-          <li>A prioritised, resourced remediation roadmap</li>
-          <li>Evidence-based findings, not policy-review guesswork</li>
-          <li>A board-ready executive summary</li>
-        </ol>
-        <a class="btn btn-primary" href="/contact/" style="margin-top:10px;display:inline-block;">Book a Free Consulting Call</a>
+        <ul class="check-list">
+          <li>${checkSvg()} A DPDP Readiness Level rating for your organisation</li>
+          <li>${checkSvg()} A prioritised, resourced remediation roadmap</li>
+          <li>${checkSvg()} Evidence-based findings, not policy-review guesswork</li>
+          <li>${checkSvg()} A board-ready executive summary</li>
+        </ul>
+        <a class="btn btn-primary" href="/contact/" style="margin-top:14px;display:inline-block;">Book a Free Consulting Call</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow pillar-coral">Statutory exposure</span>
+      <hr class="rule pillar-coral" />
+      <h2>What non-compliance actually costs</h2>
+      <p class="lede">The DPDPA's Section 33 schedule, in full — not the one figure everyone quotes.</p>
+      <div class="penalty-table-wrap">
+        <table class="penalty-table">
+          <thead><tr><th>Violation</th><th>Provision</th><th>Maximum penalty</th></tr></thead>
+          <tbody>
+            <tr><td class="violation">Failure of reasonable security safeguards (data breach)</td><td>Section 8(5)</td><td class="amount severity-high">Up to ₹250 Cr</td></tr>
+            <tr><td class="violation">Failure to notify the Board / affected persons of a breach</td><td>Section 8(6)</td><td class="amount severity-high">Up to ₹200 Cr</td></tr>
+            <tr><td class="violation">Breach of additional obligations for children's data</td><td>Section 9</td><td class="amount severity-high">Up to ₹200 Cr</td></tr>
+            <tr><td class="violation">Breach of Significant Data Fiduciary obligations</td><td>Section 10</td><td class="amount severity-mid">Up to ₹150 Cr</td></tr>
+            <tr><td class="violation">Any other breach of the Act or Rules</td><td>Residuary</td><td class="amount severity-low">Up to ₹50 Cr</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="penalty-note">Under Section 33(3) the Board can double a penalty on aggravating factors. Substantive obligations phase in 14 Nov 2026 – 14 May 2027 — the schedule above is what applies once they do.</p>
+    </div>
+  </section>
+
+  <section class="section" id="diagnostic" style="background:var(--bg-secondary);border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;">
+    <div class="container">
+      <span class="eyebrow">Self-assessment</span>
+      <hr class="rule" />
+      <h2>Where's your actual exposure?</h2>
+      <p class="lede">Four questions, an honest answer each — not a lead-gen quiz dressed up as a diagnostic.</p>
+      <div class="diagnostic-box">
+        <div class="diagnostic-grid">
+          <div class="diagnostic-q">
+            <label>01 — Notices</label>
+            <p>Itemised, multi-lingual consent notices before collection?</p>
+            <select id="dq1" onchange="dpdpDiagnostic()">
+              <option value="0">Not implemented</option>
+              <option value="12">Static privacy policy only</option>
+              <option value="25">Itemised notice per purpose</option>
+            </select>
+          </div>
+          <div class="diagnostic-q">
+            <label>02 — Log retention</label>
+            <p>Processing &amp; access logs retained long enough for an audit trail?</p>
+            <select id="dq2" onchange="dpdpDiagnostic()">
+              <option value="0">Standard app logs only</option>
+              <option value="12">Partial / inconsistent retention</option>
+              <option value="25">Structured, audit-ready retention</option>
+            </select>
+          </div>
+          <div class="diagnostic-q">
+            <label>03 — Breach response</label>
+            <p>A tested runbook for notifying the Board and affected users?</p>
+            <select id="dq3" onchange="dpdpDiagnostic()">
+              <option value="0">No documented plan</option>
+              <option value="12">Generic incident response plan</option>
+              <option value="25">DPDPA-specific, tested runbook</option>
+            </select>
+          </div>
+          <div class="diagnostic-q">
+            <label>04 — Vendor contracts</label>
+            <p>Are your data processors bound by DPDPA-compliant clauses?</p>
+            <select id="dq4" onchange="dpdpDiagnostic()">
+              <option value="0">Legacy contracts, not reviewed</option>
+              <option value="12">Some vendors updated</option>
+              <option value="25">Full DPA coverage, audited</option>
+            </select>
+          </div>
+        </div>
+        <div class="diagnostic-result">
+          <div class="diagnostic-score" id="dScore">—</div>
+          <div class="diagnostic-result-text">
+            <h3 id="dTitle">Answer the four questions above</h3>
+            <p id="dDesc">This is a directional self-check, not a substitute for a Gap Assessment — but it'll tell you honestly whether you need one now or can wait.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -365,6 +449,37 @@ function buildHome() {
   </section>
 
   ${ctaBand()}
+
+  <script>
+  function dpdpDiagnostic() {
+    var ids = ['dq1', 'dq2', 'dq3', 'dq4'];
+    var total = 0, answered = 0;
+    ids.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el.selectedIndex > 0) answered++;
+      total += parseInt(el.value, 10) || 0;
+    });
+    var scoreEl = document.getElementById('dScore');
+    var titleEl = document.getElementById('dTitle');
+    var descEl = document.getElementById('dDesc');
+    scoreEl.textContent = total + '/100';
+    scoreEl.className = 'diagnostic-score';
+    if (answered < 4) { return; }
+    if (total >= 80) {
+      scoreEl.classList.add('risk-low');
+      titleEl.textContent = 'Reasonably prepared';
+      descEl.textContent = 'The basics are in place. Worth a Gap Assessment to confirm evidence holds up, not just intent.';
+    } else if (total >= 45) {
+      scoreEl.classList.add('risk-mid');
+      titleEl.textContent = 'Real gaps, not catastrophic';
+      descEl.textContent = 'Enough is missing that a Gap Assessment will find prioritised, fixable work — start there.';
+    } else {
+      scoreEl.classList.add('risk-high');
+      titleEl.textContent = 'Significant exposure';
+      descEl.textContent = 'Multiple core obligations look unmet. This is worth a Gap Assessment before the 2026-27 deadlines, not after.';
+    }
+  }
+  </script>
   `;
 
   const jsonLd = [{
