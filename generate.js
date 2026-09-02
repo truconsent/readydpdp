@@ -236,7 +236,7 @@ function buildHome() {
         <span class="eyebrow">DPDP Act 2023 Compliance Advisory &amp; Consent Technology</span>
         <hr class="rule" />
         <h1 class="tagline-italic">${esc(cfg.tagline)}</h1>
-        <p class="lede">${esc(cfg.brand)} turns the DPDP Act 2023 from a legal document into an operating system for how your organisation actually handles personal data — assessed, architected, enabled, and sustained. Own the technology outright, or bring in the advisory bench — either way, compliance stops being a filing exercise.</p>
+        <p class="lede">${esc(cfg.brand)} turns the DPDP Act 2023 into an operating system for how you actually handle personal data — assessed, architected, enabled, sustained.</p>
         <p class="lede-secondary">${esc(cfg.secondaryTagline)}</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/services/consent-management-platform-codebase-deployment/">Own a Consent Platform, Not a Subscription</a>
@@ -245,8 +245,8 @@ function buildHome() {
         </div>
         <div class="hero-stats">
           <div class="stat"><b>${services.length}</b><span>Specialist services across 4 service lines</span></div>
-          <div class="stat"><b>6</b><span>DPDP Readiness Levels mapped</span></div>
-          <div class="stat"><b>13</b><span>Industry risk profiles covered</span></div>
+          <div class="stat pillar-amber"><b>6</b><span>DPDP Readiness Levels mapped</span></div>
+          <div class="stat pillar-blue"><b>${industries.length}</b><span>Industry risk profiles covered</span></div>
         </div>
       </div>
       <div class="hero-card">
@@ -268,34 +268,21 @@ function buildHome() {
         visualHtml: chipStackHtml('What you get', ['Full CMP source code, licensed to you', 'Deployed on your own infrastructure', 'No recurring licence fee', 'Extend and maintain it yourselves']),
         kicker: 'Flagship — Tech Architecture & Build',
         title: 'Own your consent infrastructure. Outright.',
-        body: 'Most consent platforms are rented, forever. We build and deploy a real CMP codebase onto your own infrastructure, then hand you the keys — source access, no seat licences, no vendor lock-in on the thing your compliance posture depends on.',
+        body: 'Most consent platforms are rented, forever. We build and deploy a real CMP codebase onto your own infrastructure, then hand you the keys — source access, no seat licences, no lock-in.',
         linkLabel: 'Explore the Consent Management Platform', linkHref: '/services/consent-management-platform-codebase-deployment/'
       })}
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <span class="eyebrow">Why organisations engage us</span>
-      <hr class="rule" />
-      <h2>DPDPA compliance built to be operated, not just documented</h2>
-      ${featureRowList([
-        { title: 'Evidence, not assumption', body: 'We test your consent flows, contracts and systems directly instead of taking your privacy policy\'s word for it.' },
-        { title: 'Sequenced, not overwhelming', body: 'Every finding is scored for regulatory exposure and remediation effort, so you always know what to fix first.' },
-        { title: 'Built to be sustained', body: 'From DPO-as-a-Service to incident retainers, we stay engaged through the parts of compliance that never really finish.' }
-      ])}
-    </div>
-  </section>
-
   <section class="section" style="background:var(--bg-secondary);border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;">
     <div class="container">
-      <span class="eyebrow">DPDP Readiness Levels</span>
-      <hr class="rule" />
+      <span class="eyebrow pillar-amber">DPDP Readiness Levels</span>
+      <hr class="rule pillar-amber" />
       <h2>Where does your organisation actually stand?</h2>
-      <p class="lede">A six-level maturity model, from Unaware to Optimised — used to benchmark where you are and exactly what closing the next level requires.</p>
+      <p class="lede">A six-level maturity model, Unaware to Optimised — see exactly what closing your next level requires.</p>
       <div class="grid grid-4" style="margin-top:24px;">
         ${readinessLevels.slice(0, 4).map(l => `<a class="card" href="/readiness/${l.slug}/" style="text-decoration:none;">
-          <span class="level-badge">${l.level}</span>
+          <span class="level-badge pillar-amber">${l.level}</span>
           <h3 style="margin-top:12px;">${esc(l.name)}</h3>
           <p>${esc(l.summary.slice(0, 90))}${l.summary.length > 90 ? '…' : ''}</p>
         </a>`).join('\n')}
@@ -310,16 +297,28 @@ function buildHome() {
       <hr class="rule" />
       <h2>${services.length} ways we help you close the gap</h2>
       <div class="grid grid-3" style="margin-top:24px;">
-        ${[services.find(s => s.flagship), ...services.filter(s => !s.flagship)].slice(0, 6).map(s => `<div class="card${s.flagship ? ' card--flagship' : ''}">${s.flagship ? '<span class="tag tag-flagship">Flagship</span>' : ''}<h3>${esc(s.name)}</h3><p>${esc(s.short)}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`).join('\n')}
+        ${[services.find(s => s.flagship), ...services.filter(s => !s.flagship)].slice(0, 6).map(s => `<div class="card${s.flagship ? ' card--flagship' : ''}">${s.flagship ? '<span class="tag tag-flagship">Flagship</span>' : ''}<h3>${esc(s.name)}</h3><p>${esc(s.short.slice(0, 85))}${s.short.length > 85 ? '…' : ''}</p><a class="card-link" href="/services/${s.slug}/">Learn more →</a></div>`).join('\n')}
       </div>
       <p style="margin-top:20px;"><a class="btn btn-secondary" href="/services/">View all ${services.length} services →</a></p>
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow pillar-blue">Industries</span>
+      <hr class="rule pillar-blue" />
+      <h2>Compliance risk looks different by sector</h2>
+      <div class="grid grid-4" style="margin-top:24px;">
+        ${industries.slice(0, 4).map(ind => `<a class="card" href="/industries/${ind.slug}/" style="text-decoration:none;"><h3>${esc(ind.name)}</h3><p>${esc(ind.summary.slice(0, 80))}${ind.summary.length > 80 ? '…' : ''}</p></a>`).join('\n')}
+      </div>
+      <p style="margin-top:20px;"><a class="btn btn-secondary" href="/industries/">See all ${industries.length} industries →</a></p>
+    </div>
+  </section>
+
   <section class="section" style="background:var(--bg-secondary);border-top:1px solid #1a1a1a;">
     <div class="container">
-      <span class="eyebrow">Methodology</span>
-      <hr class="rule" />
+      <span class="eyebrow pillar-amber">Methodology</span>
+      <hr class="rule pillar-amber" />
       <h2>Two registers. One defensible compliance architecture.</h2>
       ${splitFeatureHtml({
         visualHtml: chipStackHtml('DPDR core fields', dpdr.fields.map(f => f.name)),
@@ -341,12 +340,12 @@ function buildHome() {
 
   <section class="section">
     <div class="container">
-      <span class="eyebrow">Insights</span>
-      <hr class="rule" />
+      <span class="eyebrow pillar-coral">Insights</span>
+      <hr class="rule pillar-coral" />
       <h2>Latest thinking on DPDPA compliance</h2>
-      <p class="lede">${insights.length} articles — Rules explainers, penalty breakdowns, sector deep-dives, and practical readiness guidance from our advisory team.</p>
+      <p class="lede">${insights.length} articles on DPDPA rules, penalties, and sector-specific readiness.</p>
       <div class="grid grid-3" style="margin-top:24px;">
-        ${[...insights].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3).map(a => `<a class="card" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek)}</p></a>`).join('\n')}
+        ${[...insights].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3).map(a => `<a class="card" href="/insights/${a.slug}/" style="text-decoration:none;"><span class="tag pillar-coral">${esc(a.date)}</span><h3 style="margin-top:8px;">${esc(a.title)}</h3><p>${esc(a.dek.slice(0, 85))}${a.dek.length > 85 ? '…' : ''}</p></a>`).join('\n')}
       </div>
       <p style="margin-top:20px;"><a class="btn btn-secondary" href="/insights/">Read all ${insights.length} Insights articles →</a></p>
     </div>
@@ -356,11 +355,11 @@ function buildHome() {
     <div class="container">
       <span class="eyebrow">Why ${esc(cfg.brand)}</span>
       <hr class="rule" />
-      <h2>Built specifically for the DPDP Act — not retrofitted from GDPR</h2>
+      <h2>Built for the DPDP Act — not retrofitted from GDPR</h2>
       ${statLedRow([
-        { num: '01', title: 'DPDPA-native methodology', body: 'Our readiness model, registers and playbooks are built around India\'s specific law, not adapted from someone else\'s.' },
-        { num: '02', title: 'Backed by a real platform team', body: 'Powered by truConsent, an IITM-incubated Privacy Intelligence Suite — our advisory work is grounded in what actually gets built.' },
-        { num: '03', title: 'Sector-specific depth', body: 'BFSI, healthcare, EdTech and e-commerce risk profiles we\'ve actually mapped, not generic checklists applied everywhere.' }
+        { num: '01', title: 'DPDPA-native methodology', body: 'Built around India\'s law, not adapted from someone else\'s.' },
+        { num: '02', title: 'Backed by a real platform team', body: 'Powered by truConsent, an IITM-incubated Privacy Intelligence Suite — grounded in what actually gets built.' },
+        { num: '03', title: 'Sector-specific depth', body: 'BFSI, healthcare, EdTech and e-commerce risk profiles we\'ve mapped ourselves, not generic checklists.' }
       ])}
     </div>
   </section>

@@ -175,6 +175,8 @@ p { color: var(--text-secondary); }
 .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
 .stat { border: 1px solid #1e1e1e; border-radius: var(--radius); padding: 16px; background: var(--bg-secondary); }
 .stat b { display: block; font-size: 26px; color: var(--brand-green); }
+.stat.pillar-amber b { color: var(--pillar-amber); }
+.stat.pillar-blue b { color: var(--pillar-blue); }
 .stat span { font-size: 13px; color: var(--text-secondary); }
 .hero-card {
   background: var(--card-bg); border: 1.5px solid var(--border); border-radius: 14px; padding: 26px;
@@ -205,6 +207,20 @@ p { color: var(--text-secondary); }
 .tag-flagship {
   color: #06120a; background: var(--brand-green); border-color: var(--brand-green); font-weight: 800;
 }
+
+/* Content-pillar colour system, actually used (not just nav hover): amber =
+   Frameworks & Readiness, blue = Industries, coral = Resources & Insights.
+   Apply alongside the base class (.eyebrow.pillar-amber, .rule.pillar-blue, etc). */
+.eyebrow.pillar-amber { color: var(--pillar-amber); }
+.eyebrow.pillar-blue { color: var(--pillar-blue); }
+.eyebrow.pillar-coral { color: var(--pillar-coral); }
+.rule.pillar-amber { background: var(--pillar-amber); }
+.rule.pillar-blue { background: var(--pillar-blue); }
+.rule.pillar-coral { background: var(--pillar-coral); }
+.tag.pillar-amber { color: var(--pillar-amber); background: rgba(232,163,61,0.1); border-color: rgba(232,163,61,0.35); }
+.tag.pillar-blue { color: var(--pillar-blue); background: rgba(91,141,239,0.1); border-color: rgba(91,141,239,0.35); }
+.tag.pillar-coral { color: var(--pillar-coral); background: rgba(226,105,74,0.1); border-color: rgba(226,105,74,0.35); }
+.level-badge.pillar-amber { border-color: var(--pillar-amber); color: var(--pillar-amber); }
 
 /* Services hub — grouped by service line (Assessments / Tech Architecture & Build /
    Training & Enablement / Advisory & Ongoing Support). All lines stay under the
