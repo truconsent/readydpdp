@@ -37,7 +37,6 @@ Markup shape:
 
 ```html
 <a class="brand" href="/">
-  <svg class="brand-icon">...</svg>
   <span class="wordmark">
     <span class="wordmark-dpdp-group">
       <span class="wordmark-dpdp">DPDP</span>
@@ -48,36 +47,21 @@ Markup shape:
 </a>
 ```
 
-This is built as inline HTML/SVG, not a raster/`<img>` logo file, specifically
-so the two halves can carry two different typefaces and colours. Don't
-collapse it back into a single `<img src="logo.svg">` — that's what
-`static/logo.svg` is for instead (see Icon mark, below): the icon *alone*, not
-the full lockup.
+This is built as inline HTML, not a raster/`<img>` logo file, specifically
+so the two halves can carry two different typefaces and colours.
 
-## Icon mark — "a knot resolving into a line"
+## Icon mark — tried, reverted
 
-Exact path (do not redraw or reinterpret this):
+An icon mark (a "knot resolving into a line" squiggle) was added beside the
+wordmark for one iteration, then explicitly rejected by the owner ("useless
+— I disagree") and removed. **The brand is text-only, no icon** — this was
+the original instruction and it's final. Don't reintroduce an icon mark
+without a fresh, explicit decision to do so.
 
-```
-M10,38 C5,28 20,22 16,33 C12,43 27,39 24,28 C21,16 38,20 34,31 L48,24
-```
-
-inside `viewBox="0 0 56 56"`. Rendering rules:
-
-- `stroke`: brand green `#76E000`
-- `stroke-width`: `6` at small/inline sizes (header/footer lockup), `7` at
-  favicon/app-icon scale
-- `stroke-linecap="round"`, `stroke-linejoin="round"`, `fill="none"`
-
-Used in two contexts:
-1. **Beside the wordmark** — header/footer brand lockup (see above).
-2. **Alone, no text** — favicon and any app-icon-style context, on a black or
-   transparent ground. `lib/templates.js` → `FAVICON` (inline data-URI SVG,
-   black rounded-square ground, stroke-width 7) and `static/logo.svg` (same
-   treatment, used as the JSON-LD `Organization.logo` asset).
-
-The canonical copy of this path lives in `lib/templates.js` as `ICON_PATH`.
-If it ever needs to change, update it there and keep this doc in sync.
+The favicon (`lib/templates.js` → `FAVICON`) and `static/logo.svg` (the
+JSON-LD `Organization.logo` asset) are both a plain bold "**D**" letterform
+in Syne/Arial on a black rounded-square ground — a letter, not a pictorial
+glyph, consistent with "text only."
 
 ## Fonts — a disciplined 3-family system
 

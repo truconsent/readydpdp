@@ -76,7 +76,6 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
 }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand:hover { text-decoration: none; }
-.brand-icon { width: 26px; height: 26px; flex-shrink: 0; }
 
 /* Wordmark: "DPDP" in Syne 800 with a brand-green rule beneath it, followed
    by "untangled." in Fraunces italic, muted grey. Syne appears ONLY here. */
@@ -93,7 +92,6 @@ p, li, .card p, .card-plain p, .faq-item p, .related-title, .footer-tagline { li
 }
 .site-footer .wordmark-dpdp { font-size: 20px; }
 .site-footer .wordmark-untangled { font-size: 19px; }
-.site-footer .brand-icon { width: 30px; height: 30px; }
 
 .primary-nav ul {
   display: flex; gap: 22px; list-style: none; margin: 0; padding: 0;
